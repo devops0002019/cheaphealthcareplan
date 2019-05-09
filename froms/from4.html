@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#008000" />
+    <title>Netliform</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body id="site" class="center-content">
+
+
+    <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+
+
+        <h3 id="status"><span class="percentage">1% </span>Completed</h3>
+        <progress id="progressBar" value="0" max="100"></progress>
+
+
+        <p>
+            <label>Email: <input type="text" name="thename" /></label>
+        </p>
+        <p>
+            <label>Message: <textarea name="themessage"></textarea></label>
+        </p>
+
+
+        <p>
+            <label> Choose 1:<input type="radio" name="radio is one" required></label>
+            <label> Choose 2:<input type="radio" name="radio is two" required></label>
+            <label> Choose 3:<input type="radio" name="radio is three" required></label>
+        </p>
+
+
+
+        <div data-netlify-recaptcha="true"></div>
+
+        <p>
+            <button type="submit">Send</button>
+        </p>
+
+
+
+
+    </form>
+
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
