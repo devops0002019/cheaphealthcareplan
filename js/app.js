@@ -29,7 +29,7 @@ const navbar_data = [
 function navbar_template(navbar) {
    return `
     <div class="menu flex-center">
-        <a href="/#" class="brand 1em"><h1> ${navbar.brand}</h1></a>
+        <h1 class="brand"> ${navbar.brand}</h1>
     </div>
  `;
 }

@@ -224,7 +224,10 @@ a.brand > * {
 	margin: 0 4px  0;
 }
 
-
+.brand {
+	font-size: 1.6em;
+	text-align:center;
+}
 
 
 
@@ -1470,77 +1473,6 @@ column
 
 
 
-/*
-
-responsive text code !!!
-
-------------------------------------------------------------------------  */
-
-@media only screen and (max-width: 420px) {
-    :root {
-        --h1-font-size: 1.8rem !important;
-        --h2-font-size: 1.6rem !important;
-        --h3-font-size: 1.4rem !important;
-        --h4-font-size: 1.2rem !important;
-        --h5-font-size: 1rem !important;
-        --h5-font-size: 1rem !important;
-        --p-font-size: 1.1rem !important;
-        --span-font-size: 1rem !important;
-    }
-}
-
-@media only screen and (min-width: 420px) {
-    :root {
-        --h1-font-size: 1.8rem !important;
-        --h2-font-size: 1.6rem !important;
-        --h3-font-size: 1.4rem !important;
-        --h4-font-size: 1.2rem !important;
-        --h5-font-size: 1rem !important;
-        --h6-font-size: 1rem !important;
-        --p-font-size: 1.1rem !important;
-        --span-font-size: 1rem !important;
-    }
-}
-
-@media only screen and (min-width: 520px) {
-    :root {
-        --h1-font-size: 2.2rem !important;
-        --h2-font-size: 2rem !important;
-        --h3-font-size: 1.8rem !important;
-        --h4-font-size: 1.6rem !important;
-        --h5-font-size: 1.4rem !important;
-        --h6-font-size: 1.2rem !important;
-        --p-font-size: 1.1rem !important;
-        --span-font-size: 1rem !important;
-    }
-}
-
-@media only screen and (min-width: 620px) {
-    :root {
-        --h1-font-size: 2.6rem !important;
-        --h2-font-size: 2.2rem !important;
-        --h3-font-size: 2rem !important;
-        --h4-font-size: 1.8rem !important;
-        --h5-font-size: 1.6rem !important;
-        --h6-font-size: 1.4rem !important;
-        --p-font-size: 1.2rem !important;
-        --span-font-size: 1rem !important;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    :root {
-        --h1-font-size: 2.8rem !important;
-        --h2-font-size: 2.4rem !important;
-        --h3-font-size: 2rem !important;
-        --h4-font-size: 1.6rem !important;
-        --h5-font-size: 1.2rem !important;
-        --h6-font-size: 1rem !important;
-        --p-font-size: 1.3rem !important;
-        --span-font-size: 1rem !important;
-    }
-}
-
 
 
 
@@ -2510,3 +2442,80 @@ max-width 768px
 }
 
 /* min-width 1366px END */
+
+
+
+
+
+
+    
+    /*
+
+responsive text code !!!
+
+------------------------------------------------------------------------  */
+
+@media only screen and (max-width: 420px) {
+    :root {
+        --h1-font-size: 1.8rem !important;
+        --h2-font-size: 1.6rem !important;
+        --h3-font-size: 1.4rem !important;
+        --h4-font-size: 1.2rem !important;
+        --h5-font-size: 1rem !important;
+        --h5-font-size: 1rem !important;
+        --p-font-size: 1.1rem !important;
+        --span-font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    :root {
+        --h1-font-size: 1.8rem !important;
+        --h2-font-size: 1.6rem !important;
+        --h3-font-size: 1.4rem !important;
+        --h4-font-size: 1.2rem !important;
+        --h5-font-size: 1rem !important;
+        --h6-font-size: 1rem !important;
+        --p-font-size: 1.1rem !important;
+        --span-font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    :root {
+        --h1-font-size: 2.2rem !important;
+        --h2-font-size: 2rem !important;
+        --h3-font-size: 1.8rem !important;
+        --h4-font-size: 1.6rem !important;
+        --h5-font-size: 1.4rem !important;
+        --h6-font-size: 1.2rem !important;
+        --p-font-size: 1.1rem !important;
+        --span-font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 620px) {
+    :root {
+        --h1-font-size: 2.6rem !important;
+        --h2-font-size: 2.2rem !important;
+        --h3-font-size: 2rem !important;
+        --h4-font-size: 1.8rem !important;
+        --h5-font-size: 1.6rem !important;
+        --h6-font-size: 1.4rem !important;
+        --span-font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --h1-font-size: 2.8rem !important;
+        --h2-font-size: 2.4rem !important;
+        --h3-font-size: 2rem !important;
+        --h4-font-size: 1.6rem !important;
+        --h5-font-size: 1.2rem !important;
+        --h6-font-size: 1rem !important;
+        --p-font-size: 1.3rem !important;
+        --span-font-size: 1rem !important;
+    }
+}
+    
