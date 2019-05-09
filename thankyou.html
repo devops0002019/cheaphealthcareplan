@@ -57,9 +57,17 @@
 
     </main>
 
-    <footer>
-        <div id="footer"></div>
+    <footer id="footer-empty">
+        <div class="footer">
+            <div class="grid set-cols-1">
+                <div class="column">
+                    <h2 class="copyright"> <span class="company-name"></span> <span id="footer-year"></span>. All rights reserved </h2>
+                    <script>document.getElementById("footer-year").innerHTML = new Date().getFullYear();</script>
+                </div>
+            </div>
+        </div>
     </footer>
+    
 
 
 

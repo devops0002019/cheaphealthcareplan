@@ -29,15 +29,14 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <style>
-        #footer {
-            position: absolute;
-            bottom: -32%;
-            left: 0;
-            right: 0;
+    #footer {
+    position: absolute;
 
-        }
+
+}
+
+    
     </style>
-
 
 </head>
 
@@ -127,14 +126,21 @@
 
     </main>
 
-    <footer id="footer"></footer>
-
-
-
-    <script src="js/animated-form.js"></script>
-
-    <script src="js/app.js"></script>
+    <footer id="footer">
+        <div class="footer">
+            <div class="grid set-cols-1">
+                <div class="column">
+                    <h2 class="copyright"> <span class="company-name"></span> <span id="footer-year"></span>. All rights reserved </h2>
+                    <script>document.getElementById("footer-year").innerHTML = new Date().getFullYear();</script>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
+<script src="js/form.js"></script>
+
+<script src="js/app.js"></script>
 
 </html>
