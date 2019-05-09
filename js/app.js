@@ -46,7 +46,7 @@ function footer_template(foot) {
     return `
     <div class="footer">
      <div class="grid set-cols-1">
-       <div class="column flex-center">
+       <div class="column flex-center text-center">
          <h2 class="copyright"> Copyright<a href="/#"> ${foot.brand}</a>. All rights reserved <span id="year"></span> </h2>
        </div>
 
