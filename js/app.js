@@ -22,7 +22,7 @@ document.documentElement.style .setProperty('--seo-page-title-color', 'blue');
 
 const navbar_data = [
    {
-         brand: "Buy Cheap Healthcare Plans",
+         brand: "Cheap Healthcare Plan",
    }
 ];
 
@@ -39,7 +39,7 @@ document.getElementById("navbar").innerHTML = `${navbar_data.map(navbar_template
 
 const footer_data = [
    {
-       brand: "Buy Cheap Healthcare Plans",
+       brand: "Cheap Healthcare Plan",
    }
 ];
 function footer_template(foot) {

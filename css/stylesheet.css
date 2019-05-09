@@ -371,3 +371,15 @@ progress::-webkit-progress-value {
 
 
 
+
+
+
+
+.company-name {
+    font-size: 1em !important;
+    --company-name: 'Best Insurance Plan Cost';
+}
+
+.company-name:after {
+    content: var(--company-name) !important;
+} 
