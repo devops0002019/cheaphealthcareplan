@@ -584,7 +584,9 @@ main classes and subclasses
 	
 }
 
-
+nav {
+	background: var(--navbar-background)
+}
 
 /* navbar */
 [id*="navbar"] {
