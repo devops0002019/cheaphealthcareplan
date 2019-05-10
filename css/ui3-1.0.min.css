@@ -131,6 +131,10 @@ a.brand > * {
 }
 
 
+.cursive {
+	font-style: italic;
+}
+
 
 
 .band span {
