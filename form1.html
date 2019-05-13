@@ -44,6 +44,7 @@
 
 </head>
 
+
 <body id="site">
 
     <nav id="navbar"></nav>
@@ -52,7 +53,7 @@
 
         <div class="wrapper">
 
-            <form onsubmit="return validateForm()" id="forma" action="/thankyou.html" method="GET" data-netlify-recaptcha="true" data-netlify="true">
+            <form id="forma" action="/thankyou.html" method="GET" data-netlify-recaptcha="true" data-netlify="true">
 
                 <div class="progress">
                     <h3 id="status"><span class="percentage">1% </span>Completed</h3>
@@ -73,7 +74,6 @@
                     <i id="plus" class="fas fa-arrow-down enter-next"></i>
                 </div>
 
-
                 <div class="field-gender input-radio innactive">
                     <p class="question">What is your Gender?</p>
                     <input id="male" value="male" type="radio" name="gender" required />
@@ -81,11 +81,6 @@
                     <input id="female" type="radio" value="female" name="gender" required />
                     <label for="female" id="plus" class="enter-next">Female</label>
                 </div>
-
-
-
-<!-- 
-
 
                 <div class="field-coverage input-radio innactive">
                     <p class="question">When would you like coverage?</p>
@@ -124,7 +119,7 @@
                     <i class="fas fa-user-edit icon-start"></i>
                     <input type="date" id="birth" name="birth" value="1950-01-01" min="1950-01-01" max="2018-12-31">
                     <i id="plus" class="fas fa-arrow-down enter-next"></i>
-                </div> -->
+                </div>
 
                 <div class="field-submit input-submit innactive">
                     <input id="submit" type="submit" />

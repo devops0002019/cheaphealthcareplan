@@ -95,61 +95,22 @@ function validateEmail(email) {
 
 function validateGender(gender) {
 
-    var gender = document.getElementsByName('gender');
-
-    if (!(gender[0].checked || gender[1].checked)) {
-        error("#fafafa");
-        progress.value = 30;
-        statusProgress.innerHTML = `<span class="percentage">30% </span>Completed`;
-        console.log("gender is up and running");
-        return true;
-    } else {
-        error("rgb(189, 87, 87)");
-        console.log("gender is not up and running");
-        return false;
-    }
-}
-
-
-
-
-function validateCoverage(coverage) {
-
-    var coverage = document.getElementsByName('coverage');
-
-    if (!(coverage[0].checked || coverage[1].checked)) {
-        error("#fafafa");
-        progress.value = 40;
-        statusProgress.innerHTML = `<span class="percentage">40% </span>Completed`;
-        console.log("coverage is up and running");
-        return true;
-    } else {
-        error("rgb(189, 87, 87)");
-        console.log("coverage is not up and running");
-        return false;
-    }
-}
-
-
-
-
-
-
-function validateIncome(income) {
-
-    var income = document.getElementsByName('income');
-
-    if (!(income[0].checked || income[1].checked)) {
-        error("#fafafa");
-        progress.value = 50;
-        statusProgress.innerHTML = `<span class="percentage">50% </span>Completed`;
-        console.log("income is up and running");
-        return true;
-    } else {
-        error("rgb(189, 87, 87)");
-        console.log("income is not up and running");
-        return false;
-    }
+        var gender = document.getElementsByName("gender");
+        var formValid = false;
+    
+        var i = 0;
+        while (!formValid && i < gender.length) {
+            if (gender[i].checked) formValid = false;
+            i++; 
+            progress.value = 30;
+            statusProgress.innerHTML = `<span class="percentage">30% </span>Completed`;
+            console.log("gender is up and running");
+            return true;       
+        }
+    
+        if (!formValid) 
+            console.log("gender is not up and running");
+            return formValid;
 }
 
 
@@ -158,43 +119,126 @@ function validateIncome(income) {
 
 
 
-function validateEnrolled(enrolled) {
 
-    var enrolled = document.getElementsByName('enrolled');
 
-    if (!(enrolled[0].checked || enrolled[1].checked)) {
-        error("#fafafa");
-        progress.value = 60;
-        statusProgress.innerHTML = `<span class="percentage">60% </span>Completed`;
-        console.log("enrolled is up and running");
-        return true;
-    } else {
-        error("rgb(189, 87, 87)");
-        console.log("enrolled is not up and running");
-        return false;
-    }
-}
+// function validateGender(gender) {
+
+//     var gender = document.getElementsByName('gender');
+//     var formValid = false;
 
 
 
+//     if (!(gender[0].checked || gender[1].checked)) {
+//         error("#fafafa");
+//         progress.value = 30;
+//         statusProgress.innerHTML = `<span class="percentage">30% </span>Completed`;
+//         console.log("gender is up and running");
+//         return true;
+//     } else {
+//         error("rgb(189, 87, 87)");
+//         console.log("gender is not up and running");
+//         return false;
+//     }
+// }
 
-function validateBirth(date) {
 
-    var validationBirth = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 
-    if (!(validationBirth.test(date.value))) {
-        error("#fafafa");
-        progress.value = 70;
-        statusProgress.innerHTML = `<span class="percentage">70% </span>Completed`;
-        console.log("birth is up and running");
-        return true;
 
-    } else {
-        error("rgb(189, 87, 87)");
-        console.log("birth is not up and running");
-        return false;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function validateCoverage(coverage) {
+
+//     var coverage = document.getElementsByName('coverage');
+
+//     if (!(coverage[0].checked || coverage[1].checked)) {
+//         error("#fafafa");
+//         progress.value = 40;
+//         statusProgress.innerHTML = `<span class="percentage">40% </span>Completed`;
+//         console.log("coverage is up and running");
+//         return true;
+//     } else {
+//         error("rgb(189, 87, 87)");
+//         console.log("coverage is not up and running");
+//         return false;
+//     }
+// }
+
+
+
+
+
+
+// function validateIncome(income) {
+
+//     var income = document.getElementsByName('income');
+
+//     if (!(income[0].checked || income[1].checked)) {
+//         error("#fafafa");
+//         progress.value = 50;
+//         statusProgress.innerHTML = `<span class="percentage">50% </span>Completed`;
+//         console.log("income is up and running");
+//         return true;
+//     } else {
+//         error("rgb(189, 87, 87)");
+//         console.log("income is not up and running");
+//         return false;
+//     }
+// }
+
+
+
+
+
+
+
+// function validateEnrolled(enrolled) {
+
+//     var enrolled = document.getElementsByName('enrolled');
+
+//     if (!(enrolled[0].checked || enrolled[1].checked)) {
+//         error("#fafafa");
+//         progress.value = 60;
+//         statusProgress.innerHTML = `<span class="percentage">60% </span>Completed`;
+//         console.log("enrolled is up and running");
+//         return true;
+//     } else {
+//         error("rgb(189, 87, 87)");
+//         console.log("enrolled is not up and running");
+//         return false;
+//     }
+// }
+
+
+
+
+// function validateBirth(date) {
+
+//     var validationBirth = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+//     if (!(validationBirth.test(date.value))) {
+//         error("#fafafa");
+//         progress.value = 70;
+//         statusProgress.innerHTML = `<span class="percentage">70% </span>Completed`;
+//         console.log("birth is up and running");
+//         return true;
+
+//     } else {
+//         error("rgb(189, 87, 87)");
+//         console.log("birth is not up and running");
+//         return false;
+//     }
+// }
 
 
 
