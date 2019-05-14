@@ -436,3 +436,10 @@ progress::-webkit-progress-value {
 .small-img {
     max-width: 200px !important;
 }
+
+
+
+.imgs img{
+    height: 300px;
+    object-fit: cover;
+}
