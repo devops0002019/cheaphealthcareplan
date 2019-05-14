@@ -109,8 +109,8 @@
 
     // Form Submit
     function submitForm() {
-        _("userInfo").method = "GET";
-        _("userInfo").action = "/thankyou.html";
+        // _("userInfo").method = "GET";
+        // _("userInfo").action = "/thankyou.html";
         _("userInfo").submit();
 
         console.log("Form Submitted");
