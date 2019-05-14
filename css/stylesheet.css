@@ -358,7 +358,6 @@ progress::-webkit-progress-value {
 }
 
 #show_all_data {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
