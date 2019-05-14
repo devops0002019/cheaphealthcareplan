@@ -1,5 +1,5 @@
 @import url('default.css');
-
+@import url('animated.css');
 
 
 :root {
@@ -219,21 +219,14 @@ a.brand > * {
 }
 
 
-
-
-
 .nav-menu a{
 	margin: 0 4px  0;
 }
 
 .brand {
-	font-size: 2em;
+	font-size: 1.4em;
 	text-align:center;
 }
-
-
-
-
 
 
 [class*="flex"] {
@@ -593,12 +586,11 @@ nav {
 /* navbar */
 [id*="navbar"] {
 	width: 100%;
-	margin: auto;
 	border-bottom:0.5px solid var(--border);
 }
 
 [id*="navbar"] {
-	padding: 1em;
+	/* padding: 1em; */
 }
 
 [id*="navbar"] {

@@ -1,130 +1,26 @@
 
-#site {
-    background: #fafafa;
-    -webkit-transition: background 0.5s ease;
-    transition: background 0.5s ease;
+.company-name {
+    font-size: 1em !important;
+    --company-name: 'Cheap Healthcare Plan';
+}
+
+.company-name:after {
+    content: var(--company-name) !important;
+} 
 
 
+
+.thankyou {
+    max-width: 1028px;
 }
 
 
-[class*="field"] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    max-width: var(--page-max-width);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: rgb(255, 255, 255);
-    padding: 64px 32px;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -webkit-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-}
-
-@media only screen and (min-width: 500px) {
-    [class*="field"] {
-        width: 100%;
-        max-width: 800px;
-    }
-}
-
-
-[class*="input-text"] {
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
-}
-
-[class*="input-radio"] {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: 1;
-    grid-template-columns: 1fr;
-}
-
-
-[class*="input-submit"] {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-
-.field-name i,
-.field-email i,
-.field-password i {
-    cursor: pointer;
-}
-
-.field-name input,
-.field-email input,
-.field-password input {
-    background: var(--form-input-background);
-    color: #000;
-    padding: 16px;
-    border: none;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    outline: none;
-}
 
 select:focus,
 input:focus {
     background: #e8e8e8;
 }
 
-div.innactive {
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transform: translate(-50%, 50%);
-    transform: translate(-50%, 50%);
-}
-
-div.active {
-    opacity: 1;
-    pointer-events: all;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-@-webkit-keyframes shake {
-    0% {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    50% {
-        -webkit-transform: translate(-50%, -50%) rotate(10deg);
-        transform: translate(-50%, -50%) rotate(10deg);
-    }
-
-    100% {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
-@keyframes shake {
-    0% {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    50% {
-        -webkit-transform: translate(-50%, -50%) rotate(10deg);
-        transform: translate(-50%, -50%) rotate(10deg);
-    }
-
-    100% {
-        -webkit-transform: translate(-50%, -50%) rotate(0deg);
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
-
-/*styles radio buttons*/
 
 .input-radio input[type="radio"] {
     opacity: 0.01;
@@ -135,8 +31,6 @@ div.active {
 .input-radio input[type="radio"]:checked+label,
 .Checked+label {
     background: green;
-
-
 }
 
 .input-radio label {
@@ -154,63 +48,7 @@ div.active {
     background: var(--quaternary) !important;
 }
 
-
-
-p.question {
-    color: var(--primary);
-    font-size: 2em;
-    grid-column: 1 / -1;
-}
-
-i.icon-start {
-    padding: 16px !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #cecece !important;
-    color: #6a6a6a !important;
-}
-
-.enter-next {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    outline: none;
-    color: #fff !important;
-    background-color: var(--primary) !important;
-    border: none;
-    -webkit-box-shadow: 0 0 4px #999;
-    box-shadow: 0 0 4px #999;
-}
-
-.enter-next:hover {
-    background: var(--quaternary) !important;
-}
-
-.enter-next:active {
-    background-color: #003180;
-    -webkit-box-shadow: 1px 1px #666;
-    box-shadow: 1px 1px #666;
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
-}
-
-/*styles home*/
-[class*="column"].insurance101 {
+[class*="header"] {
     width: 100%;
     max-width: 1024px;
 }
@@ -237,29 +75,216 @@ i.icon-start {
     box-shadow: 0 0 64px rgba(33, 33, 33, .2);
 }
 
-
-
-
 .small-img {
     max-width: 200px !important;
 }
 
-#form {
+
+.wrapper {
+    z-index: 999999999 !important;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: 100px;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
+
+
+#footer {
+    max-width: 100%;
+    width:100%;
+    bottom: -32%;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+form#userInfo>#show_all_data,
+#step2,
+#step3,
+#step4,
+#step5 {
+    display: none;
+}
+
+
+#page {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 768px;
+}
+
+#userInfo {
+    min-height: 400px;
+    max-width: 768px;
+    width: 100%;
+    margin: auto;
+    padding: 2em;
+    background: #ffff;
+    box-shadow: var(--shadow);
+}
+
+#userInfo input {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.button {
+    opacity: 7;
+    animation: fadebtn 3s linear;
+
+}
+
+@keyframes fadebtn {
+
+    0% {
+        opacity: 0
+    }
+
+    10% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0
+    }
+
+    30% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 5
+    }
+
+    100% {
+        opacity: 9
+    }
+}
+
+
+
+
+p.Q {
+    color: var(--primary);
+    font-size: 3em;
+}
+
+
+
+
+.select {
+    position: relative;
+}
+
+.select select {
+    display: none;
+}
+
+.select-selected {
+    height: 3em;
+    background-color: var(--blue);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 15px;
+}
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 12px 8px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+[id*="step"] button {
+    margin-top: 1em;
+    float: right;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 progress:after {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
 }
 
 progress::-moz-progress-bar {
     border-radius: 12px;
     background: #ddd;
-
     box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
 
 }
@@ -286,14 +311,12 @@ progress::-webkit-progress-value {
     transition: width 2s ease;
 }
 
-
 .percentage {
     font-size: 2em;
     display: block;
     opacity: 1;
-    animation: fade 1s linear;
+    animation: fade 2s linear;
 }
-
 
 @keyframes fade {
 
@@ -312,43 +335,85 @@ progress::-webkit-progress-value {
     }
 }
 
-
-
-
-
-.progress {
+.progressbar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 128px;
-    position: absolute;
-    top: 50%;
-    left: 15%;
+    /* border-radius: 128px; */
     width: 150px;
     height: 150px;
-    margin: auto;
-    padding: 100px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    /* background: rgb(255, 255, 255); */
-
-
+    /* margin: auto; */
+    /* padding: 100px; */
+    background: rgb(255, 255, 255);
+    /* box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.119), 0 2px 5px 0px rgba(0, 0, 0, 0.064); */
 }
 
 
-.wrapper {
-    z-index: 999999999 !important;
+
+
+
+.submit {
+    float: right;
+}
+
+#show_all_data {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+.switch-field {
+    display: flex;
+    margin-bottom: 36px;
     overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    padding: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked+label {
+    background-color: #a5dc86;
+    box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
 }
 
 
@@ -356,37 +421,18 @@ progress::-webkit-progress-value {
 
 
 
-.imgs img{
-    height: 300px;
-    object-fit: cover;
+
+.callaction {
+    box-shadow:var(--shadow);
+    background: #fff;
 }
 
-
-
-
-
-
-#footer {
-    max-width: 100%;
-    width:100%;
-    bottom: -32%;
-    left: 0;
-    right: 0;
-
+.callaction:hover {
+    opacity: 9;
+    -webkit-box-shadow: 0 0 64px rgba(33, 33, 33, .2);
+    box-shadow: 0 0 64px rgba(33, 33, 33, .2);
 }
 
-
-
-
-
-
-
-
-.company-name {
-    font-size: 1em !important;
-    --company-name: 'Best Insurance Plan Cost';
+.small-img {
+    max-width: 200px !important;
 }
-
-.company-name:after {
-    content: var(--company-name) !important;
-} 
