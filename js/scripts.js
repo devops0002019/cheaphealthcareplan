@@ -99,7 +99,7 @@
             error("rgb(255, 255, 255)");
             console.log("income is up and running");
             return true;
-            
+
         } else {
 
             error("rgb(189, 87, 87)");
@@ -187,3 +187,16 @@ function closeAllSelect(elmnt) {
     }
 }
 document.addEventListener("click", closeAllSelect);
+
+
+
+
+
+
+$(document).ready(function() {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 1000);
+	
+});
