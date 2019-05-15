@@ -3,8 +3,8 @@
 
 
 :root {
-    --primary: #0522ff;
-    --secondary: #262626;
+    --primary: #00577d;
+    --secondary: #fafafa;
     --tertiary: #fafafa;
     --quaternary: #bbbbbb;
 
@@ -44,17 +44,17 @@
     --pt-sans: 'PT Sans', sans-serif;
     --pt-sans-caption: 'PT Sans Caption', sans-serif;
 
-    --page-max-width: 1024px;
-
-	--seo-page-title-color:#000;
+    --page-max-width: 1268px;
 	
 	--brand-color:#fff;
 
-    --header-background:#fafafa;
-    --header-text-color:#fff;
-    --navbar-background: #fff;
-    --navbar-text-color:#fff;
-    --footer-background::#fafafa;
+    --header-background:#00577d;
+	--header-text-color:#fff;
+	
+    --navbar-background: #00577d;
+	--navbar-text-color:#fff;
+	
+    --footer-background:#fafafa;
 	--footer-text-color:#000;
 	
 }
@@ -137,6 +137,10 @@ a.brand > * {
 	font-style: italic;
 }
 
+a.brand {
+	text-align: center;
+    color:var(--brand-color) !important;
+}
 
 
 .band span {
@@ -553,18 +557,20 @@ main classes and subclasses
 	max-width: var(--page-max-width);
 }
 
+
 nav {
+	color:var(--navbar-text-color);
 	background: var(--navbar-background)
 }
 
-/* navbar */
-[id*="navbar"] {
+#navbar {
+	padding: 1em 0;
 	width: 100%;
-	border-bottom:0.5px solid var(--border);
-}
-
-[id*="navbar"] {
-    color:var(--navbar-text-color);
+	margin: auto;
+	text-align: center;
+	max-width: var(--page-max-width);
+	color:var(--navbar-text-color);
+	background: var(--navbar-background)
 }
 
 

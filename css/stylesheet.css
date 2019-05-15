@@ -3,8 +3,10 @@
 .company-name {
     font-size: 1em !important;
     --company-name: 'Cheap Healthcare Plan';
-    color:var(--primary);
+
 }
+
+
 
 .company-name:after {
     content: var(--company-name) !important;
@@ -191,7 +193,7 @@ margin:64px 0px;
 
 .select-items {
     position: absolute;
-    background-color: rgb(0, 38, 75);
+    background-color: rgb(1, 78, 155);
     top: 100%;
     left: 0;
     right: 0;
@@ -204,7 +206,7 @@ margin:64px 0px;
 
 .select-items div:hover,
 .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 13, 89, 0.454);
 }
 
 
