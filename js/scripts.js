@@ -1,11 +1,7 @@
-    // variables
     var username, email, gender, cover, income;
-
-    // shortcode
     function _(id) {
         return document.getElementById(id);
     }
-
     function step1() {
         username = _("username").value;
         if (username.length > 2) {
@@ -13,7 +9,7 @@
             _("step1").style.display = "none";
             _("step2").style.display = "block";
             _("progressBar").value = 10;
-            _("status").innerHTML = "10% <br /> Completed";
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;
             console.log("username is up and running");
             return true;
         } else {
@@ -23,7 +19,6 @@
             return false;
         }
     }
-
     function step2() {
         email = _("email").value;
         var validemail = /\S+@\S+/;
@@ -31,7 +26,7 @@
             _("step2").style.display = "none";
             _("step3").style.display = "block";
             _("progressBar").value = 20;
-            _("status").innerHTML = "20% <br /> Completed";
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
             console.log("email is up and running");
             return validemail.test(email);
         } else {
@@ -40,16 +35,13 @@
             return false;
         }
     }
-
-
-
     function step3() {
         gender = _("gender").value;
         if (gender.length > 0) {
             _("step3").style.display = "none";
             _("step4").style.display = "block";
             _("progressBar").value = 30;
-            _("status").innerHTML = "30% <br /> Completed";
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
             console.log("gender is up and running");
             return true;
         } else {
@@ -59,7 +51,6 @@
             return false;
         }
     }
-
     function step4() {
         cover = _("cover").value;
         if (cover.length > 0) {
@@ -67,7 +58,7 @@
             _("step5").style.display = "block";
 
             _("progressBar").value = 40;
-            _("status").innerHTML = "40% <br /> Completed";
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
             console.log("cover is up and running");
             return true;
         } else {
@@ -77,9 +68,6 @@
             return false;
         }
     }
-
-
-
     function step5() {
         income = _("income").value;
         if (income.length > 0) {
@@ -91,7 +79,7 @@
             _("display_cover").innerHTML = cover;
             _("display_income").innerHTML = income;
             _("progressBar").value = 50;
-            _("status").innerHTML = "50% <br /> Completed";
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">50% <br /></span>Completed</h3>`;
             console.log("income is up and running");
             return true;
         } else {
@@ -101,19 +89,14 @@
             return false;
         }
     }
-
-    // bg Color
     function error(color) {
         document.body.style.background = color;
     }
-
-    // Form Submit
     function submitForm() {
         // _("userInfo").method = "GET";
         // _("userInfo").action = "/thankyou.html";
         _("userInfo").submit();
-
-        console.log("Form Submitted");
+            console.log("Form Submitted");
         return true;
     }
 

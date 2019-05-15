@@ -11,7 +11,7 @@ document.documentElement.style .setProperty('--navbar-text-color', 'var(--primar
 document.documentElement.style .setProperty('--header-background', '#fafafa');
 document.documentElement.style .setProperty('--header-text-color', '#000');
 
-document.documentElement.style .setProperty('--footer-background', 'var(--white)');
+document.documentElement.style .setProperty('--footer-background', 'white');
 document.documentElement.style .setProperty('--footer-text-color', 'black');
 
 document.documentElement.style .setProperty('--h1-color', 'black');

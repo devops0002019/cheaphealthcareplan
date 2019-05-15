@@ -10,19 +10,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equestionuiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="author" content="Cheap Healthcare Plan">
 
     <meta name="description"
-        content="cheaphealthcareplan.com help individuals to find great online insurance quotes an affordable price">
+        content="cheaphealthcareplan.com help individuals to find great online insurance questionuotes an affordable price">
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpquestion+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nquestionUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
 
     <!-- UI3 -->
     <link rel="stylesheet" href="css/ui3-1.0.min.css">
@@ -30,46 +31,56 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/stylesheet.css">
 
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Jquestionuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquestionuery/2.1.1/jquestionuery.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140250626-1"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-140250626-1');
+    </script>
 
 </head>
 
 <body>
 
+    <nav id="navbar">
+        <div class="menu flex-center">
+            <h1><a class="brand" href="/"><span class="company-name"></span></a></h1>
+        </div>
+    </nav>
+
     <main id="page" style="background:#fafafa;">
 
-        <nav id="navbar">
-            <div class="menu flex-center">
-                <h1><a class="brand" href="/"><span class="company-name"></span></a></h1>
-            </div>
-        </nav>
-
-        <form method="POST" action="/thankyou.html" id="userInfo" name="userInfoSubmission" onsubmit="return false" data-netlify="true" data-netlify-recaptcha="true">
+        <form method="POST" action="/thankyou.html" id="userInfo" name="userInfoSubmission" onsubmit="return false"
+            data-netlify="true" data-netlify-recaptcha="true">
 
             <div class="progressbar">
                 <h3 id="status"><span class="percentage">1% <br /></span>Completed</h3>
                 <progress id="progressBar" value="0" max="100"></progress>
             </div>
 
-
-            <div class="animated slideInUp delay-0.1s" id="step1">
-
-
-
-                <p class="Q">What is your name?</p>
+            <div class="animated fadeIn delay-0.5s" id="step1">
+                <p class="question">What is your name?</p>
                 <input class="input" type="text" id="username" name="username" placeholder="Name" /> <br>
-                <button class="button" onclick="step1()">Next</button>
+                <button class="button animated fadeIn delay-0.8s" onclick="step1()">Next</button>
             </div>
 
-            <div class="animated slideInUp delay-0.1s" id="step2">
-                <p class="Q">What is your Email?</p>
+            <div class="animated fadeIn delay-0.5s" id="step2">
+                <p class="question">What is your Email?</p>
                 <input class="input" type="email" id="email" name="email" placeholder="Email" /> <br>
-                <button class="button" onclick="step2()">Next</button>
+                <button class="button animated fadeIn delay-0.5s" onclick="step2()">Next</button>
             </div>
 
-            <div class="animated slideInUp delay-0.1s" id="step3">
-                <p class="Q">What is your gender?</p>
+            <div class="animated fadeIn delay-0.5s" id="step3">
+                <p class="question">What is your gender?</p>
                 <div class="select" selected="selected" disabled>
                     <select id="gender" name="gender">
                         <option value="">Select One</option>
@@ -77,11 +88,11 @@
                         <option value="Female">Female</option>
                     </select>
                 </div>
-                <button class="button" onclick="step3()">Next</button>
+                <button class="button animated fadeIn delay-0.5s" onclick="step3()">Next</button>
             </div>
 
-            <div class="animated slideInUp delay-0.1s" id="step4">
-                <p class="Q">When would you like coverage?</p>
+            <div class="animated fadeIn delay-0.5s" id="step4">
+                <p class="question">When would you like coverage?</p>
                 <div class="select" selected="selected" disabled>
                     <select id="cover" name="cover">
                         <option value="">Select One</option>
@@ -90,11 +101,11 @@
                         <option value="Not Sure">Not Sure</option>
                     </select>
                 </div>
-                <button class="button" onclick="step4()">Next</button>
+                <button class="button animated fadeIn delay-0.5s" onclick="step4()">Next</button>
             </div>
 
-            <div class="animated slideInUp delay-0.1s" id="step5">
-                <p class="Q">What is your total household income?</p>
+            <div class="animated fadeIn delay-0.5s" id="step5">
+                <p class="question">What is your total household income?</p>
                 <div class="select" selected="selected" disabled>
                     <select id="income" name="income">
                         <option value="">Select One</option>
@@ -104,51 +115,56 @@
                         <option value="$0 - $16,000">$0 - $16,000</option>
                     </select>
                 </div>
-                <button class="button" onclick="step5()">Next</button>
+                <button class="button animated fadeIn delay-0.5s" onclick="step5()">Next</button>
             </div>
 
+            <ul id="show_all_data">
 
-            <!-- </div> -->
+                <li>
+                    <span>Name: </span>
+                    <span id="display_username"></span>
+                </li>
 
+                <li>
+                    <span>Email: </span>
+                    <span id="display_email"></span>
+                </li>
 
-            <table id="show_all_data">
-                <tr>
-                    <td>Name: </td>
-                    <td><span id="display_username"></span></td>
-                </tr>
-                <tr>
-                    <td>Email: </td>
-                    <td><span id="display_email"></span></td>
-                </tr>
-                <tr>
-                    <td>Gender: </td>
-                    <td><span id="display_gender"></span></td>
-                </tr>
-                <tr>
-                    <td>Start Coverage: </td>
-                    <td><span id="display_cover"></span></td>
-                </tr>
-                <tr>
-                    <td>Year Income: </td>
-                    <td><span id="display_income"></span></td>
-                </tr>
-                <tr>
-                    <td><button class="submit" type="submit" onclick="submitForm()">Submit</button></td>
-                    <td>
-                        <div data-netlify-recaptcha="true"></div>
-                    </td>
-                </tr>
-            </table>
+                <li>
+                    <span>Gender: </span>
+                    <td><span id="display_gender"></span>
+                </li>
+
+                <li>
+                    <span>Start Coverage: </span>
+                    <span id="display_cover"></span>
+                </li>
+
+                <li>
+                    <span>Year Income: </span>
+                    <span id="display_income"></span>
+                </li>
+
+                <div class="submission">
+
+                    <button class="submit animated fadeIn delay-1s" type="submit" onclick="submitForm()">Submit</button>
+                    <br>
+                    <div data-netlify-recaptcha="true"></div>
+
+                </div>
+
+            </ul>
 
         </form>
 
     </main>
 
-    <footer id="footer">
-        <div class="footer">
+    <footer>
+        <div id="footer">
             <div class="grid set-cols-1">
                 <div class="column flex-center">
-                    <h2 class="copyright"> <span class="company-name"></span> <span id="year"></span>. All rights reserved </h2>
+                    <h2 class="copyright"> <a href="/" class="company-name"></a> <span id="year"></span>. All rights
+                        reserved </h2>
                     <script>
                         document.getElementById("year").innerHTML = new Date().getFullYear();
                     </script>
@@ -158,9 +174,6 @@
     </footer>
 
 </body>
-
-
-
 
 <script src="js/scripts.js"></script>
 

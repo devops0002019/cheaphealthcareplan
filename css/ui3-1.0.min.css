@@ -545,38 +545,10 @@ main classes and subclasses
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .menu {
     width: 100%;
     margin: auto;
 	max-width: var(--page-max-width);
-	
 }
 
 nav {
@@ -590,17 +562,8 @@ nav {
 }
 
 [id*="navbar"] {
-	/* padding: 1em; */
-}
-
-[id*="navbar"] {
     color:var(--navbar-text-color);
 }
-
-
-
-
-
 
 
 b {
@@ -800,16 +763,17 @@ color:#262626;
 
 /* footer */
 footer {
+	width: 100%;
+	max-width: 100%;
     padding: 32px 0px;
     color: #000;
-    background: var(--footer-background);
-
+	background:var(--footer-background);
+	color:var(--footer-text-color);
 }
 #footer {
 	padding: 128px 0px;
     margin: auto;
     max-width: var(--page-max-width);
-    color:var(--footer-text-color);
     width: 100%;
 }
 
@@ -838,6 +802,9 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
+
+
+
 #year {
     font-size: 16px;
     color:var(--footer-text-color);

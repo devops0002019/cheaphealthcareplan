@@ -1,4 +1,4 @@
-
+/* General */
 .company-name {
     font-size: 1em !important;
     --company-name: 'Cheap Healthcare Plan';
@@ -6,15 +6,140 @@
 
 .company-name:after {
     content: var(--company-name) !important;
-} 
+}
+
+.button {
+    opacity: 7;
+    /* animation: fadebtn 3s linear; */
+    margin-top: 1em;
+    float: right;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* home.html */
+
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 768px;
+}
+
+[class*="column"].intro>div {
+    margin: 32px 0px !important;
+}
+
+.ridirect {
+    box-shadow: var(--shadow);
+    background: #fff;
+}
+
+.ridirect:hover {
+    opacity: 9;
+    -webkit-box-shadow: 0 0 64px rgba(33, 33, 33, .2);
+    box-shadow: 0 0 64px rgba(33, 33, 33, .2);
+}
+.press {
+    max-width: 200px !important;
+}
+
+.cards {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* form.html */
+
+.question {
+    color: var(--primary);
+    font-size: 3em;
+}
 
 
+
+
+/* User Form */
+
+form#userInfo>#show_all_data,
+#step2,
+#step3,
+#step4,
+#step5 {
+    display: none;
+}
+
+
+#userInfo {
+    min-height: 500px;
+    max-width: 768px;
+    width: 100%;
+    padding: 2em;
+    background: #ffff;
+    box-shadow: var(--shadow);
+    margin:32px 0px;
+}
+
+#userInfo input {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#show_all_data {
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* flex-direction: column; */
+ 
+}
+
+#show_all_data li {
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    border:1px solid #d0d0d093;
+}
+
+#show_all_data span {
+    width:100%;
+    text-indent: 0.5em;
+}
+#show_all_data li:nth-of-type(odd) {
+    background: #fafafa;
+}
+#show_all_data li:nth-of-type(even) {
+    background: #dcdbdb;
+}
+
+#show_all_data span:nth-child(1) {
+    border-right:1px solid #c9c9c9;
+    font-weight: 600;
+}
+
+.submission {
+margin:64px 0px;
+
+}
+.submission button {
+    border-radius: 4px;
+    color:#fff;
+}
+
+/* thankyou.html */
 
 .thankyou {
     max-width: 1028px;
 }
 
 
+
+
+/* Form Elements */
 
 select:focus,
 input:focus {
@@ -47,152 +172,6 @@ input:focus {
 .input-radio label:hover {
     background: var(--quaternary) !important;
 }
-
-[class*="header"] {
-    width: 100%;
-    max-width: 1024px;
-}
-[class*="column"].insurance101>div {
-    margin: 32px 0px !important;
-}
-
-[class*="column"].header-insurance101 {
-    --insert-padding: 32px;
-    --insert-box-shadow: var(--shadow);
-
-    --fa-text-shadow: 1px 1px #000;
-    --fa-margin: 0em !important;
-}
-
-.callaction {
-    box-shadow:var(--shadow);
-    background: #fff;
-}
-
-.callaction:hover {
-    opacity: 9;
-    -webkit-box-shadow: 0 0 64px rgba(33, 33, 33, .2);
-    box-shadow: 0 0 64px rgba(33, 33, 33, .2);
-}
-
-.small-img {
-    max-width: 200px !important;
-}
-
-
-.wrapper {
-    z-index: 999999999 !important;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    padding: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-
-
-#footer {
-    max-width: 100%;
-    width:100%;
-    bottom: -32%;
-    left: 0;
-    right: 0;
-}
-
-
-
-
-
-
-form#userInfo>#show_all_data,
-#step2,
-#step3,
-#step4,
-#step5 {
-    display: none;
-}
-
-
-#page {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 768px;
-}
-
-#userInfo {
-    min-height: 400px;
-    max-width: 768px;
-    width: 100%;
-    margin: auto;
-    padding: 2em;
-    background: #ffff;
-    box-shadow: var(--shadow);
-}
-
-#userInfo input {
-    width: 100%;
-    padding: 1em;
-    margin: 1em 0;
-    background: #fafafa;
-    border: none;
-    border-bottom: 1px solid #ddd;
-}
-
-.button {
-    opacity: 7;
-    animation: fadebtn 3s linear;
-
-}
-
-@keyframes fadebtn {
-
-    0% {
-        opacity: 0
-    }
-
-    10% {
-        opacity: 0
-    }
-
-    20% {
-        opacity: 0
-    }
-
-    30% {
-        opacity: 0
-    }
-
-    40% {
-        opacity: 1
-    }
-
-    50% {
-        opacity: 5
-    }
-
-    100% {
-        opacity: 9
-    }
-}
-
-
-
-
-p.Q {
-    color: var(--primary);
-    font-size: 3em;
-}
-
-
-
 
 .select {
     position: relative;
@@ -253,29 +232,6 @@ p.Q {
 }
 
 
-
-
-
-
-[id*="step"] button {
-    margin-top: 1em;
-    float: right;
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 progress:after {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -315,7 +271,7 @@ progress::-webkit-progress-value {
     font-size: 2em;
     display: block;
     opacity: 1;
-    animation: fade 2s linear;
+    animation: fade 1s ease-in;
 }
 
 @keyframes fade {
@@ -348,26 +304,6 @@ progress::-webkit-progress-value {
     background: rgb(255, 255, 255);
     /* box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.119), 0 2px 5px 0px rgba(0, 0, 0, 0.064); */
 }
-
-
-
-
-
-.submit {
-    float: right;
-}
-
-#show_all_data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-
-
-
 
 
 .switch-field {
@@ -413,32 +349,4 @@ progress::-webkit-progress-value {
 
 .switch-field label:last-of-type {
     border-radius: 0 4px 4px 0;
-}
-
-
-
-
-
-
-
-.callaction {
-    box-shadow:var(--shadow);
-    background: #fff;
-}
-
-.callaction:hover {
-    opacity: 9;
-    -webkit-box-shadow: 0 0 64px rgba(33, 33, 33, .2);
-    box-shadow: 0 0 64px rgba(33, 33, 33, .2);
-}
-
-.small-img {
-    max-width: 200px !important;
-}
-
-
-
-.imgs img{
-    height: 300px;
-    object-fit: cover;
 }
