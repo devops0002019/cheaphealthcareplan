@@ -3,6 +3,7 @@
 .company-name {
     font-size: 1em !important;
     --company-name: 'Cheap Healthcare Plan';
+    color:var(--primary);
 
 }
 

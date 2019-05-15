@@ -46,7 +46,7 @@
 
     --page-max-width: 1268px;
 	
-	--brand-color:#fff;
+	--brand-color:rgb(255, 255, 255);
 
     --header-background:#00577d;
 	--header-text-color:#fff;
@@ -137,7 +137,7 @@ a.brand > * {
 	font-style: italic;
 }
 
-a.brand {
+.brand a{
 	text-align: center;
     color:var(--brand-color) !important;
 }
@@ -371,6 +371,41 @@ a.brand {
 
 
 
+/* nav */
+
+nav {
+	color:var(--navbar-text-color);
+	background: var(--navbar-background)
+}
+
+#navbar {
+	padding: 1em 0;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	max-width: var(--page-max-width);
+	color:var(--navbar-text-color);
+	background: var(--navbar-background)
+}
+
+.brand {
+	font-size: 19px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	.brand {
+		font-size: 3vw;
+	}
+}
+@media only screen and (min-width: 1268px) {
+	.brand {
+		font-size: 2em;
+	}
+}
+
+
 /* header */
 #header {
 	background: var(--header-background)!important;
@@ -558,24 +593,14 @@ main classes and subclasses
 }
 
 
-nav {
-	color:var(--navbar-text-color);
-	background: var(--navbar-background)
-}
 
-#navbar {
-	padding: 1em 0;
-	width: 100%;
-	margin: auto;
-	text-align: center;
-	max-width: var(--page-max-width);
-	color:var(--navbar-text-color);
-	background: var(--navbar-background)
-}
+
+
+
 
 
 b {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -773,13 +798,12 @@ color:#262626;
 footer {
 	width: 100%;
 	max-width: 100%;
-    padding: 32px 0px;
     color: #000;
 	background:var(--footer-background);
 	color:var(--footer-text-color);
 }
 #footer {
-	padding: 128px 0px;
+	padding: 3em 0px;
     margin: auto;
     max-width: var(--page-max-width);
     width: 100%;
