@@ -1,7 +1,6 @@
 @import url('default.css');
 @import url('animated.css');
 
-
 :root {
     --primary: #00577d;
     --secondary: #fafafa;
@@ -56,10 +55,7 @@
 	
     --footer-background:#fafafa;
 	--footer-text-color:#000;
-	
 }
-
-
 
 *,
 *::after,
@@ -191,12 +187,6 @@ a.brand > * {
     --bg-gradient-7: linear-gradient(to right, rgba(0, 1, 2, 0.78), rgba(0, 0, 0, 0.81), rgba(5, 6, 13, 0.72));
 
 }
-
-
-
-
-
-
 
 
 [class*="cmp"].layout-start {
