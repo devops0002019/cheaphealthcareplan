@@ -45,7 +45,7 @@
     max-width: 200px !important;
 }
 
-.cards {
+.cards img{
     height: 300px;
     object-fit: cover;
 }
