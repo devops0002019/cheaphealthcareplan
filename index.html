@@ -33,6 +33,18 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/stylesheet.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140250626-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-140250626-1');
+    </script>
+
+
 </head>
 
 
@@ -190,7 +202,8 @@
         <div class="footer">
             <div class="grid set-cols-1">
                 <div class="column flex-center text-center">
-                    <h2 class="copyright"> Copyright<a href="/#"> <span class="company-name"></span></a>. All rights reserved
+                    <h2 class="copyright"> Copyright<a href="/#"> <span class="company-name"></span></a>. All rights
+                        reserved
                         <span id="year"></span> </h2>
                     <script>
                         document.getElementById("year").innerHTML = new Date().getFullYear();
