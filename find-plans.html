@@ -20,6 +20,8 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
 
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- UI3 -->
     <link rel="stylesheet" href="css/ui3-1.0.min.css">
@@ -49,14 +51,14 @@
 
     <nav id="navbar">
         <div class="menu flex-center">
-            <h1><a class="brand" href="/"><span class="company-name"></span></a></h1>
+            <h1><a href="/"><span class="company-name"></span></a></h1>
         </div>
     </nav>
 
-    <main id="page" style="background:#fafafa;">
+    <main id="page">
 
         <form method="POST" action="/thankyou.html" id="userInfo" name="userInfoSubmission" onsubmit="return false"
-            data-netlify="true" data-netlify-recaptcha="true">
+            data-netlify="true" data-netlify-recaptcha="true" autocomplete="off">
 
             <div class="progressbar">
                 <h3 id="status"><span class="percentage">1% <br /></span>Completed</h3>
@@ -66,7 +68,7 @@
             <div class="animated fadeIn delay-0.5s" id="step1">
                 <p class="question">What is your name?</p>
                 <input class="input" type="text" id="username" name="username" placeholder="Name" /> <br>
-                <button class="button animated fadeIn delay-0.8s" onclick="step1()">Next</button>
+                <button class="button animated fadeIn delay-0.8s" onclick="step1()"><i class="fas fa-arrow-circle-right"></i></button>
             </div>
 
             <div class="animated fadeIn delay-0.5s" id="step2">

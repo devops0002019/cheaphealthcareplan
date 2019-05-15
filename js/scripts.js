@@ -5,14 +5,17 @@
     function step1() {
         username = _("username").value;
         if (username.length > 2) {
-            error("rgb(255, 255, 255)");
             _("step1").style.display = "none";
             _("step2").style.display = "block";
             _("progressBar").value = 10;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;
+
             console.log("username is up and running");
+            error("rgb(255, 255, 255)");
             return true;
+
         } else {
+
             error("rgb(189, 87, 87)");
             console.log("username is NOT up and running");
             alert('Plase type your name')
@@ -27,9 +30,13 @@
             _("step3").style.display = "block";
             _("progressBar").value = 20;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
+
+            error("rgb(255, 255, 255)");
             console.log("email is up and running");
             return validemail.test(email);
+
         } else {
+
             error("rgb(189, 87, 87)");
             console.log("email is NOT up and running");
             return false;
@@ -42,13 +49,18 @@
             _("step4").style.display = "block";
             _("progressBar").value = 30;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+
+            error("rgb(255, 255, 255)");
             console.log("gender is up and running");
             return true;
+
         } else {
+
             error("rgb(189, 87, 87)");
             console.log("gender is NOT up and running");
             alert('Plase select one option')
             return false;
+
         }
     }
     function step4() {
@@ -56,12 +68,15 @@
         if (cover.length > 0) {
             _("step4").style.display = "none";
             _("step5").style.display = "block";
-
             _("progressBar").value = 40;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
+
+            error("rgb(255, 255, 255)");
             console.log("cover is up and running");
             return true;
+
         } else {
+
             error("rgb(189, 87, 87)");
             console.log("cover is NOT up and running");
             alert('Plase select one option')
@@ -80,9 +95,13 @@
             _("display_income").innerHTML = income;
             _("progressBar").value = 50;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">50% <br /></span>Completed</h3>`;
+
+            error("rgb(255, 255, 255)");
             console.log("income is up and running");
             return true;
+            
         } else {
+
             error("rgb(189, 87, 87)");
             console.log("income is NOT up and running");
             alert('Plase select one option')

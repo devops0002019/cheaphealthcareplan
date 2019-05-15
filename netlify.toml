@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/form.html"
-to = "/form-application"
-status = 301
-force = false

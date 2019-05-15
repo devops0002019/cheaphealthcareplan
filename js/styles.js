@@ -5,8 +5,8 @@ document.documentElement.style .setProperty('--quaternary', '#0903cf');
 document.documentElement.style .setProperty('--border', '#d8d8d8');
 document.documentElement.style .setProperty('--page-max-width', '1268px');
 
-document.documentElement.style .setProperty('--navbar-background', 'var(--white)');
-document.documentElement.style .setProperty('--navbar-text-color', 'var(--primary)');
+// document.documentElement.style .setProperty('--navbar-background', 'var(--white)');
+// document.documentElement.style .setProperty('--navbar-text-color', 'var(--primary)');
 
 document.documentElement.style .setProperty('--header-background', '#fafafa');
 document.documentElement.style .setProperty('--header-text-color', '#000');

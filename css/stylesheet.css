@@ -1,7 +1,9 @@
 /* General */
+
 .company-name {
     font-size: 1em !important;
     --company-name: 'Cheap Healthcare Plan';
+    color:var(--primary);
 }
 
 .company-name:after {
@@ -87,7 +89,16 @@ form#userInfo>#show_all_data,
     margin: 1em 0;
     background: #fafafa;
     border: none;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid rgba(221, 221, 221, 0.406);
+    box-shadow:var(--shadow);
+}
+
+#userInfo input:focus ,
+#userInfo input:active {
+    -webkit-box-shadow: 0px 0px 8px 4px var(--primary);
+    -moz-box-shadow: 0px 0px 8px 4px  var(--primary);
+    box-shadow: 0px 0px 8px 4px  var(--primary);
+    outline: 0;
 }
 
 ul#show_all_data {
@@ -132,13 +143,9 @@ margin:64px 0px;
 }
 
 
+
 /* select */
-
-select:focus,
-input:focus {
-    background: #e8e8e8;
-}
-
+ 
 .select {
     position: relative;
 
@@ -151,7 +158,7 @@ input:focus {
 .select-selected {
     height: 3em;
 
-    background-color: var(--blue);
+    background-color:var(--primary);
 }
 
 .select-selected:after {
@@ -184,7 +191,7 @@ input:focus {
 
 .select-items {
     position: absolute;
-    background-color: rgb(0, 128, 255);
+    background-color: rgb(0, 38, 75);
     top: 100%;
     left: 0;
     right: 0;
@@ -269,49 +276,3 @@ progress::-webkit-progress-value {
         opacity: 9
     }
 }
-
-/* radio */
-/* .switch-field {
-    display: flex;
-    margin-bottom: 36px;
-    overflow: hidden;
-}
-
-.switch-field input {
-    position: absolute !important;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    width: 1px;
-    border: 0;
-    overflow: hidden;
-}
-
-.switch-field label {
-    background-color: #e4e4e4;
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    padding: 8px 16px;
-    margin-right: -1px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-    transition: all 0.1s ease-in-out;
-}
-
-.switch-field label:hover {
-    cursor: pointer;
-}
-
-.switch-field input:checked+label {
-    background-color: #a5dc86;
-    box-shadow: none;
-}
-
-.switch-field label:first-of-type {
-    border-radius: 4px 0 0 4px;
-}
-
-.switch-field label:last-of-type {
-    border-radius: 0 4px 4px 0;
-} */

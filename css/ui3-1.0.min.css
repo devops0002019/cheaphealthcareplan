@@ -46,12 +46,14 @@
 
     --page-max-width: 1024px;
 
-    --seo-page-title-color:#000;
+	--seo-page-title-color:#000;
+	
+	--brand-color:#fff;
 
     --header-background:#fafafa;
-    --header-text-color:#000;
-    --navbar-background::#fafafa;
-    --navbar-text-color:#000;
+    --header-text-color:#fff;
+    --navbar-background: #fff;
+    --navbar-text-color:#fff;
     --footer-background::#fafafa;
 	--footer-text-color:#000;
 	
