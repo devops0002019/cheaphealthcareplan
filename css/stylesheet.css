@@ -167,7 +167,7 @@ margin:64px 0px;
 .select-selected:after {
     position: absolute;
     content: "";
-    top: 20px;
+    top: 26px;
     right: 10px;
     width: 0;
     height: 0;
@@ -194,7 +194,7 @@ margin:64px 0px;
 
 .select-items {
     position: absolute;
-    background-color: rgb(1, 78, 155);
+    background-color: #0076a9;
     top: 100%;
     left: 0;
     right: 0;
@@ -207,7 +207,7 @@ margin:64px 0px;
 
 .select-items div:hover,
 .same-as-selected {
-    background-color: rgba(0, 13, 89, 0.454);
+    background-color: #00577d;
 }
 
 
