@@ -18,6 +18,3 @@ document.documentElement.style .setProperty('--h1-color', 'black');
 document.documentElement.style .setProperty('--h2-color', '#000');
 document.documentElement.style .setProperty('--h3-color', '#262626');
 document.documentElement.style .setProperty('--seo-page-title-color', 'blue');
-
-
-
