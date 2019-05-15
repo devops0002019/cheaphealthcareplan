@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/form.html"
+to = "/form-application.com"
+status = 301
+force = false
