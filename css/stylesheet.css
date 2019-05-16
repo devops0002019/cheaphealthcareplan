@@ -258,14 +258,14 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    /* width:0 %; */
-    border-radius: 12px;
-    background: var(--primary) !important;
-    box-shadow: inset 0 -2px 4px var(--primary), 0 2px 5px 0px var(--primary);
+    transition: width 1s ease-in-out !important;
 }
 
 progress::-webkit-progress-value {
-    transition: width 2s ease !important;
+    width:auto;
+    border-radius: 12px;
+    background: var(--primary) !important;
+    box-shadow: inset 0 -2px 4px var(--primary), 0 2px 5px 0px var(--primary);
 }
 
 @keyframes fade {
