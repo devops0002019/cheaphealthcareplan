@@ -85,6 +85,7 @@ form#userInfo>#show_all_data,
     background: #ffff;
     box-shadow: var(--shadow);
     margin: 32px 0px;
+    font-family: 'PT Serif', serif;
 }
 
 #userInfo input {
@@ -230,9 +231,19 @@ ul#show_all_data {
 .percentage {
     font-size: 2em;
     opacity: 1;
-    animation: fade 1s ease-in;
+    /* animation: fade 1s ease-in; */
 }
-
+/* @keyframes fade {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 9
+    }
+} */
 progress:after {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -241,7 +252,7 @@ progress:after {
 
 progress::-moz-progress-bar {
     border-radius: 12px;
-    background: #00577d;
+    background: var(--primar);
     box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -258,7 +269,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    transition: width 1s ease-in-out !important;
+    transition: width 1.4s ease-in-out !important;
 }
 
 progress::-webkit-progress-value {
@@ -268,22 +279,7 @@ progress::-webkit-progress-value {
     box-shadow: inset 0 -2px 4px var(--primary), 0 2px 5px 0px var(--primary);
 }
 
-@keyframes fade {
 
-    0% {
-        opacity: 0
-    }
-
-
-    50% {
-        opacity: 1
-    }
-
-
-    100% {
-        opacity: 9
-    }
-}
 
 
 

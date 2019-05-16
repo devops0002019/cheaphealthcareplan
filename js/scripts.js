@@ -1,92 +1,254 @@
-    var username, email, gender, cover, income;
+    // form
+
+    var coverage, family, program, income, enrolled, gender, birth, tabaco, spouse;
+
     function _(id) {
         return document.getElementById(id);
     }
+
     function step1() {
-        username = _("username").value;
-        if (username.length > 2) {
+        coverage = _("coverage").value;
+        if (coverage.length > 0) {
             _("step1").style.display = "none";
             _("step2").style.display = "block";
             _("progressBar").value = 10;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;
-
-            console.log("username is up and running");
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;             
             error("rgb(255, 255, 255)");
+            console.log("coverage is up and running");
             return true;
 
         } else {
 
             error("rgb(189, 87, 87)");
-            console.log("username is NOT up and running");
-            alert('Plase type your name')
+            console.log("coverage is NOT up and running");
+            alert('Plase select one option')
             return false;
+
         }
     }
+
     function step2() {
-        email = _("email").value;
-        var validemail = /\S+@\S+/;
-        if (email.length > 0) {
+        family = _("family").value;
+        if (family.length > 0) {
             _("step2").style.display = "none";
             _("step3").style.display = "block";
             _("progressBar").value = 20;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
-            console.log("email is up and running");
-            return validemail.test(email);
-
+            console.log("family is up and running");
+            return true;
         } else {
-
             error("rgb(189, 87, 87)");
-            console.log("email is NOT up and running");
+            console.log("family is NOT up and running");
+            alert('Plase select one option')
             return false;
+
         }
     }
+
+
     function step3() {
-        gender = _("gender").value;
-        if (gender.length > 0) {
+        program = _("program").value;
+        if (program.length > 0) {
             _("step3").style.display = "none";
             _("step4").style.display = "block";
             _("progressBar").value = 30;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
-            console.log("gender is up and running");
+            console.log("program is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
-            console.log("gender is NOT up and running");
+            console.log("program is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
+
     function step4() {
-        cover = _("cover").value;
-        if (cover.length > 0) {
-            _("step4").style.display = "none";
-            _("step5").style.display = "block";
-            _("progressBar").value = 40;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
-
-            error("rgb(255, 255, 255)");
-            console.log("cover is up and running");
-            return true;
-
-        } else {
-
-            error("rgb(189, 87, 87)");
-            console.log("cover is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-    }
-    function step5() {
         income = _("income").value;
         if (income.length > 0) {
-            _("step5").style.display = "none";
+            _("step3").style.display = "none";
+            _("step4").style.display = "block";
+            _("progressBar").value = 40;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("income is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("income is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+
+    function step5() {
+
+        enrolled = _("enrolled").value;
+        if (enrolled.length > 0) {
+            _("step3").style.display = "none";
+            _("step4").style.display = "block";
+            _("progressBar").value = 50;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">50% <br /></span>Completed</h3>`;
+
+            error("rgb(255, 255, 255)");
+            console.log("enrolled is up and running");
+            return true;
+
+        } else {
+
+            error("rgb(189, 87, 87)");
+            console.log("enrolled is NOT up and running");
+            alert('Plase select one option')
+            return false;
+
+        }
+    }
+
+    // function step6() {
+
+    //     gender = _("gender").value;
+
+    //     if (gender.length > 0) {
+    //         _("step3").style.display = "none";
+    //         _("step4").style.display = "block";
+    //         _("progressBar").value = 30;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("gender is up and running");
+    //         return true;
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("gender is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+
+    //     }
+    // }
+
+    // function step7() {
+
+    //     birth = _("birth").value;
+    //     if (birth.length > 0) {
+    //         _("step3").style.display = "none";
+    //         _("step4").style.display = "block";
+    //         _("progressBar").value = 30;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("birth is up and running");
+    //         return true;
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("birth is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+
+    //     }
+    // }
+
+
+    // function step8() {
+
+    //     spouse = _("spouse").value;
+    //     if (spouse.length > 0) {
+    //         _("step3").style.display = "none";
+    //         _("step4").style.display = "block";
+    //         _("progressBar").value = 30;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("spouse is up and running");
+    //         return true;
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("spouse is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+
+    //     }
+    // }
+
+
+
+
+
+
+
+    // function step2() {
+    //     email = _("email").value;
+    //     var validemail = /\S+@\S+/;
+    //     if (email.length > 0) {
+    //         _("step2").style.display = "none";
+    //         _("step3").style.display = "block";
+    //         _("progressBar").value = 20;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("email is up and running");
+    //         return validemail.test(email);
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("email is NOT up and running");
+    //         return false;
+    //     }
+    // }
+    // function step3() {
+    //     gender = _("gender").value;
+    //     if (gender.length > 0) {
+    //         _("step3").style.display = "none";
+    //         _("step4").style.display = "block";
+    //         _("progressBar").value = 30;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("gender is up and running");
+    //         return true;
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("gender is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+
+    //     }
+    // }
+    // function step4() {
+    //     cover = _("cover").value;
+    //     if (cover.length > 0) {
+    //         _("step4").style.display = "none";
+    //         _("step5").style.display = "block";
+    //         _("progressBar").value = 40;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("cover is up and running");
+    //         return true;
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("cover is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+    //     }
+    // }
+    function step9() {
+        income = _("income").value;
+        if (income.length > 0) {
+            _("step9").style.display = "none";
             _("show_all_data").style.display = "block";
             _("display_username").innerHTML = username;
             _("display_email").innerHTML = email;
@@ -112,8 +274,6 @@
         document.body.style.background = color;
     }
     function submitForm() {
-        // _("userInfo").method = "GET";
-        // _("userInfo").action = "/thankyou.html";
         _("userInfo").submit();
             console.log("Form Submitted");
         return true;
@@ -127,6 +287,7 @@
 
 
 
+// select tag
 
 var x, i, j, selElmnt, a, b, c;
 x = document.getElementsByClassName("select");
@@ -192,6 +353,7 @@ document.addEventListener("click", closeAllSelect);
 
 
 
+// loader
 
 $(document).ready(function() {
 	

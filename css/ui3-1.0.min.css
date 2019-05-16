@@ -791,6 +791,7 @@ footer {
     color: #000;
 	background:var(--footer-background);
 	color:var(--footer-text-color);
+	text-align: center;
 }
 #footer {
 	padding: 3em 0px;
@@ -799,12 +800,7 @@ footer {
     width: 100%;
 }
 
-#footer h5 {
-    margin: 16px 0;
-    color:var(--footer-text-color);
-    opacity: 9;
-}
-
+ 
 #footer ul.menu-list[class*="column"] {
     --insert-padding:1028px !important;
 }

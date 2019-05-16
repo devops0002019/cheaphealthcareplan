@@ -48,21 +48,12 @@
         gtag('js', new Date());
         gtag('config', 'UA-140250626-1');
     </script>
-
-
-<!--[if lt IE 7]>
+    <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
-
-
-    <style>
-       
-    </style>
-
 </head>
 
 <body>
-
 
     <nav>
         <h1 id="navbar" class="brand"><a href="/">Cheap Healthcare Plan</a></h1>
@@ -81,10 +72,102 @@
 
             <div class="progressbar">
                 <h3 id="status"><span class="percentage">1% <br /></span>Completed</h3>
-                <progress id="progressBar" value="0" max="100"></progress>
+                <progress class="animated fadeIn delay-0.5s" id="progressBar" value="0" max="100"></progress>
             </div>
 
+
             <div class="animated fadeIn delay-0.5s" id="step1">
+                <p class="question">When would you like coverage?</p>
+                <div class="select" selected="selected" disabled>
+                    <select id="coverage" name="coverage">
+                        <option value="">Select One</option>
+                        <option value="Immediately">Immediately</option>
+                        <option value="Within 2 months">Within 2 months</option>
+                        <option value="Not sure">Not sure</option>
+                    </select>
+                </div>
+                <button class="button animated fadeIn delay-0.5s" onclick="step1()">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </button>
+            </div>
+
+
+            <div class="animated fadeIn delay-0.5s" id="step2">
+                <p class="question">Are you looking for Individual or Family Coverage?</p>
+                <div class="select" selected="selected" disabled>
+                    <select id="family" name="family">
+                        <option value="">Select One</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Family">Family</option>
+                    </select>
+                </div>
+                <button class="button animated fadeIn delay-0.5s" onclick="step2()">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </button>
+            </div>
+
+
+
+
+            <div class="animated fadeIn delay-0.5s" id="step3">
+                    <p class="question">Are you on Disability, Medicaid or Medicare?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="program" name="program">
+                            <option value="">Select One</option>
+                            <option value="Neither">Neither</option>
+                            <option value="Disability">Disability</option>
+                            <option value="Medicaid">Medicaid</option>
+                            <option value="Medicare">Medicare</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step3()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+
+
+            <div class="animated fadeIn delay-0.5s" id="step4">
+                    <p class="question">What is your total household income?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="income" name="income">
+                            <option value="">Select One</option>
+                            <option value="+$47,000">+$47,000</option>
+                            <option value="$30,000 - $47,000">$30,000 - $47,000</option>
+                            <option value="$16,000 - $30,000">$16,000 - $30,000</option>
+                            <option value="0 - $16,000">0 - $16,000</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step4()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+
+
+
+                <div class="animated fadeIn delay-0.5s" id="step5">
+                        <p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
+                        <div class="select" selected="selected" disabled>
+                            <select id="enrolled" name="enrolled">
+                                <option value="">Select One</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Unsure">Unsure</option>
+                            </select>
+                        </div>
+                        <button class="button animated fadeIn delay-0.5s" onclick="step5()">
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </button>
+                    </div>
+        
+    
+
+
+
+
+
+
+
+            <!-- <div class="animated fadeIn delay-0.5s" id="step1">
                 <p class="question">What is your name?</p>
                 <input class="input" type="text" id="username" name="username" placeholder="Name" /> <br>
                 <button class="button animated fadeIn delay-0.8s" onclick="step1()"><i
@@ -107,8 +190,7 @@
                         <option value="Female">Female</option>
                     </select>
                 </div>
-                <button class="button animated fadeIn delay-0.5s" onclick="step3()"><i
-                        class="fas fa-arrow-circle-right"></i></button>
+                <button class="button animated fadeIn delay-0.5s" onclick="step3()"><i class="fas fa-arrow-circle-right"></i></button>
             </div>
 
             <div class="animated fadeIn delay-0.5s" id="step4">
@@ -138,7 +220,7 @@
                 </div>
                 <button class="button animated fadeIn delay-0.5s" onclick="step5()"><i
                         class="fas fa-arrow-circle-right"></i></button>
-            </div>
+            </div> -->
 
             <ul id="show_all_data">
 
