@@ -1,5 +1,4 @@
     // form
-
     var coverage, family, program, income, enrolled, gender, tabacco, birth, spouse, zip, firstName,lastName, email, phone;
 
     function _(id) {
@@ -150,8 +149,6 @@
         }
     }
 
-
-
     function step9() {
         spouse = _("spouse").value;
         if (spouse.length > 0) {
@@ -170,11 +167,9 @@
         }
     }
 
-
     function step10() {
         zip = _("zip").value;
         if (zip.length > 0) {
-
             _("step10").style.display = "none";
             _("step11").style.display = "block";
             _("progressBar").value = 80;
@@ -190,14 +185,10 @@
         }
     }
 
-
     function step11() {
         firstName = _("firstName").value;
         lastName = _("lastName").value;
-
-        
         if (firstName.length > 0 && lastName.length > 0) {
-
             _("step11").style.display = "none";
             _("step12").style.display = "block";
             _("progressBar").value = 80;
@@ -235,7 +226,6 @@
     function step13() {
         phone = _("phone").value;
         if (phone.length > 0) {
-
             _("step13").style.display = "none";
             _("userData").style.display = "block";
             _("userCoverage").innerHTML = coverage;
@@ -247,22 +237,17 @@
             _("userTabacco").innerHTML = tabacco;
             _("userBirth").innerHTML = birth;
             _("userSpouse").innerHTML = spouse;
-
             _("userZip").innerHTML = zip;
             _("userFirstName").innerHTML = firstName;
             _("userLastName").innerHTML = lastName;
             _("userEmail").innerHTML = email;
             _("userPhone").innerHTML = phone;
-
             _("progressBar").value = 100;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">100% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
             console.log("spouse gender is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
             console.log("income is NOT up and running");
             alert('Plase spouse gender one option')
@@ -277,42 +262,6 @@
             console.log("Form Submitted");
         return true;
     }
-
-
-
-
-
-
- // function step2() {
-    //     email = _("email").value;
-    //     var validemail = /\S+@\S+/;
-    //     if (email.length > 0) {
-    //         _("step2").style.display = "none";
-    //         _("step3").style.display = "block";
-    //         _("progressBar").value = 20;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
-
-    //         error("rgb(255, 255, 255)");
-    //         console.log("email is up and running");
-    //         return validemail.test(email);
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("email is NOT up and running");
-    //         return false;
-    //     }
-    // }
-
-
-
-
-
-
-
-
-
-
 
 // select tag
 
