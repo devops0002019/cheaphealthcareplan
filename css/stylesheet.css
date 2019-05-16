@@ -13,14 +13,6 @@
     content: var(--company-name) !important;
 }
 
-.button {
-    cursor: pointer;
-    opacity: 7;
-    margin-top: 1em;
-    float: right;
-    color: #fff;
-    border-radius: 4px;
-}
 
 /* home.html */
 
@@ -56,25 +48,40 @@
     object-fit: cover;
 }
 
-/* form.html */
-
-.question {
-    color: var(--primary);
-    font-size: 2.2em;
-}
 
 
 
 
 /* User Form */
 
-form#userInfo>#show_all_data,
+.info {
+    display:flex ; 
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+/* form#userInfo>#show_all_data,
 #step2,
 #step3,
 #step4,
 #step5 {
     display: none;
 }
+  */
+
+
+ #step1 {
+    display: block;
+}
+
+form#userInfo > #show_all_data,
+[id*="step"]{
+    display: none;
+}
+ 
+
+
 
 
 #userInfo {
@@ -133,6 +140,25 @@ ul#show_all_data {
     border-right: 1px solid #c9c9c9;
     font-weight: 600;
 }
+
+/* form.html */
+
+.question {
+    color: var(--primary);
+    font-size: 2.2em;
+    min-height:100px ;
+}
+
+.button {
+    align-self: flex-end;
+    cursor: pointer;
+    opacity: 7;
+    margin-top: 3em;
+    float: right;
+    color: #fff;
+    border-radius: 4px;
+}
+
 
 .submission {
     margin: 64px 0px;

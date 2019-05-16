@@ -77,39 +77,42 @@
 
 
             <div class="animated fadeIn delay-0.5s" id="step1">
-                <p class="question">When would you like coverage?</p>
-                <div class="select" selected="selected" disabled>
-                    <select id="coverage" name="coverage">
-                        <option value="">Select One</option>
-                        <option value="Immediately">Immediately</option>
-                        <option value="Within 2 months">Within 2 months</option>
-                        <option value="Not sure">Not sure</option>
-                    </select>
+                <div class="info">
+                    <p class="question">When would you like coverage?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="coverage" name="coverage">
+                            <option value="">Select One</option>
+                            <option value="Immediately">Immediately</option>
+                            <option value="Within 2 months">Within 2 months</option>
+                            <option value="Not sure">Not sure</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step1()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
                 </div>
-                <button class="button animated fadeIn delay-0.5s" onclick="step1()">
-                    <i class="fas fa-arrow-circle-right"></i>
-                </button>
             </div>
 
 
             <div class="animated fadeIn delay-0.5s" id="step2">
-                <p class="question">Are you looking for Individual or Family Coverage?</p>
-                <div class="select" selected="selected" disabled>
-                    <select id="family" name="family">
-                        <option value="">Select One</option>
-                        <option value="Individual">Individual</option>
-                        <option value="Family">Family</option>
-                    </select>
+                <div class="info">
+                    <p class="question">Are you looking for Individual or Family Coverage?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="family" name="family">
+                            <option value="">Select One</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Family">Family</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step2()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
                 </div>
-                <button class="button animated fadeIn delay-0.5s" onclick="step2()">
-                    <i class="fas fa-arrow-circle-right"></i>
-                </button>
             </div>
 
 
-
-
             <div class="animated fadeIn delay-0.5s" id="step3">
+                <div class="info">
                     <p class="question">Are you on Disability, Medicaid or Medicare?</p>
                     <div class="select" selected="selected" disabled>
                         <select id="program" name="program">
@@ -124,9 +127,11 @@
                         <i class="fas fa-arrow-circle-right"></i>
                     </button>
                 </div>
+            </div>
 
 
             <div class="animated fadeIn delay-0.5s" id="step4">
+                <div class="info">
                     <p class="question">What is your total household income?</p>
                     <div class="select" selected="selected" disabled>
                         <select id="income" name="income">
@@ -141,25 +146,64 @@
                         <i class="fas fa-arrow-circle-right"></i>
                     </button>
                 </div>
+            </div>
 
 
-
-                <div class="animated fadeIn delay-0.5s" id="step5">
-                        <p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
-                        <div class="select" selected="selected" disabled>
-                            <select id="enrolled" name="enrolled">
-                                <option value="">Select One</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                                <option value="Unsure">Unsure</option>
-                            </select>
-                        </div>
-                        <button class="button animated fadeIn delay-0.5s" onclick="step5()">
-                            <i class="fas fa-arrow-circle-right"></i>
-                        </button>
+            <div class="animated fadeIn delay-0.5s" id="step5">
+                <div class="info">
+                    <p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="enrolled" name="enrolled">
+                            <option value="">Select One</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Unsure">Unsure</option>
+                        </select>
                     </div>
-        
-    
+                    <button class="button animated fadeIn delay-0.5s" onclick="step5()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div class="animated fadeIn delay-0.5s" id="step6">
+                <div class="info">
+                    <p class="question">What is your gender?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="gender" name="gender">
+                            <option value="">Select One</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step6()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+             <div class="animated fadeIn delay-0.5s" id="step7">
+                <div class="info">
+                    <p class="question">Have you used Tobacco Products within the last 12 months?</p>
+                    <div class="select" selected="selected" disabled>
+                        <select id="tobacco" name="tobacco">
+                            <option value="">Select One</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <button class="button animated fadeIn delay-0.5s" onclick="step7()">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
 
 
 
@@ -222,42 +266,67 @@
                         class="fas fa-arrow-circle-right"></i></button>
             </div> -->
 
-            <ul id="show_all_data">
-
+            <!-- <ul id="userData">
                 <li>
-                    <span>Name: </span>
+                    <span>When would you like coverage?</span>
                     <span id="display_username"></span>
                 </li>
-
                 <li>
-                    <span>Email: </span>
+                    <span>Are you looking for Individual or Family Coverage?</span>
                     <span id="display_email"></span>
                 </li>
-
                 <li>
-                    <span>Gender: </span>
+                    <span>Are you on Disability, Medicaid or Medicare?</span>
                     <td><span id="display_gender"></span>
                 </li>
-
                 <li>
-                    <span>Start Coverage: </span>
+                    <span>What is your total household income?</span>
                     <span id="display_cover"></span>
                 </li>
-
                 <li>
-                    <span>Year Income: </span>
+                    <span>Are you currently enrolled in Medicare Parts A or B?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>What is your gender?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>What is your date of birth?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>Have you used Tobacco Products within the last 12 months?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>Are you looking to include your spouse in your Health Insurance plan?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>What is your spouse's gender?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>What is your spouse's date of birth?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>Has your spouse used tobacco products within the last 12 months?</span>
+                    <span id="display_income"></span>
+                </li>
+                <li>
+                    <span>Are you looking to include your children in your Health Insurance plan?</span>
                     <span id="display_income"></span>
                 </li>
 
                 <div class="submission">
-
                     <button class="submit animated fadeIn delay-1s" type="submit" onclick="submitForm()">Submit</button>
                     <br>
                     <div data-netlify-recaptcha="true"></div>
-
                 </div>
 
-            </ul>
+            </ul> -->
 
         </form>
 
