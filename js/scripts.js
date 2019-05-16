@@ -1,6 +1,6 @@
     // form
 
-    var coverage, family, program, income, enrolled, gender, tabacco, birth, spouse;
+    var coverage, family, program, income, enrolled, gender, tabacco, birth, spouse, zip, firstName,lastName, email, phone;
 
     function _(id) {
         return document.getElementById(id);
@@ -12,18 +12,15 @@
             _("step1").style.display = "none";
             _("step2").style.display = "block";
             _("progressBar").value = 10;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;             
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;       
             error("rgb(255, 255, 255)");
             console.log("coverage is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
             console.log("coverage is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
 
@@ -42,10 +39,8 @@
             console.log("family is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
-
 
     function step3() {
         program = _("program").value;
@@ -83,7 +78,6 @@
         }
     }
 
-
     function step5() {
         enrolled = _("enrolled").value;
         if (enrolled.length > 0) {
@@ -109,197 +103,140 @@
             _("step7").style.display = "block";
             _("progressBar").value = 60;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
             console.log("gender is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
             console.log("gender is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
-    function step7() {
 
+    function step7() {
         tabacco = _("tabacco").value;
         if (tabacco.length > 0) {
             _("step7").style.display = "none";
             _("step8").style.display = "block";
             _("progressBar").value = 70;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">70% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
             console.log("tobacco is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
             console.log("tobacco is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
 
-
-
     function step8() {
-
         birth = _("birth").value;
         if (birth.length > 0) {
             _("step8").style.display = "none";
             _("step9").style.display = "block";
             _("progressBar").value = 80;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
-
             error("rgb(255, 255, 255)");
             console.log("birth is up and running");
             return true;
-
         } else {
-
             error("rgb(189, 87, 87)");
             console.log("birth is NOT up and running");
             alert('Plase select one option')
             return false;
-
         }
     }
 
 
-    // function step9() {
 
-    //     spouse = _("spouse").value;
-    //     if (spouse.length  > 1) {
-    //         _("step9").style.display = "none";
-    //         _("step1").style.display = "block";
-    //         _("progressBar").value = 90;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">90% <br /></span>Completed</h3>`;
-    //         error("rgb(255, 255, 255)");
-    //         console.log("spouse is up and running");
-    //         return true;
-
-
-    //     } else  if (spouse.length > 0) {
-    //             _("step9").style.display = "none";
-    //             _("step1").style.display = "block";
-    //             _("progressBar").value = 90;
-    //             _("status").innerHTML = `<h3 id="status"><span class="percentage">90% <br /></span>Completed</h3>`;
-    //             error("rgb(255, 255, 255)");
-    //             console.log("spouse is up and running");
-    //             return true;
-
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("spouse is NOT up and running");
-    //         alert('Plase select one option')
-    //         return false;
-
-    //     }
-    // }
-
-
-    // function step8() {
-
-    //     spouse = _("spouse").value;
-    //     if (spouse.length > 0) {
-    //         _("step3").style.display = "none";
-    //         _("step4").style.display = "block";
-    //         _("progressBar").value = 30;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
-
-    //         error("rgb(255, 255, 255)");
-    //         console.log("spouse is up and running");
-    //         return true;
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("spouse is NOT up and running");
-    //         alert('Plase select one option')
-    //         return false;
-
-    //     }
-    // }
-
-
-
-
-
-
-
-    // function step2() {
-    //     email = _("email").value;
-    //     var validemail = /\S+@\S+/;
-    //     if (email.length > 0) {
-    //         _("step2").style.display = "none";
-    //         _("step3").style.display = "block";
-    //         _("progressBar").value = 20;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
-
-    //         error("rgb(255, 255, 255)");
-    //         console.log("email is up and running");
-    //         return validemail.test(email);
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("email is NOT up and running");
-    //         return false;
-    //     }
-    // }
-    // function step3() {
-    //     gender = _("gender").value;
-    //     if (gender.length > 0) {
-    //         _("step3").style.display = "none";
-    //         _("step4").style.display = "block";
-    //         _("progressBar").value = 30;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
-
-    //         error("rgb(255, 255, 255)");
-    //         console.log("gender is up and running");
-    //         return true;
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("gender is NOT up and running");
-    //         alert('Plase select one option')
-    //         return false;
-
-    //     }
-    // }
-    // function step4() {
-    //     cover = _("cover").value;
-    //     if (cover.length > 0) {
-    //         _("step4").style.display = "none";
-    //         _("step5").style.display = "block";
-    //         _("progressBar").value = 40;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
-
-    //         error("rgb(255, 255, 255)");
-    //         console.log("cover is up and running");
-    //         return true;
-
-    //     } else {
-
-    //         error("rgb(189, 87, 87)");
-    //         console.log("cover is NOT up and running");
-    //         alert('Plase select one option')
-    //         return false;
-    //     }
-    // }
     function step9() {
         spouse = _("spouse").value;
         if (spouse.length > 0) {
             _("step9").style.display = "none";
+            _("step10").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("spouse is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("spouse is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+
+    function step10() {
+        zip = _("zip").value;
+        if (zip.length > 0) {
+
+            _("step10").style.display = "none";
+            _("step11").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("zip is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("zip is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+
+    function step11() {
+        firstName = _("firstName").value;
+        lastName = _("lastName").value;
+
+        
+        if (firstName.length > 0 && lastName.length > 0) {
+
+            _("step11").style.display = "none";
+            _("step12").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("full name is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("full name is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+    function step12() {
+        email = _("email").value;
+        var validemail = /\S+@\S+/;
+        if (zip.length > 0) { 
+            _("step12").style.display = "none";
+            _("step13").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("email is up and running");
+            return validemail.test(email);
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("email is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+    function step13() {
+        phone = _("phone").value;
+        if (phone.length > 0) {
+
+            _("step13").style.display = "none";
             _("userData").style.display = "block";
             _("userCoverage").innerHTML = coverage;
             _("userFamily").innerHTML = family;
@@ -310,8 +247,12 @@
             _("userTabacco").innerHTML = tabacco;
             _("userBirth").innerHTML = birth;
             _("userSpouse").innerHTML = spouse;
-            // _("userSpouseGender").innerHTML = spouse;
-            
+
+            _("userZip").innerHTML = zip;
+            _("userFirstName").innerHTML = firstName;
+            _("userLastName").innerHTML = lastName;
+            _("userEmail").innerHTML = email;
+            _("userPhone").innerHTML = phone;
 
             _("progressBar").value = 100;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">100% <br /></span>Completed</h3>`;
@@ -336,6 +277,34 @@
             console.log("Form Submitted");
         return true;
     }
+
+
+
+
+
+
+ // function step2() {
+    //     email = _("email").value;
+    //     var validemail = /\S+@\S+/;
+    //     if (email.length > 0) {
+    //         _("step2").style.display = "none";
+    //         _("step3").style.display = "block";
+    //         _("progressBar").value = 20;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
+
+    //         error("rgb(255, 255, 255)");
+    //         console.log("email is up and running");
+    //         return validemail.test(email);
+
+    //     } else {
+
+    //         error("rgb(189, 87, 87)");
+    //         console.log("email is NOT up and running");
+    //         return false;
+    //     }
+    // }
+
+
 
 
 
