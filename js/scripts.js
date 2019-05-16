@@ -1,6 +1,6 @@
     // form
 
-    var coverage, family, program, income, enrolled, gender, birth, tabaco, spouse;
+    var coverage, family, program, income, enrolled, gender, tabacco, birth, spouse;
 
     function _(id) {
         return document.getElementById(id);
@@ -123,11 +123,10 @@
 
         }
     }
-
     function step7() {
 
-        tobacco = _("tobacco").value;
-        if (tobacco.length > 0) {
+        tabacco = _("tabacco").value;
+        if (tabacco.length > 0) {
             _("step7").style.display = "none";
             _("step8").style.display = "block";
             _("progressBar").value = 70;
@@ -149,23 +148,57 @@
 
 
 
-    // function step7() {
+    function step8() {
 
-    //     birth = _("birth").value;
-    //     if (birth.length > 0) {
-    //         _("step3").style.display = "none";
-    //         _("step4").style.display = "block";
-    //         _("progressBar").value = 30;
-    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+        birth = _("birth").value;
+        if (birth.length > 0) {
+            _("step8").style.display = "none";
+            _("step9").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
 
+            error("rgb(255, 255, 255)");
+            console.log("birth is up and running");
+            return true;
+
+        } else {
+
+            error("rgb(189, 87, 87)");
+            console.log("birth is NOT up and running");
+            alert('Plase select one option')
+            return false;
+
+        }
+    }
+
+
+    // function step9() {
+
+    //     spouse = _("spouse").value;
+    //     if (spouse.length  > 1) {
+    //         _("step9").style.display = "none";
+    //         _("step1").style.display = "block";
+    //         _("progressBar").value = 90;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">90% <br /></span>Completed</h3>`;
     //         error("rgb(255, 255, 255)");
-    //         console.log("birth is up and running");
+    //         console.log("spouse is up and running");
     //         return true;
+
+
+    //     } else  if (spouse.length > 0) {
+    //             _("step9").style.display = "none";
+    //             _("step1").style.display = "block";
+    //             _("progressBar").value = 90;
+    //             _("status").innerHTML = `<h3 id="status"><span class="percentage">90% <br /></span>Completed</h3>`;
+    //             error("rgb(255, 255, 255)");
+    //             console.log("spouse is up and running");
+    //             return true;
+
 
     //     } else {
 
     //         error("rgb(189, 87, 87)");
-    //         console.log("birth is NOT up and running");
+    //         console.log("spouse is NOT up and running");
     //         alert('Plase select one option')
     //         return false;
 
@@ -264,27 +297,34 @@
     //     }
     // }
     function step9() {
-        income = _("income").value;
-        if (income.length > 0) {
+        spouse = _("spouse").value;
+        if (spouse.length > 0) {
             _("step9").style.display = "none";
             _("userData").style.display = "block";
-            _("display_username").innerHTML = username;
-            _("display_email").innerHTML = email;
-            _("display_gender").innerHTML = gender;
-            _("display_cover").innerHTML = cover;
-            _("display_income").innerHTML = income;
-            _("progressBar").value = 50;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">50% <br /></span>Completed</h3>`;
+            _("userCoverage").innerHTML = coverage;
+            _("userFamily").innerHTML = family;
+            _("userProgram").innerHTML = program;
+            _("userIncome").innerHTML = income;
+            _("userEnrolled").innerHTML = enrolled;
+            _("userGender").innerHTML = gender;
+            _("userTabacco").innerHTML = tabacco;
+            _("userBirth").innerHTML = birth;
+            _("userSpouse").innerHTML = spouse;
+            // _("userSpouseGender").innerHTML = spouse;
+            
+
+            _("progressBar").value = 100;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">100% <br /></span>Completed</h3>`;
 
             error("rgb(255, 255, 255)");
-            console.log("income is up and running");
+            console.log("spouse gender is up and running");
             return true;
 
         } else {
 
             error("rgb(189, 87, 87)");
             console.log("income is NOT up and running");
-            alert('Plase select one option')
+            alert('Plase spouse gender one option')
             return false;
         }
     }
