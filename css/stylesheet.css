@@ -178,7 +178,7 @@ ul#userData {
     padding: 12px 8px;
     font-weight: 600;
     font-size: 1.2em;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     user-select: none;
@@ -186,7 +186,7 @@ ul#userData {
 
 .select-items {
     position: absolute;
-    background-color: #0076a9;
+    background-color: var(--primary);
     top: 100%;
     left: 0;
     right: 0;
@@ -199,7 +199,7 @@ ul#userData {
 
 .select-items div:hover,
 .same-as-selected {
-    background-color: #00577d;
+    background-color: rgb(57, 130, 255);
 }
 
 /* progressbar */
