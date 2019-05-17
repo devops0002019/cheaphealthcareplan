@@ -1,17 +1,55 @@
     // form
-    var coverage, family, program, income, enrolled, gender, tabacco, birth, spouse, zip, firstName,lastName, email, phone;
+    var coverage, family, program, income, enrolled, gender, sgender, sbirth, stabacco, schildren, tabacco, birth, spouse, zip, firstName, lastName, email, phone;
+
+
+    sgender = 'No applied';
+    sbirth = 'No applied';
+    stabacco = 'No applied';
+    schildren = 'No applied';
+
 
     function _(id) {
         return document.getElementById(id);
     }
 
+
+    // function step1() {
+    //     var coverage = document.getElementById("coverage");
+    //     var answer = coverage.options[coverage.selectedIndex].value;
+    //     if (answer == "No") {
+    //         alert("NO IS WORKING!!!!!!");
+    //         _("step1").style.display = "none";
+    //         _("step2").style.display = "block";
+    //         _("progressBar").value = 7.5;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
+    //         error("rgb(255, 255, 255)");
+    //         console.log("coverage is up and running");
+    //         return true;
+    //     } else if(selectedValue == "Yes") {
+    //         alert("Yes IS WORKING!!!!!!");
+    //         _("step1").style.display = "none";
+    //         _("step7").style.display = "block";
+    //         _("progressBar").value = 7.5;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
+    //         error("rgb(255, 255, 255)");
+    //         console.log("coverage is up and running");
+    //         return true;
+    //     } else {
+    //         error("rgb(189, 87, 87)");
+    //         console.log("coverage is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+    //     }
+    // }
+
+
     function step1() {
         coverage = _("coverage").value;
-        if (coverage.length > 0) {
+        if (coverage.length > 2) {
             _("step1").style.display = "none";
             _("step2").style.display = "block";
             _("progressBar").value = 7.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;       
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("coverage is up and running");
             return true;
@@ -149,24 +187,142 @@
         }
     }
 
-
     function step9() {
-        spouse = _("spouse").value;
-        if (spouse.length > 0) {
+
+        var spouse = document.getElementById("spouse");
+        var answer = spouse.options[spouse.selectedIndex].value;
+
+        if (spouse.length > 1) {
+        if (answer == "No") {
+
+            alert("NO IS WORKING!!!!!!");
             _("step9").style.display = "none";
             _("step10").style.display = "block";
-            _("progressBar").value = 75;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">75% <br /></span>Completed</h3>`;
+            _("progressBar").value = 7.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
-            console.log("spouse is up and running");
+            console.log("spouse coverage is up and running");
+            return true;
+        } else if(answer == "Yes" && spouse.length > 1) {
+            alert("Yes IS WORKING!!!!!!");
+            _("step9").style.display = "none";
+            _("step20").style.display = "block";
+            _("progressBar").value = 7.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("spouse coverage is up and running");
             return true;
         } else {
             error("rgb(189, 87, 87)");
-            console.log("spouse is NOT up and running");
+            console.log("spouse coverage is NOT up and running");
             alert('Plase select one option')
             return false;
         }
     }
+    }
+
+
+    function step20() {
+        sgender = _("sgender").value;
+        if (sgender.length > 1) {
+            _("step20").style.display = "none";
+            _("step21").style.display = "block";
+            _("progressBar").value = 52.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">52.5% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("gender is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("gender is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step21() {
+        sbirth = _("sbirth").value;
+        if (sbirth.length > 1) {
+            _("step21").style.display = "none";
+            _("step22").style.display = "block";
+            _("progressBar").value = 67.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">67.5% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("birth is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("birth is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step22() {
+        stabacco = _("stabacco").value;
+        if (stabacco.length > 1) {
+            _("step22").style.display = "none";
+            _("step23").style.display = "block";
+            _("progressBar").value = 60;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("tobacco is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("tobacco is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step23() {
+        schildren = _("schildren").value;
+        if (schildren.length > 1) {
+            _("step23").style.display = "none";
+            _("step10").style.display = "block";
+            _("progressBar").value = 60;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("tobacco is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("tobacco is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+
+
+
+    // function step9() {
+    //     spouse = _("spouse").value;
+    //     if (spouse.length > 0) {
+    //         _("step9").style.display = "none";
+    //         _("step10").style.display = "block";
+    //         _("progressBar").value = 75;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">75% <br /></span>Completed</h3>`;
+    //         error("rgb(255, 255, 255)");
+    //         console.log("spouse is up and running");
+    //         return true;
+    //     } else {
+    //         error("rgb(189, 87, 87)");
+    //         console.log("spouse is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+    //     }
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     function step10() {
         zip = _("zip").value;
@@ -185,11 +341,10 @@
             return false;
         }
     }
-
     function step11() {
         firstName = _("firstName").value;
         lastName = _("lastName").value;
-        if (firstName.length > 0 && lastName.length > 0) {
+        if (firstName.length > 2 && lastName.length > 2) {
             _("step11").style.display = "none";
             _("step12").style.display = "block";
             _("progressBar").value = 90;
@@ -204,11 +359,10 @@
             return false;
         }
     }
-
     function step12() {
         email = _("email").value;
         var validemail = /\S+@\S+/;
-        if (zip.length > 0) { 
+        if (zip.length > 1) {
             _("step12").style.display = "none";
             _("step13").style.display = "block";
             _("progressBar").value = 97.5;
@@ -224,9 +378,13 @@
         }
     }
 
+
+
     function step13() {
         phone = _("phone").value;
-        if (phone.length > 0) {
+        if (phone.length > 5) {
+
+            
             _("step13").style.display = "none";
             _("userData").style.display = "block";
             _("userCoverage").innerHTML = coverage;
@@ -237,7 +395,14 @@
             _("userGender").innerHTML = gender;
             _("userTabacco").innerHTML = tabacco;
             _("userBirth").innerHTML = birth;
+
             _("userSpouse").innerHTML = spouse;
+            
+            _("userSgender").innerHTML = sgender;
+            _("userSbirth").innerHTML = sbirth;
+            _("userStabacco").innerHTML = stabacco;
+            _("userSchildren").innerHTML = schildren;
+
             _("userZip").innerHTML = zip;
             _("userFirstName").innerHTML = firstName;
             _("userLastName").innerHTML = lastName;
@@ -257,73 +422,76 @@
             return false;
         }
     }
+
     function error(color) {
         document.body.style.background = color;
     }
+
     function submitForm() {
         _("userInfo").submit();
-            console.log("Form Submitted");
+        console.log("Form Submitted");
         return true;
     }
 
-// select tag
+    // select tag
 
-var x, i, j, selElmnt, a, b, c;
-x = document.getElementsByClassName("select");
-for (i = 0; i < x.length; i++) {
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    x[i].appendChild(a);
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 1; j < selElmnt.length; j++) {
-        c = document.createElement("DIV");
-        c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function (e) {
-            var y, i, k, s, h;
-            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-            h = this.parentNode.previousSibling;
-            for (i = 0; i < s.length; i++) {
-                if (s.options[i].innerHTML == this.innerHTML) {
-                    s.selectedIndex = i;
-                    h.innerHTML = this.innerHTML;
-                    y = this.parentNode.getElementsByClassName("same-as-selected");
-                    for (k = 0; k < y.length; k++) {
-                        y[k].removeAttribute("class");
-                    }
-                    this.setAttribute("class", "same-as-selected");
-                    break;
-                }
-            }
-            h.click();
-        });
-        b.appendChild(c);
-    }
-    x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
-        e.stopPropagation();
-        closeAllSelect(this);
-        this.nextSibling.classList.toggle("select-hide");
-        this.classList.toggle("select-arrow-active");
-    });
-}
-function closeAllSelect(elmnt) {
-    var x, y, i, arrNo = [];
-    x = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    for (i = 0; i < y.length; i++) {
-        if (elmnt == y[i]) {
-            arrNo.push(i)
-        } else {
-            y[i].classList.remove("select-arrow-active");
-        }
-    }
+    var x, i, j, selElmnt, a, b, c;
+    x = document.getElementsByClassName("select");
     for (i = 0; i < x.length; i++) {
-        if (arrNo.indexOf(i)) {
-            x[i].classList.add("select-hide");
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+                var y, i, k, s, h;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < s.length; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        for (k = 0; k < y.length; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+
+    function closeAllSelect(elmnt) {
+        var x, y, i, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
         }
     }
-}
-document.addEventListener("click", closeAllSelect);
+    document.addEventListener("click", closeAllSelect);
