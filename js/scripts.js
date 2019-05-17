@@ -150,29 +150,66 @@
     }
 
 
+    // var select = document.querySelector('select');
+    // select.addEventListener('change', step9);
+    
+    // function step9() {
+
+    //     spouse = _("spouse").value;
+    //     var choice = select.value;
+    
+    //     if (spouse.length > 0 && choice === 'Yes') {
+    //         _("step9").style.display = "none";
+    //         _("step20").style.display = "block";
+
+    //     } else if (spouse.length > 0 && choice === 'No') {
+    //         _("step9").style.display = "none";
+    //         _("step10").style.display = "block";
 
 
+    //         _("progressBar").value = 80;
+    //         _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+    //         error("rgb(255, 255, 255)");
+    //         console.log("spouse is up and running");
+    //         return true;
+    //     } else {
+    //         error("rgb(189, 87, 87)");
+    //         console.log("spouse is NOT up and running");
+    //         alert('Plase select one option')
+    //         return false;
+    //     }
+    // }
+
+
+
+
+
+    var select = document.querySelector('.select');
+    select.addEventListener('change', step9);
+    
     function step9() {
-        var spouse = false;
+
+        var choice = select.value;
         spouse = _("spouse").value;
-        
 
-        if (spouse.value === false) {
-
-            _("step9").style.display = "none";
-            _("step10").style.display = "block";
-
-        } else if (spouse.value === true) {
-
+        if (spouse.length < 1 && choice === 'Yes'){
             _("step9").style.display = "none";
             _("step20").style.display = "block";
-
-
             _("progressBar").value = 80;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("spouse is up and running");
             return true;
+
+        } else if (spouse.length < 1 && choice === 'No') {
+            _("step9").style.display = "none";
+            _("step10").style.display = "block";
+            _("progressBar").value = 80;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("spouse is up and running");
+            return true;
+
         } else {
             error("rgb(189, 87, 87)");
             console.log("spouse is NOT up and running");
@@ -180,12 +217,6 @@
             return false;
         }
     }
-
-
-
-
-
-
 
 
     // function step9() {
