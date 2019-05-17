@@ -8,6 +8,15 @@
     content: var(--company-name) !important;
 }
 
+
+.addresses ,
+.addresses td ,
+.addresses input[type="text"] {
+    margin:  10px;
+}
+
+
+
 #page {
     display: flex;
     justify-content: center;

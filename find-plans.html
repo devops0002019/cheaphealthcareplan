@@ -74,7 +74,7 @@
             <div class="loader-section section-right"></div>
         </div>
 
-        <form  action="/thankyou.html" method="POST" id="userInfo" name="userInfoSubmission" onsubmit="return false"
+        <form action="/thankyou.html" method="POST" id="userInfo" name="userInfoSubmission" onsubmit="return false"
             data-netlify="true" autocomplete="off">
 
             <div class="progressbar">
@@ -211,7 +211,7 @@
                             <option value="">Select One</option>
                             <option value="No">No</option>
                             <option value="Yes">Yes</option>
-                       </select>
+                        </select>
                     </div>
                     <button class="button animated fadeIn delay-0.5s" onclick="step9()">
                         <i class="fas fa-arrow-circle-right"></i>
@@ -269,7 +269,7 @@
                             <option value="">Select One</option>
                             <option value="No">No</option>
                             <option value="Yes">Yes</option>
-                       </select>
+                        </select>
                     </div>
                     <button class="button animated fadeIn delay-0.5s" onclick="step23()">
                         <i class="fas fa-arrow-circle-right"></i>
@@ -281,8 +281,25 @@
 
 
             <div class="animated fadeIn delay-0.5s" id="step10">
-                <p class="question">What is your zip code?</p>
-                <input type="text" id="zip" name="zip" placeholder="33214" />
+                <p class="question">What is your address?</p>
+
+                <table>
+                    <tr>
+                        <input type="text" id="addesss" name="addesss" placeholder="Address" />
+                    </tr>
+                    <tr class="addresses">
+                        <td>
+                            <input type="text" id="apt" name="apt" placeholder="Apartment" />
+                            <input type="text" id="city" name="city" placeholder="City" />
+                        </td>
+                        <td>
+                            <input type="text" id="state" name="state" placeholder="State" />
+                            <input type="text" id="zip" name="zip" placeholder="Zip Code" />
+
+                        </td>
+                    </tr>
+                </table>
+
                 <button class="button animated fadeIn delay-0.8s" onclick="step10()">
                     <i class="fas fa-arrow-circle-right"></i>
                 </button>

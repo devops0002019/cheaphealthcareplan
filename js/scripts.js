@@ -360,13 +360,10 @@
         }
     }
 
-
-
     function step13() {
         phone = _("phone").value;
         if (phone.length > 5) {
 
-            
             _("step13").style.display = "none";
             _("userData").style.display = "block";
             _("userCoverage").innerHTML = coverage;
