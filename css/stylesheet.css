@@ -129,6 +129,10 @@ ul#userData {
     color: #fff;
     border-radius: 4px;
 }
+.button.home{
+    align-self: center;
+}
+
 .submission {
     margin: 64px 0px;
 }
