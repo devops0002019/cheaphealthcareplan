@@ -71,7 +71,7 @@ form#userInfo > #userData,
     width: 100%;
     padding: 1em;
     margin: 1em 0;
-    background: #fafafa;
+    background: #b8b8b8;
     border: none;
     border: 1px solid rgba(221, 221, 221, 0.406);
     box-shadow: var(--shadow);
@@ -144,6 +144,7 @@ ul#userData {
 }
 
 .select {
+    
     position: relative;
 }
 
@@ -153,7 +154,8 @@ ul#userData {
 
 .select-selected {
     height: 3em;
-    background-color: var(--primary);
+    color:#000;
+    background-color: #dfdfdf;
 }
 
 .select-selected:after {
@@ -164,21 +166,21 @@ ul#userData {
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    border-color: var(--primary) transparent transparent transparent;
 }
 
 .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent var(--primary) transparent;
     top: 15px;
 }
 
 .select-items div,
 .select-selected {
-    color: #ffffff;
+    color:#000;
     padding: 12px 8px;
     font-weight: 600;
     font-size: 1.2em;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     user-select: none;
@@ -186,11 +188,13 @@ ul#userData {
 
 .select-items {
     position: absolute;
-    background-color: var(--primary);
+    background-color: #dfdfdf;
+    color:#000;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
+    /* outline:1px solid gray; */
 }
 
 .select-hide {
@@ -199,7 +203,7 @@ ul#userData {
 
 .select-items div:hover,
 .same-as-selected {
-    background-color: rgb(57, 130, 255);
+    background-color: rgb(168, 181, 203);
 }
 
 /* progressbar */

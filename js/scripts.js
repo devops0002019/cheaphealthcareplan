@@ -10,8 +10,8 @@
         if (coverage.length > 0) {
             _("step1").style.display = "none";
             _("step2").style.display = "block";
-            _("progressBar").value = 10;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">10% <br /></span>Completed</h3>`;       
+            _("progressBar").value = 7.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;       
             error("rgb(255, 255, 255)");
             console.log("coverage is up and running");
             return true;
@@ -28,8 +28,8 @@
         if (family.length > 0) {
             _("step2").style.display = "none";
             _("step3").style.display = "block";
-            _("progressBar").value = 20;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">20% <br /></span>Completed</h3>`;
+            _("progressBar").value = 22.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">22.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("family is up and running");
             return true;
@@ -64,8 +64,8 @@
         if (income.length > 0) {
             _("step4").style.display = "none";
             _("step5").style.display = "block";
-            _("progressBar").value = 40;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">40% <br /></span>Completed</h3>`;
+            _("progressBar").value = 37.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">37.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("income is up and running");
             return true;
@@ -82,8 +82,8 @@
         if (enrolled.length > 0) {
             _("step5").style.display = "none";
             _("step6").style.display = "block";
-            _("progressBar").value = 50;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">50% <br /></span>Completed</h3>`;
+            _("progressBar").value = 45;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">45% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("enrolled is up and running");
             return true;
@@ -100,8 +100,8 @@
         if (gender.length > 0) {
             _("step6").style.display = "none";
             _("step7").style.display = "block";
-            _("progressBar").value = 60;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
+            _("progressBar").value = 52.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">52.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("gender is up and running");
             return true;
@@ -118,8 +118,8 @@
         if (tabacco.length > 0) {
             _("step7").style.display = "none";
             _("step8").style.display = "block";
-            _("progressBar").value = 70;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">70% <br /></span>Completed</h3>`;
+            _("progressBar").value = 60;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("tobacco is up and running");
             return true;
@@ -136,8 +136,8 @@
         if (birth.length > 0) {
             _("step8").style.display = "none";
             _("step9").style.display = "block";
-            _("progressBar").value = 80;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            _("progressBar").value = 67.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">67.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("birth is up and running");
             return true;
@@ -155,8 +155,8 @@
         if (spouse.length > 0) {
             _("step9").style.display = "none";
             _("step10").style.display = "block";
-            _("progressBar").value = 80;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            _("progressBar").value = 75;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">75% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("spouse is up and running");
             return true;
@@ -173,8 +173,8 @@
         if (zip.length > 0) {
             _("step10").style.display = "none";
             _("step11").style.display = "block";
-            _("progressBar").value = 80;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            _("progressBar").value = 82.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">82.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("zip is up and running");
             return true;
@@ -192,8 +192,8 @@
         if (firstName.length > 0 && lastName.length > 0) {
             _("step11").style.display = "none";
             _("step12").style.display = "block";
-            _("progressBar").value = 80;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            _("progressBar").value = 90;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">90% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("full name is up and running");
             return true;
@@ -211,8 +211,8 @@
         if (zip.length > 0) { 
             _("step12").style.display = "none";
             _("step13").style.display = "block";
-            _("progressBar").value = 80;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">80% <br /></span>Completed</h3>`;
+            _("progressBar").value = 97.5;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">97.5% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("email is up and running");
             return validemail.test(email);
@@ -243,6 +243,8 @@
             _("userLastName").innerHTML = lastName;
             _("userEmail").innerHTML = email;
             _("userPhone").innerHTML = phone;
+
+
             _("progressBar").value = 100;
             _("status").innerHTML = `<h3 id="status"><span class="percentage">100% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");

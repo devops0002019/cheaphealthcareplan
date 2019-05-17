@@ -30,6 +30,18 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/stylesheet.css">
 
+
+    <!-- Jquery -->
+    <script src="js/jquery.js"></script>
+    <script>
+        // loader
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 1000);
+        });
+    </script>
+
 </head>
 
 <body id="site">
