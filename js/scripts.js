@@ -192,10 +192,7 @@
         var spouse = document.getElementById("spouse");
         var answer = spouse.options[spouse.selectedIndex].value;
 
-        if (spouse.length > 1) {
         if (answer == "No") {
-
-            alert("NO IS WORKING!!!!!!");
             _("step9").style.display = "none";
             _("step10").style.display = "block";
             _("progressBar").value = 7.5;
@@ -204,7 +201,6 @@
             console.log("spouse coverage is up and running");
             return true;
         } else if(answer == "Yes" && spouse.length > 1) {
-            alert("Yes IS WORKING!!!!!!");
             _("step9").style.display = "none";
             _("step20").style.display = "block";
             _("progressBar").value = 7.5;
@@ -218,7 +214,7 @@
             alert('Plase select one option')
             return false;
         }
-    }
+
     }
 
 
