@@ -2,6 +2,7 @@
     var coverage, family, program, income, enrolled, gender, sgender, sbirth, stabacco, schildren, tabacco, birth, spouse, zip, firstName, lastName, email, phone;
 
 
+    spouse = '';
     sgender = 'No applied';
     sbirth = 'No applied';
     stabacco = 'No applied';
@@ -48,8 +49,8 @@
         if (coverage.length > 2) {
             _("step1").style.display = "none";
             _("step2").style.display = "block";
-            _("progressBar").value = 7.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 6;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">6% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("coverage is up and running");
             return true;
@@ -63,11 +64,11 @@
 
     function step2() {
         family = _("family").value;
-        if (family.length > 0) {
+        if (family.length > 1) {
             _("step2").style.display = "none";
             _("step3").style.display = "block";
-            _("progressBar").value = 22.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">22.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 12;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">12% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("family is up and running");
             return true;
@@ -81,11 +82,11 @@
 
     function step3() {
         program = _("program").value;
-        if (program.length > 0) {
+        if (program.length > 1) {
             _("step3").style.display = "none";
             _("step4").style.display = "block";
-            _("progressBar").value = 30;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
+            _("progressBar").value = 18;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">18% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("program is up and running");
             return true;
@@ -102,8 +103,8 @@
         if (income.length > 0) {
             _("step4").style.display = "none";
             _("step5").style.display = "block";
-            _("progressBar").value = 37.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">37.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 24;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">24% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("income is up and running");
             return true;
@@ -117,11 +118,11 @@
 
     function step5() {
         enrolled = _("enrolled").value;
-        if (enrolled.length > 0) {
+        if (enrolled.length > 1) {
             _("step5").style.display = "none";
             _("step6").style.display = "block";
-            _("progressBar").value = 45;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">45% <br /></span>Completed</h3>`;
+            _("progressBar").value = 30;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">30% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("enrolled is up and running");
             return true;
@@ -135,11 +136,11 @@
 
     function step6() {
         gender = _("gender").value;
-        if (gender.length > 0) {
+        if (gender.length > 1) {
             _("step6").style.display = "none";
             _("step7").style.display = "block";
-            _("progressBar").value = 52.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">52.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 36;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">36% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("gender is up and running");
             return true;
@@ -153,11 +154,11 @@
 
     function step7() {
         tabacco = _("tabacco").value;
-        if (tabacco.length > 0) {
+        if (tabacco.length > 1) {
             _("step7").style.display = "none";
             _("step8").style.display = "block";
-            _("progressBar").value = 60;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
+            _("progressBar").value = 42;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">42% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("tobacco is up and running");
             return true;
@@ -171,11 +172,11 @@
 
     function step8() {
         birth = _("birth").value;
-        if (birth.length > 0) {
+        if (birth.length > 1) {
             _("step8").style.display = "none";
             _("step9").style.display = "block";
-            _("progressBar").value = 67.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">67.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 48;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">48% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("birth is up and running");
             return true;
@@ -186,108 +187,6 @@
             return false;
         }
     }
-
-    function step9() {
-
-        var spouse = document.getElementById("spouse");
-        var answer = spouse.options[spouse.selectedIndex].value;
-
-        if (answer == "No") {
-            _("step9").style.display = "none";
-            _("step10").style.display = "block";
-            _("progressBar").value = 7.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("spouse coverage is up and running");
-            return true;
-        } else if(answer == "Yes" && spouse.length > 1) {
-            _("step9").style.display = "none";
-            _("step20").style.display = "block";
-            _("progressBar").value = 7.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("spouse coverage is up and running");
-            return true;
-        } else {
-            error("rgb(189, 87, 87)");
-            console.log("spouse coverage is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-
-    }
-
-
-    function step20() {
-        sgender = _("sgender").value;
-        if (sgender.length > 1) {
-            _("step20").style.display = "none";
-            _("step21").style.display = "block";
-            _("progressBar").value = 52.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">52.5% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("gender is up and running");
-            return true;
-        } else {
-            error("rgb(189, 87, 87)");
-            console.log("gender is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-    }
-    function step21() {
-        sbirth = _("sbirth").value;
-        if (sbirth.length > 1) {
-            _("step21").style.display = "none";
-            _("step22").style.display = "block";
-            _("progressBar").value = 67.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">67.5% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("birth is up and running");
-            return true;
-        } else {
-            error("rgb(189, 87, 87)");
-            console.log("birth is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-    }
-    function step22() {
-        stabacco = _("stabacco").value;
-        if (stabacco.length > 1) {
-            _("step22").style.display = "none";
-            _("step23").style.display = "block";
-            _("progressBar").value = 60;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("tobacco is up and running");
-            return true;
-        } else {
-            error("rgb(189, 87, 87)");
-            console.log("tobacco is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-    }
-    function step23() {
-        schildren = _("schildren").value;
-        if (schildren.length > 1) {
-            _("step23").style.display = "none";
-            _("step10").style.display = "block";
-            _("progressBar").value = 60;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
-            error("rgb(255, 255, 255)");
-            console.log("tobacco is up and running");
-            return true;
-        } else {
-            error("rgb(189, 87, 87)");
-            console.log("tobacco is NOT up and running");
-            alert('Plase select one option')
-            return false;
-        }
-    }
-
-
 
     // function step9() {
     //     spouse = _("spouse").value;
@@ -307,26 +206,113 @@
     //     }
     // }
 
+    function step9() {
+
+        var spouse = document.getElementById("spouse");
+        var answer = spouse.options[spouse.selectedIndex].value;
+
+        if (answer == "No"&& spouse.length > 1) {
+            _("step9").style.display = "none";
+            _("step10").style.display = "block";
+            _("progressBar").value = 54;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">54% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("spouse coverage is up and running");
+            return true;
+        } else if(answer == "Yes" && spouse.length > 1) {
+            _("step9").style.display = "none";
+            _("step20").style.display = "block";
+            _("progressBar").value = 54;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">54% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("spouse coverage is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("spouse coverage is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+
+    }
 
 
-
-
-
-
-
-
-
-
-
-
+    function step20() {
+        sgender = _("sgender").value;
+        if (sgender.length > 1) {
+            _("step20").style.display = "none";
+            _("step21").style.display = "block";
+            _("progressBar").value = 60;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">60% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("sgender is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("sgender is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step21() {
+        sbirth = _("sbirth").value;
+        if (sbirth.length > 1) {
+            _("step21").style.display = "none";
+            _("step22").style.display = "block";
+            _("progressBar").value = 66;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">66% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("birth is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("birth is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step22() {
+        stabacco = _("stabacco").value;
+        if (stabacco.length > 1) {
+            _("step22").style.display = "none";
+            _("step23").style.display = "block";
+            _("progressBar").value = 72;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">72% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("tobacco is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("tobacco is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
+    function step23() {
+        schildren = _("schildren").value;
+        if (schildren.length > 1) {
+            _("step23").style.display = "none";
+            _("step10").style.display = "block";
+            _("progressBar").value = 78;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">78% <br /></span>Completed</h3>`;
+            error("rgb(255, 255, 255)");
+            console.log("tobacco is up and running");
+            return true;
+        } else {
+            error("rgb(189, 87, 87)");
+            console.log("tobacco is NOT up and running");
+            alert('Plase select one option')
+            return false;
+        }
+    }
 
     function step10() {
         zip = _("zip").value;
-        if (zip.length > 0) {
+        if (zip.length > 1) {
             _("step10").style.display = "none";
             _("step11").style.display = "block";
-            _("progressBar").value = 82.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">82.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 84;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">84% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("zip is up and running");
             return true;
@@ -361,8 +347,8 @@
         if (zip.length > 1) {
             _("step12").style.display = "none";
             _("step13").style.display = "block";
-            _("progressBar").value = 97.5;
-            _("status").innerHTML = `<h3 id="status"><span class="percentage">97.5% <br /></span>Completed</h3>`;
+            _("progressBar").value = 96;
+            _("status").innerHTML = `<h3 id="status"><span class="percentage">96% <br /></span>Completed</h3>`;
             error("rgb(255, 255, 255)");
             console.log("email is up and running");
             return validemail.test(email);
