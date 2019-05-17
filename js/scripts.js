@@ -394,17 +394,3 @@ function closeAllSelect(elmnt) {
     }
 }
 document.addEventListener("click", closeAllSelect);
-
-
-
-
-
-// loader
-
-$(document).ready(function() {
-	
-	setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 1000);
-	
-});

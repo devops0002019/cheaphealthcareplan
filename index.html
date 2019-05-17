@@ -30,6 +30,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/stylesheet.css">
 
+    <!-- Jquery -->
+    <script src="js/jquery.js"></script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140250626-1"></script>
@@ -41,6 +44,15 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-140250626-1');
+    </script>
+
+    <script>
+        // loader
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 1000);
+        });
     </script>
 
     <!--[if lt IE 7]>
@@ -57,11 +69,11 @@
 
     <main id="page">
 
-        <div id="loader-wrapper">
-            <div id="loader"></div>
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-        </div>
+            <div id="loader-wrapper">
+                    <div id="loader"></div>
+                    <div class="loader-section section-left"></div>
+                    <div class="loader-section section-right"></div>
+                </div>
 
         <section class="section padd-64 deep-secondary">
             <div class="grid set-cols-1">
@@ -210,7 +222,5 @@
     </footer>
 
 </body>
-
-<script src="js/scripts.js"></script>
 
 </html>
