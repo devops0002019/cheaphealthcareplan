@@ -52,7 +52,7 @@ function step1() {
 	if (coverage.length > 1) {
 		_("step1").style.display = "none";
 		_("step2").style.display = "block";
-		progress.dataset.progress = 10;
+		progress.dataset.progress = 6;
 		return true;
 	} else {
 		animateCSS('#question1', 'jello');
@@ -66,7 +66,7 @@ function step2() {
 	if (family.length > 1) {
 		_("step2").style.display = "none";
 		_("step3").style.display = "block";
-		progress.dataset.progress = 20;
+		progress.dataset.progress = 12;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -80,7 +80,7 @@ function step3() {
 	if (program.length > 1) {
 		_("step3").style.display = "none";
 		_("step4").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 18;
 		return true;
 	} else {
 		animateCSS('#question3', 'jello');
@@ -94,7 +94,7 @@ function step4() {
 	if (income.length > 0) {
 		_("step4").style.display = "none";
 		_("step5").style.display = "block";
-		progress.dataset.progress = 40;
+		progress.dataset.progress = 24;
 		return true;
 	} else {
 		animateCSS('#question4', 'jello');
@@ -122,7 +122,7 @@ function step6() {
 	if (gender.length > 1) {
 		_("step6").style.display = "none";
 		_("step7").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 36;
 		return true;
 	} else {
 		animateCSS('#question6', 'jello');
@@ -136,7 +136,7 @@ function step7() {
 	if (tabacco.length > 1) {
 		_("step7").style.display = "none";
 		_("step8").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 42;
 		return true;
 	} else {
 		animateCSS('#question7', 'jello');
@@ -150,7 +150,7 @@ function step8() {
 	if (birth.length > 1) {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 48;
 		return true;
 	} else {
 		animateCSS('#birth', 'jello');
@@ -166,12 +166,12 @@ function step9() {
 	if (answer == "No" && spouse.length > 1) {
 		_("step9").style.display = "none";
 		_("step10").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 54;
 		return true;
 	} else if (answer == "Yes" && spouse.length > 1) {
 		_("step9").style.display = "none";
 		_("step20").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 54;
 		return true;
 	} else {
 		animateCSS('#question9', 'jello');
@@ -185,7 +185,7 @@ function step20() {
 	if (sgender.length > 1) {
 		_("step20").style.display = "none";
 		_("step21").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 60;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -199,7 +199,7 @@ function step21() {
 	if (sbirth.length > 1) {
 		_("step21").style.display = "none";
 		_("step22").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 66;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -213,7 +213,7 @@ function step22() {
 	if (stabacco.length > 1) {
 		_("step22").style.display = "none";
 		_("step23").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 72;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -227,7 +227,7 @@ function step23() {
 	if (schildren.length > 1) {
 		_("step23").style.display = "none";
 		_("step10").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 78;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -246,7 +246,7 @@ function step10() {
 	if (address.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
 		_("step10").style.display = "none";
 		_("step11").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 84;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -261,7 +261,7 @@ function step11() {
 	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 90;
 		return true;
 	} else {
 		animateCSS('#question2', 'jello');
@@ -275,7 +275,7 @@ function step12() {
 	if (email.length > 1 &&  email.match(/^\S+@\S+/)){
 		_("step12").style.display = "none";
 		_("step13").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 96;
 	} else {
 		animateCSS('#question2', 'jello');
 		alert.show('Please enter a valid email address', 'danger');
