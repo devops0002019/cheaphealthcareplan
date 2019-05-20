@@ -1,3 +1,16 @@
+// init vars
+var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
+
+spouse = 'Applied';
+sgender = 'No applied';
+sbirth = 'No applied';
+stabacco = 'No applied';
+schildren = 'No applied';
+
+
+
+
+
 // prevent forms from auto submitting on all inputs
 $(document).on("keydown", "input", function (e) {
 	if (e.which == 13) e.preventDefault();
@@ -8,14 +21,15 @@ var progress = document.querySelector('#progressBar');
 
 // animated function
 function animateCSS(element, animationName, callback) {
-    const node = document.querySelector(element)
-    node.classList.add('animated', animationName)
-    function handleAnimationEnd() {
-        node.classList.remove('animated', animationName)
-        node.removeEventListener('animationend', handleAnimationEnd)
-        if (typeof callback === 'function') callback()
-    }
-    node.addEventListener('animationend', handleAnimationEnd)
+	const node = document.querySelector(element)
+	node.classList.add('animated', animationName)
+
+	function handleAnimationEnd() {
+		node.classList.remove('animated', animationName)
+		node.removeEventListener('animationend', handleAnimationEnd)
+		if (typeof callback === 'function') callback()
+	}
+	node.addEventListener('animationend', handleAnimationEnd)
 }
 
 // notification class
@@ -35,18 +49,6 @@ class alert {
 function _(id) {
 	return document.getElementById(id);
 }
-
-// init vars
-var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
-
-
-// default values
-spouse = 'Applied';
-sgender = 'No applied';
-sbirth = 'No applied';
-stabacco = 'No applied';
-schildren = 'No applied';
-
 
 
 // step by step
@@ -97,7 +99,7 @@ function step4() {
 	if (income.length > 1) {
 		_("step4").style.display = "none";
 		_("step5").style.display = "block";
-		progress.dataset.progress = 40;
+		progress.dataset.progress = 24;
 		return true;
 	} else {
 		animateCSS('#incomeQuestion', 'jello');
@@ -125,7 +127,7 @@ function step6() {
 	if (gender.length > 1) {
 		_("step6").style.display = "none";
 		_("step7").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 36;
 		return true;
 	} else {
 		animateCSS('#genderQuestion', 'jello');
@@ -139,7 +141,7 @@ function step7() {
 	if (tabacco.length > 1) {
 		_("step7").style.display = "none";
 		_("step8").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 42;
 		return true;
 	} else {
 		animateCSS('#tabaccoQuestion', 'jello');
@@ -147,60 +149,101 @@ function step7() {
 		return false;
 	}
 }
+
 function step8() {
 	day = _("day").value;
 	month = _("month").value;
 	year = _("year").value;
-	if (day.length < 1) {
-		animateCSS('#day', 'jello');
-		alert.show('Please enter the day the were born', 'danger');
-		return false;
-	} else if(month.length < 1){
-		animateCSS('#month', 'jello');
-		alert.show('Please enter the month the were born', 'danger');
-		return false;
-	} else if(year.length < 4){
-		animateCSS('#year', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
-		return false;
-	} else {
+
+	if (day.length > 1 && month.length > 1 && year.length > 1) {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
 		progress.dataset.progress = 48;
 		return true;
+	} else {
+		animateCSS('#birthQuestion', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+		return false;
 	}
 }
 
 function step9() {
 	var spouse = document.getElementById("spouse");
 	var answer = spouse.options[spouse.selectedIndex].value;
-	
+
 	if (answer == "No" && spouse.length > 1) {
 		_("step9").style.display = "none";
 		_("step10").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 54;
 		return true;
 	} else if (answer == "Yes" && spouse.length > 1) {
 		_("step9").style.display = "none";
 		_("step20").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 54;
 		return true;
 	} else {
-		animateCSS('#question9', 'jello');
+		animateCSS('#spouseQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
 }
+
+function step10() {
+	street = _("street").value;
+	apt = _("apt").value;
+	city = _("city").value;
+	zip = _("zip").value;
+	state = _("state").value;
+	if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
+		_("step10").style.display = "none";
+		_("step11").style.display = "block";
+		progress.dataset.progress = 60;
+		return true;
+	} else {
+		animateCSS('#addressQuestion', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	}
+}
+
+function step11() {
+	firstName = _("firstName").value;
+	lastName = _("lastName").value;
+	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+		_("step11").style.display = "none";
+		_("step12").style.display = "block";
+		progress.dataset.progress = 66;
+		return true;
+	} else {
+		animateCSS('#namesQuestion', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	}
+}
+
+function step12() {
+	email = _("email").value;
+	if (email.length > 1 && email.match(/^\S+@\S+/)) {
+		_("step12").style.display = "none";
+		_("step30").style.display = "block";
+		progress.dataset.progress = 72;
+	} else {
+		animateCSS('#email', 'jello');
+		alert.show('Please enter a valid email address', 'danger');
+		return false;
+	}
+}
+
 
 function step20() {
 	sgender = _("sgender").value;
 	if (sgender.length > 1) {
 		_("step20").style.display = "none";
 		_("step21").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 78;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#sgenderQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -211,23 +254,15 @@ function step21() {
 	sday = _("sday").value;
 	smonth = _("smonth").value;
 	syear = _("syear").value;
-	if (sday.length < 2) {
-		animateCSS('#sday', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else if(smonth.length < 2){
-		animateCSS('#smonth', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else if(syear.length < 4){
-		animateCSS('#syear', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else {
+	if (sday.length > 0 && smonth.length > 0 && syear.length > 0) {
 		_("step21").style.display = "none";
 		_("step22").style.display = "block";
-		progress.dataset.progress = 48;
+		progress.dataset.progress = 84;
 		return true;
+	} else {
+		animateCSS('#sbirthQuestion', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+		return false;
 	}
 }
 
@@ -236,10 +271,10 @@ function step22() {
 	if (stabacco.length > 1) {
 		_("step22").style.display = "none";
 		_("step23").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 90;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#stabaccoQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -249,95 +284,27 @@ function step23() {
 	schildren = _("schildren").value;
 	if (schildren.length > 1) {
 		_("step23").style.display = "none";
-		_("step10").style.display = "block";
-		progress.dataset.progress = 30;
+		_("step30").style.display = "block";
+		progress.dataset.progress = 96;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#schildrenQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
 }
 
 
-function step10() {
-	street = _("street").value;
-	apt = _("apt").value;
-	city = _("city").value;
-	zip = _("zip").value;
-	state = _("state").value;
 
-	// if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
 
-		if (street.length < 1) {
-			animateCSS('#street', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-		} else if(apt.length < 1){
-			animateCSS('#apt', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-		} else if(city.length < 1){
-			animateCSS('#city', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-		} else if(zip.length < 1){
-			animateCSS('#zip', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-		} else if(state.length < 1){
-			animateCSS('#state', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-		} else {
-			_("step10").style.display = "none";
-			_("step11").style.display = "block";
-			progress.dataset.progress = 48;
-			return true;
-		}
-}
-
-function step11() {
-	firstName = _("firstName").value;
-	lastName = _("lastName").value;
-
-	// if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
-	if (firstName.length < 1) {
-			animateCSS('#firstName', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-
-		} else if(lastName.length < 1){
-			animateCSS('#lastName', 'jello');
-			alert.show('Please enter your date of birth', 'danger');
-			return false;
-
-	} else {
-		_("step11").style.display = "none";
-		_("step12").style.display = "block";
-		progress.dataset.progress = 30;
-		return true;
-	}
-}
-
-function step12() {
-	email = _("email").value;
-	if (email.length > 1 &&  email.match(/^\S+@\S+/)){
-		_("step12").style.display = "none";
-		_("stepLast").style.display = "block";
-		progress.dataset.progress = 30;
-	} else {
-		animateCSS('#question2', 'jello');
-		alert.show('Please enter a valid email address', 'danger');
-		return false;
-	}
-}
 // && phone.match(/^[0-9]*$/)
-function stepLast() {
-	phone = _("phone").value;	
-	if (phone.length > 10 && phone.match(/^[0-9]*$/)){
-		_("stepLast").style.display = "none";
+function step30() {
+	phone = _("phone").value;
+	if (phone.length > 10 && phone.match(/^[0-9]*$/)) {
+
+		_("step30").style.display = "none";
 		_("userData").style.display = "block";
+
 		_("userCoverage").innerHTML = coverage;
 		_("userFamily").innerHTML = family;
 		_("userProgram").innerHTML = program;
@@ -351,7 +318,7 @@ function stepLast() {
 		_("userSpouse").innerHTML = spouse;
 		_("userSgender").innerHTML = sgender;
 		_("userSday").innerHTML = sday;
-		_("userSmonth").innerHTML =smonth;
+		_("userSmonth").innerHTML = smonth;
 		_("userSyear").innerHTML = syear;
 		_("userStabacco").innerHTML = stabacco;
 		_("userSchildren").innerHTML = schildren;
@@ -364,10 +331,12 @@ function stepLast() {
 		_("userLastName").innerHTML = lastName;
 		_("userEmail").innerHTML = email;
 		_("userPhone").innerHTML = phone;
+
 		progress.dataset.progress = 100;
-alert.show('Please review your information', 'success');
+		alert.show('Please review your information', 'success');
+		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#phone', 'jello');
 		alert.show('Please enter a valid phone number', 'danger');
 		return false;
 	}
@@ -423,6 +392,7 @@ for (i = 0; i < x.length; i++) {
 		this.classList.toggle("select-arrow-active");
 	});
 }
+
 function closeAllSelect(elmnt) {
 	var x, y, i, arrNo = [];
 	x = document.getElementsByClassName("select-items");
@@ -441,5 +411,3 @@ function closeAllSelect(elmnt) {
 	}
 }
 document.addEventListener("click", closeAllSelect);
-
-
