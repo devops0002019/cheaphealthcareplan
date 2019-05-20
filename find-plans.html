@@ -21,7 +21,10 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
 
 	<!-- Fontawesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
 	<!-- Animate -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -79,12 +82,7 @@
 	
 			<div class="animated fadeIn delay-0.8s" id="step1">
 				<div class="info">
-					<div class="question">When would you like coverage?
-						<div class="tooltip">
-							<i class="fas fa-exclamation-triangle"></i>
-							<span class="tooltiptext">We ask this question because..hgghghghghhg, fgfgfgfgfgg. fdfdfdfdfffs</span>
-						</div>
-					</div>
+					<div class="question">When would you like coverage?</div>
 				</div>
 				<div id="question1" class="select" selected="selected" disabled>
 					<select id="coverage" name="coverage" required>
@@ -103,7 +101,7 @@
 		
 			<div class="animated fadeIn delay-0.8s" id="step2">
 				<div class="info">
-					<p class="question">Are you looking for Individual or Family Coverage?</p>
+					<div class="question">Are you looking for Individual or Family Coverage?</div>
 					<div id="question2" class="select" selected="selected" disabled>
 						<select id="family" name="family" required>
                             <option value="">Select One</option>
@@ -139,7 +137,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step4">
 				<div class="info">
-					<p class="question">What is your total household income?</p>
+					<div class="question">What is your total household income?</div>
 					<div id="question4" class="select" selected="selected" disabled>
 						<select id="income" name="income">
                             <option value="">Select One</option>
@@ -157,7 +155,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step5">
 				<div class="info">
-					<p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
+					<div class="question">Are you currently enrolled in Medicare Parts A or B?</div>
 					<div id="question5" class="select" selected="selected" disabled>
 						<select id="enrolled" name="enrolled" required>
                             <option value="">Select One</option>
@@ -175,8 +173,9 @@
 			<div class="animated fadeIn delay-0.5s" id="step6">
 				<div class="info">
 					<div class="question">What is your gender?
-						<div class="tooltip">?
-							<span class="tooltiptext">We ask this question because..gggggghhhmnh, gfgbgggggggggggh.</span>
+						<div class="tooltip">
+							<i class="fas fa-exclamation-triangle"></i>
+							<span class="tooltiptext">We need to know your gender in order to find the best plans.</span>
 						</div>
 					</div>
 					<div id="question6" class="select" selected="selected" disabled>
@@ -194,7 +193,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step7">
 				<div class="info">
-					<p class="question">Have you used Tabacco Products within the last 12 months?</p>
+					<div class="question">Have you used Tabacco Products within the last 12 months?</div>
 					<div id="question7" class="select" selected="selected" disabled>
 						<select id="tabacco" name="tabacco" required>
                             <option value="">Select One</option>
@@ -210,7 +209,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step8">
 				<div class="info">
-					<p class="question">What is your date of birth?</p>
+					<div class="question8">What is your date of birth?</div>
 					<input type="date" name="birth" id="birth" required/>
 					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step8()">
                        <i id="spinner" class="fas fa-spinner fa-spin"></i>
@@ -220,7 +219,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step9">
 				<div class="info">
-					<p class="question">Are you looking to include your spouse in your Health Insurance plan?</p>
+					<div class="question">Are you looking to include your spouse in your Health Insurance plan?</div>
 					<div id="question9" class="select" selected="selected" disabled>
 						<select id="spouse" name="spouse" required>
                             <option value="">Select One</option>
@@ -236,7 +235,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step20">
 				<div class="info">
-					<p class="question">What is your spouse's gender?</p>
+					<div class="question">What is your spouse's gender?</div>
 					<div class="select" selected="selected" disabled>
 						<select id="sgender" name="sgender" required>
                             <option value="">Select One</option>
@@ -252,8 +251,18 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step21">
 				<div class="info">
-					<p class="question">What is your spouse's date of birth? </p>
-					<input class="step" type="date" name="sbirth" id="sbirth" required/>
+					<div class="question">What is your spouse's date of birth? </div>
+
+
+					<fieldset>
+						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="D" required/>
+						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="M" required/>
+						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="Y" required/>
+					</fieldset>
+					
+
+
+
 					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step21()">
                        <i id="spinner" class="fas fa-spinner fa-spin"></i>
                        <i id="arrow" class="fas fa-arrow-circle-right "></i>
@@ -262,7 +271,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step22">
 				<div class="info">
-					<p class="question">Has your spouse Tabacco Products within the last 12 months?</p>
+					<div class="question">Has your spouse Tabacco Products within the last 12 months?</div>
 					<div class="select" selected="selected" disabled>
 						<select id="stabacco" name="stabacco" required>
                             <option value="">Select One</option>
@@ -278,7 +287,7 @@
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step23">
 				<div class="info">
-					<p class="question">Are you looking to include your children in your Health Insurance plan?</p>
+					<div class="question">Are you looking to include your children in your Health Insurance plan?</divp>
 					<div class="select" selected="selected" disabled>
 						<select id="schildren" name="schildren" required>
                             <option value="">Select One</option>
@@ -293,7 +302,7 @@
 				</div>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step10">
-				<p class="question">What is your address?</p>
+				<div class="question">What is your address?</div>
 				<div class="grid set-cols-2 set-gap-32">
 					<input class="fullrow" type="text" id="address" name="address" placeholder="street" required/>
 					<input type="text" id="apt" name="apt" placeholder="apartment" />
@@ -307,7 +316,7 @@
                 </button>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step11">
-				<p class="question">What is your full name?</p>
+				<div class="question">What is your full name?</div>
 				<input type="text" id="firstName" name="firstName" placeholder="first Name" required/>
 				<br /><br />
 				<input class="step" type="text" id="lastName" name="lastName" placeholder="last Name" required/>
@@ -317,7 +326,7 @@
                  </button>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step12">
-				<p class="question">What is your Email?</p>
+				<div class="question">What is your Email?</div>
 				<input type="email" id="email" name="email" placeholder="youremail@mail.com" required/> <br>
 				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step12()">
                     <i id="spinner" class="fas fa-spinner fa-spin"></i>
@@ -325,7 +334,7 @@
                 </button>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step13">
-				<p class="question">Last step! What is your Mobile or home phone number?</p>
+				<div class="question">Last step! What is your Mobile or home phone number?</div>
 				<input class="step" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required/>
 				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step13()">
                      <i id="spinner" class="fas fa-spinner fa-spin"></i>
