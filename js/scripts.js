@@ -136,6 +136,7 @@ function step6() {
 	}
 }
 
+
 function step7() {
 	tabacco = _("tabacco").value;
 	if (tabacco.length > 1) {
@@ -154,18 +155,29 @@ function step8() {
 	day = _("day").value;
 	month = _("month").value;
 	year = _("year").value;
-
-	if (day.length > 1 && month.length > 1 && year.length > 1) {
+	if (day.length < 2 && month.length < 2 && year.length < 4) {
+		animateCSS('#birthQuestion', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(day.length < 2){
+		animateCSS('#day', 'jello');
+		alert.show('Please enter the day you were born', 'danger');
+	} else if(month.length < 2){
+		animateCSS('#month', 'jello');
+		alert.show('Please enter the month you were born', 'danger');
+	} else if(year.length < 4){
+		animateCSS('#year', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+	} else {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
 		progress.dataset.progress = 48;
 		return true;
-	} else {
-		animateCSS('#birthQuestion', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
-		return false;
 	}
 }
+
+
+
 
 function step9() {
 	var spouse = document.getElementById("spouse");
@@ -189,35 +201,78 @@ function step9() {
 }
 
 function step10() {
+
 	street = _("street").value;
 	apt = _("apt").value;
 	city = _("city").value;
 	zip = _("zip").value;
 	state = _("state").value;
-	if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
+
+	if (street.length < 1 && apt.length < 1 && city.length < 1 && state.length < 1) {
+		animateCSS('#birthQuestion', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(street.length < 1){
+		animateCSS('#day', 'jello');
+		alert.show('Please enter the day you were born', 'danger');
+	} else if(apt.length < 1){
+		animateCSS('#month', 'jello');
+		alert.show('Please enter the month you were born', 'danger');
+	} else if(city.length < 1){
+		animateCSS('#year', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+	} else if(state.length < 1){
+		animateCSS('#year', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+	} else {
 		_("step10").style.display = "none";
 		_("step11").style.display = "block";
 		progress.dataset.progress = 60;
 		return true;
-	} else {
-		animateCSS('#addressQuestion', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
 	}
+
+
+
+
+
+
+
+
+
+
+	// if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
+	// 	_("step10").style.display = "none";
+	// 	_("step11").style.display = "block";
+	// 	progress.dataset.progress = 60;
+	// 	return true;
+	// } else {
+	// 	animateCSS('#addressQuestion', 'jello');
+	// 	alert.show('Please enter your date of birth', 'danger');
+	// 	return false;
+	// }
 }
 
 function step11() {
+
 	firstName = _("firstName").value;
 	lastName = _("lastName").value;
-	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+
+	// if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+	if (firstName.length < 2 && lastName.length < 2) {
+		animateCSS('#namesQuestion', 'jello');
+		alert.show('Please enter your first and last names', 'danger');
+		return false;
+	} else if(firstName.length < 2){
+		animateCSS('#firstName', 'jello');
+		alert.show('Please enter your First Name', 'danger');
+	} else if(lastName.length < 2){
+		animateCSS('#lastName', 'jello');
+		alert.show('Please enter your Last Name', 'danger');
+	} else {
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
-		progress.dataset.progress = 66;
+		progress.dataset.progress = 48;
 		return true;
-	} else {
-		animateCSS('#namesQuestion', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
 	}
 }
 
