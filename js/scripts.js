@@ -47,16 +47,18 @@ sbirth = 'No applied';
 stabacco = 'No applied';
 schildren = 'No applied';
 
+
+
 // step by step
 function step1() {
 	coverage = _("coverage").value;
 	if (coverage.length > 1) {
 		_("step1").style.display = "none";
 		_("step2").style.display = "block";
-		progress.dataset.progress = 10;
+		progress.dataset.progress = 6;
 		return true;
 	} else {
-		animateCSS('#question1', 'jello');
+		animateCSS('#coverageQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -67,10 +69,10 @@ function step2() {
 	if (family.length > 1) {
 		_("step2").style.display = "none";
 		_("step3").style.display = "block";
-		progress.dataset.progress = 20;
+		progress.dataset.progress = 12;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#familyQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -81,10 +83,10 @@ function step3() {
 	if (program.length > 1) {
 		_("step3").style.display = "none";
 		_("step4").style.display = "block";
-		progress.dataset.progress = 30;
+		progress.dataset.progress = 18;
 		return true;
 	} else {
-		animateCSS('#question3', 'jello');
+		animateCSS('#programQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -92,13 +94,13 @@ function step3() {
 
 function step4() {
 	income = _("income").value;
-	if (income.length > 0) {
+	if (income.length > 1) {
 		_("step4").style.display = "none";
 		_("step5").style.display = "block";
 		progress.dataset.progress = 40;
 		return true;
 	} else {
-		animateCSS('#question4', 'jello');
+		animateCSS('#incomeQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -112,7 +114,7 @@ function step5() {
 		progress.dataset.progress = 30;
 		return true;
 	} else {
-		animateCSS('#question5', 'jello');
+		animateCSS('#enrolledQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -126,7 +128,7 @@ function step6() {
 		progress.dataset.progress = 30;
 		return true;
 	} else {
-		animateCSS('#question6', 'jello');
+		animateCSS('#genderQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -140,7 +142,7 @@ function step7() {
 		progress.dataset.progress = 30;
 		return true;
 	} else {
-		animateCSS('#question7', 'jello');
+		animateCSS('#tabaccoQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -149,35 +151,25 @@ function step8() {
 	day = _("day").value;
 	month = _("month").value;
 	year = _("year").value;
-	if (day.length < 2 && day.length < 2 && year.length < 4) {
+	if (day.length < 1) {
+		animateCSS('#day', 'jello');
+		alert.show('Please enter the day the were born', 'danger');
+		return false;
+	} else if(month.length < 1){
+		animateCSS('#month', 'jello');
+		alert.show('Please enter the month the were born', 'danger');
+		return false;
+	} else if(year.length < 4){
+		animateCSS('#year', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+		return false;
+	} else {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
 		progress.dataset.progress = 48;
 		return true;
-	} else {
-		animateCSS('#day', 'jello');
-		animateCSS('#month', 'jello');
-		animateCSS('#year', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-		
 	}
 }
-
-
-// function step8() {
-// 	birth = _("birth").value;
-// 	if (birth.length > 1) {
-// 		_("step8").style.display = "none";
-// 		_("step9").style.display = "block";
-// 		progress.dataset.progress = 30;
-// 		return true;
-// 	} else {
-// 		animateCSS('#birth', 'jello');
-// 		alert.show('Please enter your date of birth', 'danger');
-// 		return false;
-// 	}
-// }
 
 function step9() {
 	var spouse = document.getElementById("spouse");
@@ -215,7 +207,6 @@ function step20() {
 }
 
 
-
 function step21() {
 	sday = _("sday").value;
 	smonth = _("smonth").value;
@@ -239,21 +230,6 @@ function step21() {
 		return true;
 	}
 }
-
-
-// function step21() {
-// 	sbirth = _("sbirth").value;
-// 	if (sbirth.length > 1) {
-// 		_("step21").style.display = "none";
-// 		_("step22").style.display = "block";
-// 		progress.dataset.progress = 30;
-// 		return true;
-// 	} else {
-// 		animateCSS('#question2', 'jello');
-// 		alert.show('Please select one option', 'danger');
-// 		return false;
-// 	}
-// }
 
 function step22() {
 	stabacco = _("stabacco").value;
@@ -285,35 +261,62 @@ function step23() {
 
 
 function step10() {
-	address = _("address").value;
+	street = _("street").value;
 	apt = _("apt").value;
 	city = _("city").value;
 	zip = _("zip").value;
 	state = _("state").value;
-	if (address.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
-		_("step10").style.display = "none";
-		_("step11").style.display = "block";
-		progress.dataset.progress = 30;
-		return true;
-	} else {
-		animateCSS('#question2', 'jello');
-		alert.show('Please Fill out all the fields with correct values', 'danger');
-		return false;
-	}
+
+	// if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
+
+		if (street.length < 1) {
+			animateCSS('#street', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+		} else if(apt.length < 1){
+			animateCSS('#apt', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+		} else if(city.length < 1){
+			animateCSS('#city', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+		} else if(zip.length < 1){
+			animateCSS('#zip', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+		} else if(state.length < 1){
+			animateCSS('#state', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+		} else {
+			_("step10").style.display = "none";
+			_("step11").style.display = "block";
+			progress.dataset.progress = 48;
+			return true;
+		}
 }
 
 function step11() {
 	firstName = _("firstName").value;
 	lastName = _("lastName").value;
-	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+
+	// if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+	if (firstName.length < 1) {
+			animateCSS('#firstName', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+
+		} else if(lastName.length < 1){
+			animateCSS('#lastName', 'jello');
+			alert.show('Please enter your date of birth', 'danger');
+			return false;
+
+	} else {
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
 		progress.dataset.progress = 30;
 		return true;
-	} else {
-		animateCSS('#question2', 'jello');
-		alert.show('Please Fill out all the fields', 'danger');
-		return false;
 	}
 }
 
@@ -352,7 +355,7 @@ function stepLast() {
 		_("userSyear").innerHTML = syear;
 		_("userStabacco").innerHTML = stabacco;
 		_("userSchildren").innerHTML = schildren;
-		_("userAddress").innerHTML = address;
+		_("userStreet").innerHTML = street;
 		_("userApt").innerHTML = apt;
 		_("userCity").innerHTML = city;
 		_("userState").innerHTML = state;
@@ -440,69 +443,3 @@ function closeAllSelect(elmnt) {
 document.addEventListener("click", closeAllSelect);
 
 
-
-
-
-
-
-
-
-
-
-
-
-// function step1() {
-//     var coverage = document.getElementById("coverage");
-//     var answer = coverage.options[coverage.selectedIndex].value;
-//     if (answer == "No") {
-//         alert("NO IS WORKING!!!!!!");
-//         _("step1").style.display = "none";
-//         _("step2").style.display = "block";
-//         _("progressBar").value = 7.5;
-//         _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
-//         error("rgb(255, 255, 255)");
-//         console.log("coverage is up and running");
-//         return true;
-//     } else if(selectedValue == "Yes") {
-//         alert("Yes IS WORKING!!!!!!");
-//         _("step1").style.display = "none";
-//         _("step7").style.display = "block";
-//         _("progressBar").value = 7.5;
-//         _("status").innerHTML = `<h3 id="status"><span class="percentage">7.5% <br /></span>Completed</h3>`;
-//         error("rgb(255, 255, 255)");
-//         console.log("coverage is up and running");
-//         return true;
-//     } else {
-//         error("rgb(189, 87, 87)");
-//         console.log("coverage is NOT up and running");
-//         alert('Plase select one option')
-//         return false;
-//     }
-// }
-
-
-//var progress = document.querySelector('#progressBar');
-//
-//function step1() {
-////	coverage = _("coverage").value;
-//
-//	
-//	var radio1 = document.getElementById('male').checked;
-//	var radio2 = document.getElementById('female').checked;
-//	
-//	if ((radio1 == "") && (radio2 == "")) {
-//		
-//		alert.show('Please select one option', 'danger');
-//		return false;
-//
-//	} else {
-//		
-//		//	if (coverage.length > 1) {
-//		_("step1").style.display = "none";
-//		_("step2").style.display = "block";
-//		progress.dataset.progress = 10;
-//		return true;
-//		
-//
-//	}
-//}

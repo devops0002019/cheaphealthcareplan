@@ -17,23 +17,23 @@
 	grid-template-columns: 1fr 1fr 2fr;
 }
 
-#spinner {
+.fa-spinner {
 	display: none;
 }
 
-#arrow {
+.fa-arrow-circle-right {
 	display: block;
 }
 
-#button:focus #spinner {
+.button:focus .fa-spinner {
 	display: block;
 }
 
-#button:focus #arrow {
+.button:focus .fa-arrow-circle-right {
 	display: none;
 }
 
-#arrow.fa-spinner.fa-spin {
+.fa-spinner.fa-spin {
 	display: none;
 }
 
@@ -101,7 +101,7 @@
 	-o-object-fit: cover;
 	object-fit: cover;
 }
-
+/* 
 .info {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -116,10 +116,17 @@
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-}
+} */
 
 #step1 {
+
 	display: block;
+}
+
+
+[id*="step"] {
+	animation-name: fadeIn;
+	animation-duration: 1s;
 }
 
 form#userInfo > #userData, #stepLast,
@@ -240,6 +247,8 @@ ul#userData {
 	border-radius: 4px;
 	-webkit-box-shadow: var(--shadow);
 	box-shadow: var(--shadow);
+	animation-name: fadeIn;
+	animation-duration: 1s;
 }
 
 
@@ -264,6 +273,8 @@ ul#userData {
 	color: #fff;
 	-webkit-box-shadow: var(--shadow);
 	box-shadow: var(--shadow);
+	animation-name: fadeIn;
+	animation-duration: 1s;
 }
 
 .thankyou {

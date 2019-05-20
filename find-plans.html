@@ -79,12 +79,9 @@
 			<div id="progressBar" class="progress-circle" data-progress="0"></div>
 
 
-
-			<div class="animated fadeIn delay-0.8s" id="step1">
-				<div class="info">
-					<div class="question">When would you like coverage?</div>
-				</div>
-				<div id="question1" class="select" selected="selected" disabled>
+			<div id="step1">
+				<div class="question">When would you like coverage?</div>
+				<div id="coverageQuestion" class="select" selected="selected" disabled>
 					<select id="coverage" name="coverage" required>
 						<option value="">Select One</option>
 						<option value="Immediately">Immediately</option>
@@ -92,71 +89,66 @@
 						<option value="Not sure">Not sure</option>
 					</select>
 				</div>
-				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step1()">
-					<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
-					<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
+				<button class="button" onclick="step1()">
+					<i class="fas fa-spinner fa-spin"></i>
+					<i class="fas fa-arrow-circle-right"></i>
+				</button>
+			</div>
+
+			<div id="step2">
+				<div class="question">Are you looking for Individual or Family Coverage?</div>
+				<div id="familyQuestion" class="select" selected="selected" disabled>
+					<select id="family" name="family" required>
+						<option value="">Select One</option>
+						<option value="Individual">Individual</option>
+						<option value="Family">Family</option>
+					</select>
+				</div>
+				<button class="button" onclick="step2()">
+					<i class="fas fa-spinner fa-spin"></i>
+					<i class="fas fa-arrow-circle-right"></i>
 				</button>
 			</div>
 
 
-			<div class="animated fadeIn delay-0.8s" id="step2">
-				<div class="info">
-					<p class="question">Are you looking for Individual or Family Coverage?</p>
-					<div id="question2" class="select" selected="selected" disabled>
-						<select id="family" name="family" required>
-							<option value="">Select One</option>
-							<option value="Individual">Individual</option>
-							<option value="Family">Family</option>
-						</select>
-					</div>
-					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step2()">
-						<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
-						<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
-					</button>
-				</div>
-			</div>
-
 
 			<div class="animated fadeIn delay-0.8s" id="step3">
-				<div class="info">
-					<p class="question">Are you on Disability, Medicaid or Medicare?</p>
-					<div id="question3" class="select" selected="selected" disabled>
-						<select id="program" name="program" required>
-							<option value="">Select One</option>
-							<option value="Neither">Neither</option>
-							<option value="Disability">Disability</option>
-							<option value="Medicaid">Medicaid</option>
-							<option value="Medicare">Medicare</option>
-						</select>
-					</div>
-					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step3()">
-						<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
-						<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
-					</button>
+
+				<div class="question">Are you on Disability, Medicaid or Medicare?</div>
+				<div id="programQuestion" class="select" selected="selected" disabled>
+					<select id="program" name="program" required>
+						<option value="">Select One</option>
+						<option value="Neither">Neither</option>
+						<option value="Disability">Disability</option>
+						<option value="Medicaid">Medicaid</option>
+						<option value="Medicare">Medicare</option>
+					</select>
 				</div>
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step3()">
+					<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
+				</button>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step4">
-				<div class="info">
-					<p class="question">What is your total household income?</p>
-					<div id="question4" class="select" selected="selected" disabled>
-						<select id="income" name="income">
-							<option value="">Select One</option>
-							<option value="+$47,000">+$47,000</option>
-							<option value="$30,000 - $47,000">$30,000 - $47,000</option>
-							<option value="$16,000 - $30,000">$16,000 - $30,000</option>
-							<option value="0 - $16,000">0 - $16,000</option>
-						</select>
-					</div>
-					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step4()">
-						<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
-						<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
-					</button>
+				<div class="question">What is your total household income?</div>
+				<div id="incomeQuestion" class="select" selected="selected" disabled>
+					<select id="income" name="income">
+						<option value="">Select One</option>
+						<option value="+$47,000">+$47,000</option>
+						<option value="$30,000 - $47,000">$30,000 - $47,000</option>
+						<option value="$16,000 - $30,000">$16,000 - $30,000</option>
+						<option value="0 - $16,000">0 - $16,000</option>
+					</select>
 				</div>
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step4()">
+					<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
+				</button>
 			</div>
 			<div class="animated fadeIn delay-0.5s" id="step5">
 				<div class="info">
 					<p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
-					<div id="question5" class="select" selected="selected" disabled>
+					<div id="enrolledQuestion" class="select" selected="selected" disabled>
 						<select id="enrolled" name="enrolled" required>
 							<option value="">Select One</option>
 							<option value="Yes">Yes</option>
@@ -178,7 +170,7 @@
 							<span class="tooltiptext">We need to know your gender in order to find the bestplans.</span>
 						</div>
 					</div>
-					<div id="question6" class="select" selected="selected" disabled>
+					<div id="genderQuestion" class="select" selected="selected" disabled>
 						<select id="gender" name="gender" required>
 							<option value="">Select One</option>
 							<option value="Male">Male</option>
@@ -195,7 +187,7 @@
 			<div class="animated fadeIn delay-0.5s" id="step7">
 				<div class="info">
 					<p class="question">Have you used Tabacco Products within the last 12 months?</p>
-					<div id="question7" class="select" selected="selected" disabled>
+					<div id="tabaccoQuestion" class="select" selected="selected" disabled>
 						<select id="tabacco" name="tabacco" required>
 							<option value="">Select One</option>
 							<option value="Yes">Yes</option>
@@ -214,7 +206,8 @@
 					<div class="question">What is your date of birth?
 						<div class="tooltip">
 							<i class="fas fa-exclamation-triangle"></i>
-							<span class="tooltiptext">We need to know your date of birth in order to find the bestplans.</span>
+							<span class="tooltiptext">We need to know your date of birth in order to find the
+								bestplans.</span>
 						</div>
 					</div>
 					<div class="birthday">
@@ -311,10 +304,11 @@
 					</button>
 				</div>
 			</div>
+
 			<div class="animated fadeIn delay-0.5s" id="step10">
 				<p class="question">What is your address?</p>
-				<div class="grid set-cols-2 set-gap-32">
-					<input class="fullrow" type="text" id="address" name="address" placeholder="street" required />
+				<div id="question10" class="grid set-cols-2 set-gap-32">
+					<input class="fullrow" type="text" id="street" name="street" placeholder="street" required />
 					<input type="text" id="apt" name="apt" placeholder="apartment" />
 					<input type="text" id="city" name="city" placeholder="city" required />
 					<input type="text" id="zip" name="zip" placeholder="zip code" required />
@@ -325,16 +319,20 @@
 					<i id="arrow" class="fas fa-arrow-circle-right "></i>
 				</button>
 			</div>
+
 			<div class="animated fadeIn delay-0.5s" id="step11">
-				<p class="question">What is your full name?</p>
-				<input type="text" id="firstName" name="firstName" placeholder="first Name" required />
-				<br /><br />
-				<input class="step" type="text" id="lastName" name="lastName" placeholder="last Name" required />
+				<div class="question">What is your full name?</div>
+				<div class="grid set-cols-2 set-gap-32">
+					<input type="text" id="firstName" name="firstName" placeholder="first Name" required />
+					<input class="step" type="text" id="lastName" name="lastName" placeholder="last Name" required />
+				</div>
 				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step11()">
 					<i id="spinner" class="fas fa-spinner fa-spin"></i>
 					<i id="arrow" class="fas fa-arrow-circle-right "></i>
 				</button>
 			</div>
+
+
 			<div class="animated fadeIn delay-0.5s" id="step12">
 				<p class="question">What is your Email?</p>
 				<input type="email" id="email" name="email" placeholder="youremail@mail.com" required /> <br>
@@ -343,6 +341,11 @@
 					<i id="arrow" class="fas fa-arrow-circle-right "></i>
 				</button>
 			</div>
+
+
+
+
+
 
 			<div class="animated fadeIn delay-0.5s" id="stepLast">
 				<div class="question">Last step! What is your Mobile or home phone number?</div>
@@ -409,7 +412,7 @@
 				</li>
 				<li>
 					<span>What is your zip code?</span>
-					<span id="userAddress"></span>
+					<span id="userStreet"></span>
 				</li>
 
 				<li>
