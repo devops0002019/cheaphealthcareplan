@@ -205,16 +205,22 @@
                     </button>
 				</div>
 			</div>
+
 			<div class="animated fadeIn delay-0.5s" id="step8">
 				<div class="info">
-					<div class="question8">What is your date of birth?</div>
-					<input type="date" name="birth" id="birth" required/>
+					<div class="question">What is your date of birth?</div>
+					<div class="birthday">
+						<input type="number" id="day" name="day" placeholder="DD" required />
+						<input type="number" id="month" name="month" placeholder="MM" required />
+						<input type="number" id="year" name="year" placeholder="YYYY" required />
+					</div>
 					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step8()">
                        <i id="spinner" class="fas fa-spinner fa-spin"></i>
                        <i id="arrow" class="fas fa-arrow-circle-right "></i>
                     </button>
 				</div>
 			</div>
+
 			<div class="animated fadeIn delay-0.5s" id="step9">
 				<div class="info">
 					<div class="question">Are you looking to include your spouse in your Health Insurance plan?</div>
@@ -250,17 +256,11 @@
 			<div class="animated fadeIn delay-0.5s" id="step21">
 				<div class="info">
 					<div class="question">What is your spouse's date of birth? </div>
-
-
-					<fieldset>
-						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="D" required/>
-						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="M" required/>
-						<input class="step" type="text" name="sbirth" id="sbirth" placeholder="Y" required/>
-					</fieldset>
-					
-
-
-
+					<div class="birthday">
+						<input type="number" id="day" name="sday" placeholder="DD" required />
+						<input type="number" id="month" name="smonth" placeholder="MM" required />
+						<input type="number" id="year" name="syear" placeholder="YYYY" required />
+					</div>
 					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step21()">
                        <i id="spinner" class="fas fa-spinner fa-spin"></i>
                        <i id="arrow" class="fas fa-arrow-circle-right "></i>
@@ -339,6 +339,8 @@
                      <i id="arrow" class="fas fa-arrow-circle-right "></i>
                 </button>
 			</div>
+
+
 			<ul id="userData">
 				<li>
 					<span>When would you like coverage?</span>
@@ -370,7 +372,15 @@
 				</li>
 				<li>
 					<span>What is your date of birth?</span>
-					<span id="userBirth"></span>
+					<span id="userDay"></span>
+				</li>
+				<li>
+					<span>What is your date of birth?</span>
+					<span id="userMonth"></span>
+				</li>
+				<li>
+					<span>What is your date of birth?</span>
+					<span id="userYear"></span>
 				</li>
 				<li>
 					<span>Are you looking to include your spouse in your Health Insurance plan?</span>
@@ -382,7 +392,15 @@
 				</li>
 				<li>
 					<span>What is your spouse's date of birth? </span>
-					<span id="userSbirth"></span>
+					<span id="userSday"></span>
+				</li>
+				<li>
+					<span>What is your spouse's date of birth? </span>
+					<span id="userSmonth"></span>
+				</li>
+				<li>
+					<span>What is your spouse's date of birth? </span>
+					<span id="userSyear"></span>
 				</li>
 				<li>
 					<span>Has your spouse Tabacco Products within the last 12 months?</span>
@@ -396,7 +414,6 @@
 					<span>What is your zip code?</span>
 					<span id="userAddress"></span>
 				</li>
-
 				<li>
 					<span>What is your zip code?</span>
 					<span id="userApt"></span>
@@ -409,7 +426,6 @@
 					<span>What is your zip code?</span>
 					<span id="userState"></span>
 				</li>
-
 				<li>
 					<span>What is your zip code?</span>
 					<span id="userZip"></span>

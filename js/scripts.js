@@ -37,7 +37,7 @@ function _(id) {
 }
 
 // init vars
-var coverage, family, program, income, enrolled, gender, sgender, sbirth, stabacco, schildren, tabacco, birth, spouse, address, apt, city, zip, state, firstName, lastName, email, phone;
+var coverage, family, program, income, enrolled, gender, sgender, sday, smonth, syear, stabacco, schildren, tabacco, day, month,year, spouse, address, apt, city, zip, state, firstName, lastName, email, phone;
 
 // default values
 spouse = 'Applied';
@@ -146,16 +146,27 @@ function step7() {
 }
 
 function step8() {
-	birth = _("birth").value;
-	if (birth.length > 1) {
+	day = _("day").value;
+	month = _("month").value;
+	year = _("year").value;
+	// if (day.length > 2 && month.length > 2 && year.length > 4) {
+	if (day.length < 2) {
+		animateCSS('#day', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(month.length < 2){
+		animateCSS('#month', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(year.length < 4){
+		animateCSS('#year', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
 		progress.dataset.progress = 48;
 		return true;
-	} else {
-		animateCSS('#birth', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
 	}
 }
 
@@ -188,7 +199,7 @@ function step20() {
 		progress.dataset.progress = 60;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question20', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -208,6 +219,36 @@ function step21() {
 	}
 }
 
+function step21() {
+	sday = _("sday").value;
+	smonth = _("smonth").value;
+	syear = _("syear").value;
+	if (sday.length < 2) {
+		animateCSS('#sday', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(smonth.length < 2){
+		animateCSS('#smonth', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else if(syear.length < 4){
+		animateCSS('#syear', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+	} else {
+		_("step21").style.display = "none";
+		_("step22").style.display = "block";
+		progress.dataset.progress = 48;
+		return true;
+	}
+}
+
+
+
+
+
+
+
 function step22() {
 	stabacco = _("stabacco").value;
 	if (stabacco.length > 1) {
@@ -216,7 +257,7 @@ function step22() {
 		progress.dataset.progress = 72;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question22', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -230,7 +271,7 @@ function step23() {
 		progress.dataset.progress = 78;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question23', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
 	}
@@ -249,7 +290,7 @@ function step10() {
 		progress.dataset.progress = 84;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question10', 'jello');
 		alert.show('Please Fill out all the fields with correct values', 'danger');
 		return false;
 	}
@@ -264,7 +305,7 @@ function step11() {
 		progress.dataset.progress = 90;
 		return true;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question11', 'jello');
 		alert.show('Please Fill out all the fields', 'danger');
 		return false;
 	}
@@ -277,7 +318,7 @@ function step12() {
 		_("step13").style.display = "block";
 		progress.dataset.progress = 96;
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question12', 'jello');
 		alert.show('Please enter a valid email address', 'danger');
 		return false;
 	}
@@ -295,10 +336,14 @@ function step13() {
 		_("userEnrolled").innerHTML = enrolled;
 		_("userGender").innerHTML = gender;
 		_("userTabacco").innerHTML = tabacco;
-		_("userBirth").innerHTML = birth;
+		_("userDay").innerHTML = day;
+		_("userMonth").innerHTML = month;
+		_("userYear").innerHTML = year;
 		_("userSpouse").innerHTML = spouse;
 		_("userSgender").innerHTML = sgender;
-		_("userSbirth").innerHTML = sbirth;
+		_("userSday").innerHTML = sday;
+		_("userSmonth").innerHTML =smonth;
+		_("userSyear").innerHTML = syear;
 		_("userStabacco").innerHTML = stabacco;
 		_("userSchildren").innerHTML = schildren;
 		_("userAddress").innerHTML = address;
@@ -313,7 +358,7 @@ function step13() {
 		progress.dataset.progress = 100;
 		alert.show('Please review your information', 'success');
 	} else {
-		animateCSS('#question2', 'jello');
+		animateCSS('#question13', 'jello');
 		alert.show('Please enter a valid phone number', 'danger');
 		return false;
 	}
