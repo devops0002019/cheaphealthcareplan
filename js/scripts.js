@@ -200,6 +200,74 @@ function step9() {
 	}
 }
 
+
+
+
+
+
+
+function step20() {
+	sgender = _("sgender").value;
+	if (sgender.length > 1) {
+		_("step20").style.display = "none";
+		_("step21").style.display = "block";
+		progress.dataset.progress = 60;
+		return true;
+	} else {
+		animateCSS('#sgenderQuestion', 'jello');
+		alert.show('Please select one option', 'danger');
+		return false;
+	}
+}
+
+
+function step21() {
+	sday = _("sday").value;
+	smonth = _("smonth").value;
+	syear = _("syear").value;
+	if (sday.length > 0 && smonth.length > 0 && syear.length > 0) {
+		_("step21").style.display = "none";
+		_("step22").style.display = "block";
+		progress.dataset.progress = 66;
+		return true;
+	} else {
+		animateCSS('#sbirthQuestion', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+		return false;
+	}
+}
+
+function step22() {
+	stabacco = _("stabacco").value;
+	if (stabacco.length > 1) {
+		_("step22").style.display = "none";
+		_("step23").style.display = "block";
+		progress.dataset.progress = 72;
+		return true;
+	} else {
+		animateCSS('#stabaccoQuestion', 'jello');
+		alert.show('Please select one option', 'danger');
+		return false;
+	}
+}
+
+function step23() {
+	schildren = _("schildren").value;
+	if (schildren.length > 1) {
+		_("step23").style.display = "none";
+		_("step30").style.display = "block";
+		progress.dataset.progress = 78;
+		return true;
+	} else {
+		animateCSS('#schildrenQuestion', 'jello');
+		alert.show('Please select one option', 'danger');
+		return false;
+	}
+}
+
+
+
+
 function step10() {
 
 	street = _("street").value;
@@ -227,7 +295,7 @@ function step10() {
 	} else {
 		_("step10").style.display = "none";
 		_("step11").style.display = "block";
-		progress.dataset.progress = 60;
+		progress.dataset.progress = 86;
 		return true;
 	}
 
@@ -271,7 +339,7 @@ function step11() {
 	} else {
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
-		progress.dataset.progress = 48;
+		progress.dataset.progress = 92;
 		return true;
 	}
 }
@@ -281,7 +349,7 @@ function step12() {
 	if (email.length > 1 && email.match(/^\S+@\S+/)) {
 		_("step12").style.display = "none";
 		_("step30").style.display = "block";
-		progress.dataset.progress = 72;
+		progress.dataset.progress = 98;
 	} else {
 		animateCSS('#email', 'jello');
 		alert.show('Please enter a valid email address', 'danger');
@@ -290,64 +358,6 @@ function step12() {
 }
 
 
-function step20() {
-	sgender = _("sgender").value;
-	if (sgender.length > 1) {
-		_("step20").style.display = "none";
-		_("step21").style.display = "block";
-		progress.dataset.progress = 78;
-		return true;
-	} else {
-		animateCSS('#sgenderQuestion', 'jello');
-		alert.show('Please select one option', 'danger');
-		return false;
-	}
-}
-
-
-function step21() {
-	sday = _("sday").value;
-	smonth = _("smonth").value;
-	syear = _("syear").value;
-	if (sday.length > 0 && smonth.length > 0 && syear.length > 0) {
-		_("step21").style.display = "none";
-		_("step22").style.display = "block";
-		progress.dataset.progress = 84;
-		return true;
-	} else {
-		animateCSS('#sbirthQuestion', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
-		return false;
-	}
-}
-
-function step22() {
-	stabacco = _("stabacco").value;
-	if (stabacco.length > 1) {
-		_("step22").style.display = "none";
-		_("step23").style.display = "block";
-		progress.dataset.progress = 90;
-		return true;
-	} else {
-		animateCSS('#stabaccoQuestion', 'jello');
-		alert.show('Please select one option', 'danger');
-		return false;
-	}
-}
-
-function step23() {
-	schildren = _("schildren").value;
-	if (schildren.length > 1) {
-		_("step23").style.display = "none";
-		_("step30").style.display = "block";
-		progress.dataset.progress = 96;
-		return true;
-	} else {
-		animateCSS('#schildrenQuestion', 'jello');
-		alert.show('Please select one option', 'danger');
-		return false;
-	}
-}
 
 
 
