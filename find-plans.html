@@ -17,24 +17,24 @@
 	<meta name="description" content="cheaphealthcareplan.com helps individuals to find cheap health insurance quotes online, find family and individual plans through our dedicated form.
         ">
 
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
+
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<!-- Animate -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 	<!-- UI3 -->
 	<link rel="stylesheet" href="css/ui3-1.0.min.css">
-
-	<!-- Fontawesome.css -->
-	<link rel="stylesheet" href="css/fontawesome.css">
-
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animated.css">
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/stylesheet.css">
 
 	<!-- Jquery -->
 	<script src="js/jquery.js"></script>
-
-	<!-- Fontawesome.js -->
-	<script defer src="js/fontawesome.js"></script>
-
 
 	<!-- Google Analytics | Global site tag (gtag.js) - -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140250626-1"></script>
@@ -78,9 +78,17 @@
 
 			<div id="progressBar" class="progress-circle" data-progress="0"></div>
 
+
+
 			<div class="animated fadeIn delay-0.8s" id="step1">
 				<div class="info">
-					<div class="question">When would you like coverage?</div>
+					<div class="question">When would you like coverage?
+						<div class="tooltip">
+							<i class="fas fa-exclamation-triangle"></i>
+							<span class="tooltiptext">We ask this question because..hgghghghghhg, fgfgfgfgfgg.
+								fdfdfdfdfffs</span>
+						</div>
+					</div>
 				</div>
 				<div id="question1" class="select" selected="selected" disabled>
 					<select id="coverage" name="coverage" required>
@@ -91,14 +99,15 @@
 					</select>
 				</div>
 				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step1()">
-					<i id="spinner" class="fas fa-spinner fa-spin"></i>
-					<i id="arrow" class="fas fa-arrow-circle-right"></i>
+					<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
 				</button>
 			</div>
 
+
 			<div class="animated fadeIn delay-0.8s" id="step2">
 				<div class="info">
-					<div class="question">Are you looking for Individual or Family Coverage?</div>
+					<p class="question">Are you looking for Individual or Family Coverage?</p>
 					<div id="question2" class="select" selected="selected" disabled>
 						<select id="family" name="family" required>
 							<option value="">Select One</option>
@@ -107,11 +116,12 @@
 						</select>
 					</div>
 					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step2()">
-						<i id="spinner" class="fas fa-spinner fa-spin"></i>
-						<i id="arrow" class="fas fa-arrow-circle-right"></i>
+						<i id="spinner" class="fas fa-spinner fa-spin animated"></i>
+						<i id="arrow" class="fas fa-arrow-circle-right animated"></i>
 					</button>
 				</div>
 			</div>
+
 
 			<div class="animated fadeIn delay-0.8s" id="step3">
 				<div class="info">
@@ -131,10 +141,9 @@
 					</button>
 				</div>
 			</div>
-
 			<div class="animated fadeIn delay-0.5s" id="step4">
 				<div class="info">
-					<div class="question">What is your total household income?</div>
+					<p class="question">What is your total household income?</p>
 					<div id="question4" class="select" selected="selected" disabled>
 						<select id="income" name="income">
 							<option value="">Select One</option>
@@ -150,10 +159,9 @@
 					</button>
 				</div>
 			</div>
-
 			<div class="animated fadeIn delay-0.5s" id="step5">
 				<div class="info">
-					<div class="question">Are you currently enrolled in Medicare Parts A or B?</div>
+					<p class="question">Are you currently enrolled in Medicare Parts A or B?</p>
 					<div id="question5" class="select" selected="selected" disabled>
 						<select id="enrolled" name="enrolled" required>
 							<option value="">Select One</option>
@@ -168,14 +176,12 @@
 					</button>
 				</div>
 			</div>
-
 			<div class="animated fadeIn delay-0.5s" id="step6">
 				<div class="info">
 					<div class="question">What is your gender?
 						<div class="tooltip">
 							<i class="fas fa-exclamation-triangle"></i>
-							<span class="tooltiptext">We need to know your gender in order to find the best
-								plans.</span>
+							<span class="tooltiptext">We need to know your gender in order to find the bestplans.</span>
 						</div>
 					</div>
 					<div id="question6" class="select" selected="selected" disabled>
@@ -194,7 +200,7 @@
 
 			<div class="animated fadeIn delay-0.5s" id="step7">
 				<div class="info">
-					<div class="question">Have you used Tabacco Products within the last 12 months?</div>
+					<p class="question">Have you used Tabacco Products within the last 12 months?</p>
 					<div id="question7" class="select" selected="selected" disabled>
 						<select id="tabacco" name="tabacco" required>
 							<option value="">Select One</option>
@@ -211,7 +217,12 @@
 
 			<div class="animated fadeIn delay-0.5s" id="step8">
 				<div class="info">
-					<div class="question">What is your date of birth?</div>
+					<div class="question">What is your date of birth?
+						<div class="tooltip">
+							<i class="fas fa-exclamation-triangle"></i>
+							<span class="tooltiptext">We need to know your date of birth in order to find the bestplans.</span>
+						</div>
+					</div>
 					<div class="birthday">
 						<input type="number" id="day" name="day" placeholder="DD" required />
 						<input type="number" id="month" name="month" placeholder="MM" required />
@@ -226,7 +237,7 @@
 
 			<div class="animated fadeIn delay-0.5s" id="step9">
 				<div class="info">
-					<div class="question">Are you looking to include your spouse in your Health Insurance plan?</div>
+					<p class="question">Are you looking to include your spouse in your Health Insurance plan?</p>
 					<div id="question9" class="select" selected="selected" disabled>
 						<select id="spouse" name="spouse" required>
 							<option value="">Select One</option>
@@ -241,47 +252,9 @@
 				</div>
 			</div>
 
-			<div class="animated fadeIn delay-0.5s" id="step10">
-				<div class="question">What is your address?</div>
-				<div id="question10" class="grid set-cols-2 set-gap-32">
-					<input class="fullrow" type="text" id="street" name="street" placeholder="street" required />
-					<input type="text" id="apt" name="apt" placeholder="apartment" />
-					<input type="text" id="city" name="city" placeholder="city" required />
-					<input type="text" id="zip" name="zip" placeholder="zip code" required />
-					<input type="text" id="state" name="state" placeholder="state" required />
-				</div>
-				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step10()">
-					<i id="spinner" class="fas fa-spinner fa-spin"></i>
-					<i id="arrow" class="fas fa-arrow-circle-right "></i>
-				</button>
-			</div>
-
-			<div class="animated fadeIn delay-0.5s" id="step11">
-				<div class="question">What is your full name?</div>
-				<div id="question11" class="grid set-cols-2 set-gap-32">
-					<input type="text" id="firstName" name="firstName" placeholder="first name" required /> 
-					<input type="text" id="lastName" name="lastName" placeholder="last name" required />
-				</div>
-
-				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step11()">
-					<i id="spinner" class="fas fa-spinner fa-spin"></i>
-					<i id="arrow" class="fas fa-arrow-circle-right "></i>
-				</button>
-			</div>
-
-			<div class="animated fadeIn delay-0.5s" id="step12">
-				<div class="question">What is your Email?</div>
-				<input type="email" id="email" name="email" placeholder="youremail@mail.com" required /> <br>
-				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step12()">
-					<i id="spinner" class="fas fa-spinner fa-spin"></i>
-					<i id="arrow" class="fas fa-arrow-circle-right "></i>
-				</button>
-			</div>
-
-
 			<div class="animated fadeIn delay-0.5s" id="step20">
 				<div class="info">
-					<div class="question">What is your spouse's gender?</div>
+					<p class="question">What is your spouse's gender?</p>
 					<div class="select" selected="selected" disabled>
 						<select id="sgender" name="sgender" required>
 							<option value="">Select One</option>
@@ -313,7 +286,7 @@
 
 			<div class="animated fadeIn delay-0.5s" id="step22">
 				<div class="info">
-					<div class="question">Has your spouse Tabacco Products within the last 12 months?</div>
+					<p class="question">Has your spouse Tabacco Products within the last 12 months?</p>
 					<div class="select" selected="selected" disabled>
 						<select id="stabacco" name="stabacco" required>
 							<option value="">Select One</option>
@@ -330,148 +303,160 @@
 
 			<div class="animated fadeIn delay-0.5s" id="step23">
 				<div class="info">
-					<div class="question">Are you looking to include your children in your Health Insurance plan?</divp>
-						<div class="select" selected="selected" disabled>
-							<select id="schildren" name="schildren" required>
-								<option value="">Select One</option>
-								<option value="No">No</option>
-								<option value="Yes">Yes</option>
-							</select>
-						</div>
-						<button id="button" class="button animated fadeIn delay-0.5s" onclick="step23()">
-							<i id="spinner" class="fas fa-spinner fa-spin"></i>
-							<i id="arrow" class="fas fa-arrow-circle-right "></i>
-						</button>
+					<p class="question">Are you looking to include your children in your Health Insurance plan?</p>
+					<div class="select" selected="selected" disabled>
+						<select id="schildren" name="schildren" required>
+							<option value="">Select One</option>
+							<option value="No">No</option>
+							<option value="Yes">Yes</option>
+						</select>
 					</div>
-				</div>
-
-
-
-
-
-
-				<div class="animated fadeIn delay-0.5s" id="stepLast">
-					<div class="question">Last step! What is your Mobile or home phone number?</div>
-					<input class="step" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required />
-					<button id="button" class="button animated fadeIn delay-0.5s" onclick="stepLast()">
+					<button id="button" class="button animated fadeIn delay-0.5s" onclick="step23()">
 						<i id="spinner" class="fas fa-spinner fa-spin"></i>
 						<i id="arrow" class="fas fa-arrow-circle-right "></i>
 					</button>
 				</div>
+			</div>
+			<div class="animated fadeIn delay-0.5s" id="step10">
+				<p class="question">What is your address?</p>
+				<div class="grid set-cols-2 set-gap-32">
+					<input class="fullrow" type="text" id="address" name="address" placeholder="street" required />
+					<input type="text" id="apt" name="apt" placeholder="apartment" />
+					<input type="text" id="city" name="city" placeholder="city" required />
+					<input type="text" id="zip" name="zip" placeholder="zip code" required />
+					<input type="text" id="state" name="state" placeholder="state" required />
+				</div>
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step10()">
+					<i id="spinner" class="fas fa-spinner fa-spin"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right "></i>
+				</button>
+			</div>
+			<div class="animated fadeIn delay-0.5s" id="step11">
+				<p class="question">What is your full name?</p>
+				<input type="text" id="firstName" name="firstName" placeholder="first Name" required />
+				<br /><br />
+				<input class="step" type="text" id="lastName" name="lastName" placeholder="last Name" required />
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step11()">
+					<i id="spinner" class="fas fa-spinner fa-spin"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right "></i>
+				</button>
+			</div>
+			<div class="animated fadeIn delay-0.5s" id="step12">
+				<p class="question">What is your Email?</p>
+				<input type="email" id="email" name="email" placeholder="youremail@mail.com" required /> <br>
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="step12()">
+					<i id="spinner" class="fas fa-spinner fa-spin"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right "></i>
+				</button>
+			</div>
+
+			<div class="animated fadeIn delay-0.5s" id="stepLast">
+				<div class="question">Last step! What is your Mobile or home phone number?</div>
+				<input class="step" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required />
+				<button id="button" class="button animated fadeIn delay-0.5s" onclick="stepLast()">
+					<i id="spinner" class="fas fa-spinner fa-spin"></i>
+					<i id="arrow" class="fas fa-arrow-circle-right "></i>
+				</button>
+			</div>
 
 
-				<ul id="userData">
-					<li>
-						<span>When would you like coverage?</span>
-						<span id="userCoverage"></span>
-					</li>
-					<li>
-						<span>Are you looking for Individual or Family Coverage?</span>
-						<span id="userFamily"></span>
-					</li>
-					<li>
-						<span>Are you on Disability, Medicaid or Medicare?</span>
-						<td><span id="userProgram"></span>
-					</li>
-					<li>
-						<span>What is your total household income?</span>
-						<span id="userIncome"></span>
-					</li>
-					<li>
-						<span>Are you currently enrolled in Medicare Parts A or B?</span>
-						<span id="userEnrolled"></span>
-					</li>
-					<li>
-						<span>What is your gender?</span>
-						<span id="userGender"></span>
-					</li>
-					<li>
-						<span>Have you used Tobacco Products within the last 12 months?</span>
-						<span id="userTabacco"></span>
-					</li>
-					<li>
-						<span>What is your date of birth?</span>
-						<span id="userDay"></span>
-					</li>
-					<li>
-						<span>What is your date of birth?</span>
-						<span id="userMonth"></span>
-					</li>
-					<li>
-						<span>What is your date of birth?</span>
-						<span id="userYear"></span>
-					</li>
-					<li>
-						<span>Are you looking to include your spouse in your Health Insurance plan?</span>
-						<span id="userSpouse"></span>
-					</li>
-					<li>
-						<span>What is your spouse's gender?</span>
-						<span id="userSgender"></span>
-					</li>
-					<li>
-						<span>What is your spouse's date of birth? </span>
-						<span id="userSday"></span>
-					</li>
-					<li>
-						<span>What is your spouse's date of birth? </span>
-						<span id="userSmonth"></span>
-					</li>
-					<li>
-						<span>What is your spouse's date of birth? </span>
-						<span id="userSyear"></span>
-					</li>
-					<li>
-						<span>Has your spouse Tabacco Products within the last 12 months?</span>
-						<span id="userStabacco"></span>
-					</li>
-					<li>
-						<span>Are you looking to include your children in your Health Insurance plan?</span>
-						<span id="userSchildren"></span>
-					</li>
-					<li>
-						<span>What is your zip code?</span>
-						<span id="userAddress"></span>
-					</li>
-					<li>
-						<span>What is your zip code?</span>
-						<span id="userApt"></span>
-					</li>
-					<li>
-						<span>What is your zip code?</span>
-						<span id="userCity"></span>
-					</li>
-					<li>
-						<span>What is your zip code?</span>
-						<span id="userState"></span>
-					</li>
-					<li>
-						<span>What is your zip code?</span>
-						<span id="userZip"></span>
-					</li>
-					<li>
-						<span>What is your First name?</span>
-						<span id="userFirstName"></span>
-					</li>
-					<li>
-						<span>What is your Last name?</span>
-						<span id="userLastName"></span>
-					</li>
-					<li>
-						<span>What is your email?</span>
-						<span id="userEmail"></span>
-					</li>
-					<li>
-						<span>Mobile or home Phone number?</span>
-						<span id="userPhone"></span>
-					</li>
-					<div class="submission">
-						<!-- <div data-netlify-recaptcha="true"></div> -->
-						<br>
-						<button class="submit animated fadeIn delay-1s" type="submit"
-							onclick="submitForm()">Submit</button>
-					</div>
-				</ul>
+			<ul id="userData">
+				<li>
+					<span>When would you like coverage?</span>
+					<span id="userCoverage"></span>
+				</li>
+				<li>
+					<span>Are you looking for Individual or Family Coverage?</span>
+					<span id="userFamily"></span>
+				</li>
+				<li>
+					<span>Are you on Disability, Medicaid or Medicare?</span>
+					<td><span id="userProgram"></span>
+				</li>
+				<li>
+					<span>What is your total household income?</span>
+					<span id="userIncome"></span>
+				</li>
+				<li>
+					<span>Are you currently enrolled in Medicare Parts A or B?</span>
+					<span id="userEnrolled"></span>
+				</li>
+				<li>
+					<span>What is your gender?</span>
+					<span id="userGender"></span>
+				</li>
+				<li>
+					<span>Have you used Tobacco Products within the last 12 months?</span>
+					<span id="userTabacco"></span>
+				</li>
+				<li>
+					<span>What is your date of birth?</span>
+					<span id="userBirth"></span>
+				</li>
+				<li>
+					<span>Are you looking to include your spouse in your Health Insurance plan?</span>
+					<span id="userSpouse"></span>
+				</li>
+				<li>
+					<span>What is your spouse's gender?</span>
+					<span id="userSgender"></span>
+				</li>
+				<li>
+					<span>What is your spouse's date of birth? </span>
+					<span id="userSbirth"></span>
+				</li>
+				<li>
+					<span>Has your spouse Tabacco Products within the last 12 months?</span>
+					<span id="userStabacco"></span>
+				</li>
+				<li>
+					<span>Are you looking to include your children in your Health Insurance plan?</span>
+					<span id="userSchildren"></span>
+				</li>
+				<li>
+					<span>What is your zip code?</span>
+					<span id="userAddress"></span>
+				</li>
+
+				<li>
+					<span>What is your zip code?</span>
+					<span id="userApt"></span>
+				</li>
+				<li>
+					<span>What is your zip code?</span>
+					<span id="userCity"></span>
+				</li>
+				<li>
+					<span>What is your zip code?</span>
+					<span id="userState"></span>
+				</li>
+
+				<li>
+					<span>What is your zip code?</span>
+					<span id="userZip"></span>
+				</li>
+				<li>
+					<span>What is your First name?</span>
+					<span id="userFirstName"></span>
+				</li>
+				<li>
+					<span>What is your Last name?</span>
+					<span id="userLastName"></span>
+				</li>
+				<li>
+					<span>What is your email?</span>
+					<span id="userEmail"></span>
+				</li>
+				<li>
+					<span>Mobile or home Phone number?</span>
+					<span id="userPhone"></span>
+				</li>
+				<div class="submission">
+					<!-- <div data-netlify-recaptcha="true"></div> -->
+					<br>
+					<button class="submit animated fadeIn delay-1s" type="submit" onclick="submitForm()">Submit</button>
+				</div>
+			</ul>
 
 		</form>
 
