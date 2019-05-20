@@ -122,7 +122,7 @@
 	display: block;
 }
 
-form#userInfo > #userData,
+form#userInfo > #userData, #stepLast,
 [id*="step"] {
 	display: none;
 }

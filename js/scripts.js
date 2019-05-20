@@ -37,7 +37,7 @@ function _(id) {
 }
 
 // init vars
-var coverage, family, program, income, enrolled, gender, sgender, sday, smonth, syear, stabacco, schildren, tabacco, day, month,year, spouse, address, apt, city, zip, state, firstName, lastName, email, phone;
+var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
 
 // default values
 spouse = 'Applied';
@@ -149,26 +149,47 @@ function step8() {
 	day = _("day").value;
 	month = _("month").value;
 	year = _("year").value;
-	// if (day.length > 2 && month.length > 2 && year.length > 4) {
-	if (day.length < 2) {
-		animateCSS('#day', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else if(month.length < 2){
-		animateCSS('#month', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else if(year.length < 4){
-		animateCSS('#year', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
-		return false;
-	} else {
+	if (day.length < 2 && day.length < 2 && year.length < 4) {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";
 		progress.dataset.progress = 48;
 		return true;
+	} else {
+		animateCSS('#day', 'jello');
+		animateCSS('#month', 'jello');
+		animateCSS('#year', 'jello');
+		alert.show('Please enter your date of birth', 'danger');
+		return false;
+		
 	}
 }
+
+
+
+// function step8() {
+// 	day = _("day").value;
+// 	month = _("month").value;
+// 	year = _("year").value;
+// 	if (day.length < 2) {
+// 		animateCSS('#day', 'jello');
+// 		alert.show('Please enter your date of birth', 'danger');
+// 		return false;
+// 	} else if(month.length < 2){
+// 		animateCSS('#month', 'jello');
+// 		alert.show('Please enter your date of birth', 'danger');
+// 		return false;
+// 	} else if(year.length < 4){
+// 		animateCSS('#year', 'jello');
+// 		alert.show('Please enter your date of birth', 'danger');
+// 		return false;
+// 	} else {
+// 		_("step8").style.display = "none";
+// 		_("step9").style.display = "block";
+// 		progress.dataset.progress = 48;
+// 		return true;
+// 	}
+// }
+
 
 function step9() {
 	var spouse = document.getElementById("spouse");
@@ -190,6 +211,59 @@ function step9() {
 		return false;
 	}
 }
+
+
+
+
+function step10() {
+	street = _("street").value;
+	apt = _("apt").value;
+	city = _("city").value;
+	zip = _("zip").value;
+	state = _("state").value;
+	if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
+		_("step10").style.display = "none";
+		_("step11").style.display = "block";
+		progress.dataset.progress = 84;
+		return true;
+	} else {
+		animateCSS('#question10', 'jello');
+		alert.show('Please Fill out all the fields with correct values', 'danger');
+		return false;
+	}
+}
+
+function step11() {
+	firstName = _("firstName").value;
+	lastName = _("lastName").value;
+	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
+		_("step11").style.display = "none";
+		_("step12").style.display = "block";
+		progress.dataset.progress = 90;
+		return true;
+	} else {
+		animateCSS('#firstName', 'jello');
+		animateCSS('#lastName', 'jello');
+		alert.show('Please Fill out all the fields', 'danger');
+		return false;
+	}
+}
+
+function step12() {
+	email = _("email").value;
+	if (email.length > 1 &&  email.match(/^\S+@\S+/)){
+		_("step12").style.display = "none";
+		_("stepLast").style.display = "block";
+		progress.dataset.progress = 96;
+	} else {
+		animateCSS('#email', 'jello');
+		alert.show('Please enter a valid email address', 'danger');
+		return false;
+	}
+}
+
+
+
 
 function step20() {
 	sgender = _("sgender").value;
@@ -244,11 +318,6 @@ function step21() {
 }
 
 
-
-
-
-
-
 function step22() {
 	stabacco = _("stabacco").value;
 	if (stabacco.length > 1) {
@@ -278,56 +347,12 @@ function step23() {
 }
 
 
-function step10() {
-	address = _("address").value;
-	apt = _("apt").value;
-	city = _("city").value;
-	zip = _("zip").value;
-	state = _("state").value;
-	if (address.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
-		_("step10").style.display = "none";
-		_("step11").style.display = "block";
-		progress.dataset.progress = 84;
-		return true;
-	} else {
-		animateCSS('#question10', 'jello');
-		alert.show('Please Fill out all the fields with correct values', 'danger');
-		return false;
-	}
-}
 
-function step11() {
-	firstName = _("firstName").value;
-	lastName = _("lastName").value;
-	if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
-		_("step11").style.display = "none";
-		_("step12").style.display = "block";
-		progress.dataset.progress = 90;
-		return true;
-	} else {
-		animateCSS('#question11', 'jello');
-		alert.show('Please Fill out all the fields', 'danger');
-		return false;
-	}
-}
 
-function step12() {
-	email = _("email").value;
-	if (email.length > 1 &&  email.match(/^\S+@\S+/)){
-		_("step12").style.display = "none";
-		_("step13").style.display = "block";
-		progress.dataset.progress = 96;
-	} else {
-		animateCSS('#question12', 'jello');
-		alert.show('Please enter a valid email address', 'danger');
-		return false;
-	}
-}
-
-function step13() {
+function stepLast() {
 	phone = _("phone").value;	
 	if (phone.length > 10 && phone.match(/^[0-9]*$/)){
-		_("step13").style.display = "none";
+		_("stepLast").style.display = "none";
 		_("userData").style.display = "block";
 		_("userCoverage").innerHTML = coverage;
 		_("userFamily").innerHTML = family;
