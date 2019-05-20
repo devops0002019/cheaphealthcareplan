@@ -276,20 +276,20 @@ function step10() {
 	zip = _("zip").value;
 	state = _("state").value;
 
-	if (street.length < 1 && apt.length < 1 && city.length < 1 && state.length < 1) {
+	if (street.length > 0 && apt.length < 0 && city.length < 0 && state.length < 0) {
 		animateCSS('#birthQuestion', 'jello');
 		alert.show('Please enter your date of birth', 'danger');
 		return false;
-	} else if(street.length < 1){
+	} else if(street.length < 0){
 		animateCSS('#day', 'jello');
 		alert.show('Please enter the day you were born', 'danger');
-	} else if(apt.length < 1){
+	} else if(apt.length < 0){
 		animateCSS('#month', 'jello');
 		alert.show('Please enter the month you were born', 'danger');
-	} else if(city.length < 1){
+	} else if(city.length < 0){
 		animateCSS('#year', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
-	} else if(state.length < 1){
+	} else if(state.length < 0){
 		animateCSS('#year', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
 	} else {
