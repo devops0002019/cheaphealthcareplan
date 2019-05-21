@@ -209,7 +209,7 @@ function step21() {
 	sday = _("sday").value;
 	smonth = _("smonth").value;
 	syear = _("syear").value;
-	if (dsdayay.length < 2 && smonth.length < 2 && syearz.length < 4) {
+	if (sday.length < 2 && smonth.length < 2 && syear.length < 4) {
 		animateCSS('#sbirthQuestion', 'jello');
 		alert.show('Please enter your spouse date of birth', 'danger');
 		return false;
@@ -223,9 +223,9 @@ function step21() {
 		animateCSS('#syear', 'jello');
 		alert.show('Please enter the year your spouse born', 'danger');
 	} else {
-		_("step8").style.display = "none";
-		_("step9").style.display = "block";
-		progress.dataset.progress = 48;
+		_("step21").style.display = "none";
+		_("step22").style.display = "block";
+		progress.dataset.progress = 66;
 		return true;
 	}
 }
@@ -248,7 +248,7 @@ function step23() {
 	schildren = _("schildren").value;
 	if (schildren.length > 1) {
 		_("step23").style.display = "none";
-		_("step30").style.display = "block";
+		_("step10").style.display = "block";
 		progress.dataset.progress = 78;
 		return true;
 	} else {
@@ -313,17 +313,6 @@ function step11() {
 		return false;
 
 	}
-
-
-
-
-
-// } else {
-// 	_("step11").style.display = "none";
-// 	_("step12").style.display = "block";
-// 	progress.dataset.progress = 92;
-// 	return true;
-// }
 }
 
 function step12() {
@@ -333,13 +322,7 @@ function step12() {
 	progress.dataset.progress = 98;
 	return true;
 }
-// if (email.length > 0) {
-// if (email.length > 1 && email.match(/^\S+@\S+/)) {  //if email is *required use this snippet
-// } else {
-// 	animateCSS('#email', 'jello');
-// 	alert.show('Please enter a valid email address', 'danger');
-// 	return false;
-// }
+
 
 function step30() {
 	phone = _("phone").value;
