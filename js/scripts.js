@@ -215,15 +215,24 @@ function step21() {
 	sday = _("sday").value;
 	smonth = _("smonth").value;
 	syear = _("syear").value;
-	if (sday.length > 0 && smonth.length > 0 && syear.length > 0) {
-		_("step21").style.display = "none";
-		_("step22").style.display = "block";
-		progress.dataset.progress = 66;
-		return true;
-	} else {
+	if (dsdayay.length < 2 && smonth.length < 2 && syearz.length < 4) {
 		animateCSS('#sbirthQuestion', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
+		alert.show('Please enter your date of birth', 'danger');
 		return false;
+	} else if(sday.length < 2 ){
+		animateCSS('#sday', 'jello');
+		alert.show('Please enter the day you were born', 'danger');
+	} else if(smonth.length < 2 ){
+		animateCSS('#smonth', 'jello');
+		alert.show('Please enter the month you were born', 'danger');
+	} else if(syear.length < 4 ){
+		animateCSS('#syear', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+	} else {
+		_("step8").style.display = "none";
+		_("step9").style.display = "block";
+		progress.dataset.progress = 48;
+		return true;
 	}
 }
 

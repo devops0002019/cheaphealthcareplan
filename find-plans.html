@@ -260,7 +260,6 @@
 				</button>
 			</div>
 
-
 			<div id="step20">
 				<div class="question req">What is your spouse's gender?</div>
 				<div id="sgenderQuestion" class="select" selected="selected" disabled>
@@ -278,7 +277,7 @@
 
 			<div id="step21">
 				<div class="question req">What is your spouse's date of birth? </div>
-				<div id="sbirthQuestion">
+				<div id="sbirthQuestion" class="grid set-cols-3 set-sizes-1s-1s-1l set-gap-32">
 					<input type="number" id="day" name="sday" placeholder="DD" required />
 					<input type="number" id="month" name="smonth" placeholder="MM" required />
 					<input type="number" id="year" name="syear" placeholder="YYYY" required />
@@ -319,7 +318,6 @@
 				</button>
 			</div>
 
-
 			<div id="step30">
 				<div class="question req">Last step! What is your Mobile or home phone number?</div>
 				<input type="tel" id="phone" name="phone" placeholder="(555) 555 - 5555" required />
@@ -328,6 +326,7 @@
 					<i class="fas fa-arrow-circle-right"></i>
 				</button>
 			</div>
+
 			<ul id="userData">
 				<li>
 					<span>When would you like coverage?</span>
@@ -466,6 +465,7 @@
 </body>
 
 <!-- scripts -->
-<script src="js/scripts.js"></script>
+<script async src="js/scripts.js"></script>
+<script async src="js/all.js"></script>
 
 </html>
