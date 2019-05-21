@@ -69,13 +69,15 @@
 	background-color: #54a754;
 }
 
- /* input:invalid {
-  background: purple;
+ input:invalid {
+	 color:red !important;;
+  background: #fff3f3ba!important;
 }
 
 input:valid {
-  background: orange;
-} */
+	color:red !important;;
+  background: #eaf2ffbf !important;
+}
 
 
 #page {
