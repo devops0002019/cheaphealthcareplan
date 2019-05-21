@@ -11,12 +11,11 @@
 	border: 5px solid red;
 }
 
-.birthday {
-	display: grid;
-	grid-gap: 1em;
-	grid-template-columns: 1fr 1fr 2fr;
+.controls {
+display:flex;
+justify-content: space-between;
+align-items: center;
 }
-
 
 .req:after {
 	color:var(--red);
@@ -24,7 +23,7 @@
     content: '* required';
 }
 .optional:after {
-	color:var(--green);
+	color:var(--gray);
 	font-size:12px;
     content: '(Optional)';
 }
@@ -70,12 +69,11 @@
 }
 
  input:invalid {
-	 color:red !important;;
   background: #fff3f3ba!important;
 }
 
 input:valid {
-	color:red !important;;
+
   background: #eaf2ffbf !important;
 }
 

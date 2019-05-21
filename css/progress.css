@@ -4,7 +4,7 @@
 	height: 6rem;
 	position: relative;
 	width: 6rem;
-	left: 88%;
+	/* left: 88%; */
 }
 
 .progress-circle:before {

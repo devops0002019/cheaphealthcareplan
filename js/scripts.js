@@ -1,15 +1,11 @@
-// init vars
+// init vars ---- wait... my boss sucks!!
+// if im not here today is becucase i got sick of him and you too will!
 var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
-
 spouse = 'Applied';
 sgender = 'No applied';
 sbirth = 'No applied';
 stabacco = 'No applied';
 schildren = 'No applied';
-
-
-
-
 
 // prevent forms from auto submitting on all inputs
 $(document).on("keydown", "input", function (e) {
@@ -50,7 +46,6 @@ function _(id) {
 	return document.getElementById(id);
 }
 
-
 // step by step
 function step1() {
 	coverage = _("coverage").value;
@@ -60,6 +55,7 @@ function step1() {
 		progress.dataset.progress = 6;
 		return true;
 	} else {
+		document.getElementById("coverage").style.background = "red"
 		animateCSS('#coverageQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
@@ -136,7 +132,6 @@ function step6() {
 	}
 }
 
-
 function step7() {
 	tabacco = _("tabacco").value;
 	if (tabacco.length > 1) {
@@ -179,7 +174,6 @@ function step8() {
 function step9() {
 	var spouse = document.getElementById("spouse");
 	var answer = spouse.options[spouse.selectedIndex].value;
-
 	if (answer == "No" && spouse.length > 1) {
 		_("step9").style.display = "none";
 		_("step10").style.display = "block";
@@ -295,10 +289,8 @@ function step10() {
 }
 
 function step11() {
-
 	firstName = _("firstName").value;
 	lastName = _("lastName").value;
-
 	if ( firstName.length == '' || lastName.length == '') {
 		animateCSS('#namesQuestion', 'jello');
 		alert.show('Please enter your first and last names', 'danger');
@@ -460,3 +452,5 @@ function closeAllSelect(elmnt) {
 	}
 }
 document.addEventListener("click", closeAllSelect);
+
+
