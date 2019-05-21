@@ -18,13 +18,15 @@
 }
 
 
-.req:before {
-    content: ' \2731';
-}
-
-.req {
+.req:after {
 	color:var(--red);
 	font-size:12px;
+    content: '* required';
+}
+.optional:after {
+	color:var(--red);
+	font-size:12px;
+    content: 'Optional';
 }
 
 .fa-spinner {
