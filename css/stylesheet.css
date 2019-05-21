@@ -17,6 +17,16 @@
 	grid-template-columns: 1fr 1fr 2fr;
 }
 
+
+.req:before {
+    content: ' \2731';
+}
+
+.req {
+	color:var(--red);
+	font-size:12px;
+}
+
 .fa-spinner {
 	display: none;
 }

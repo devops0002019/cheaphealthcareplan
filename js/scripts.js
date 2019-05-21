@@ -276,21 +276,21 @@ function step10() {
 	zip = _("zip").value;
 	state = _("state").value;
 
-	if (street.length > 0 && apt.length < 0 && city.length < 0 && state.length < 0) {
-		animateCSS('#birthQuestion', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
+	if (street.length < 2 && city.length < 2 && state.length < 2) {
+		animateCSS('#addressQuestion', 'jello');
+		alert.show('Please enter your address', 'danger');
 		return false;
-	} else if(street.length < 0){
-		animateCSS('#day', 'jello');
+	} else if(street.length < 2){
+		animateCSS('#street', 'jello');
 		alert.show('Please enter the day you were born', 'danger');
-	} else if(apt.length < 0){
-		animateCSS('#month', 'jello');
-		alert.show('Please enter the month you were born', 'danger');
-	} else if(city.length < 0){
-		animateCSS('#year', 'jello');
+	} else if(city.length < 2){
+		animateCSS('#city', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
-	} else if(state.length < 0){
-		animateCSS('#year', 'jello');
+	} else if(zip.length < 2){
+		animateCSS('#zip', 'jello');
+		alert.show('Please enter the year the were born', 'danger');
+	} else if(state.length < 2){
+		animateCSS('#state', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
 	} else {
 		_("step10").style.display = "none";
@@ -298,14 +298,6 @@ function step10() {
 		progress.dataset.progress = 86;
 		return true;
 	}
-
-
-
-
-
-
-
-
 
 
 	// if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {

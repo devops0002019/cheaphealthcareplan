@@ -31,7 +31,7 @@
 	--black: black;
 	--white: white;
 	--silver: silver;
-	--red: red;
+	--red: rgb(140, 0, 0);
 	--green: rgb(6, 181, 6);
 	--blue: blue;
 	--orange: orange;
@@ -343,11 +343,6 @@ a.brand > * {
 
 
 
-
-
-
-
-
 .min-height-100 {
 	min-height: 100px !important;
 }
@@ -359,9 +354,6 @@ a.brand > * {
 .min-height-300 {
 	min-height: 300px !important;
 }
-
-
-
 
 [class*="gallery"] {
 	display: grid !important;
@@ -730,7 +722,7 @@ b {
 }
 
 [class*="1em"] {
-	font-size: 1em;
+	font-size: 1em !important;
 }
 
 [class*="2em"] {
@@ -775,6 +767,9 @@ b {
 
 .text-black {
 	color: #000 !important;
+}
+.text-red {
+	color: red !important;
 }
 
 .text-primary {

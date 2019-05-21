@@ -75,7 +75,7 @@
 			<div id="progressBar" class="progress-circle" data-progress="0"></div>
 
 			<div id="step1">
-				<div class="question">When would you like coverage?</div>
+				<div class="question">When would you like coverage?<b class="req sxem">required</b></div>
 				<div id="coverageQuestion" class="select" selected="selected" disabled>
 					<select id="coverage" name="coverage" required>
 						<option value="">Select One</option>
@@ -159,7 +159,7 @@
 				<div class="question">What is your gender?
 					<div class="tooltip">
 						<i class="fas fa-exclamation-triangle"></i>
-						<span class="tooltiptext">We need to know your gender in order to find the bestplans.</span>
+						<span class="tooltiptext">We need to know your gender in in order to find the best plans.</span>
 					</div>
 				</div>
 				<div id="genderQuestion" class="select" selected="selected" disabled>
@@ -194,7 +194,7 @@
 				<div class="question">What is your date of birth?
 					<div class="tooltip">
 						<i class="fas fa-exclamation-triangle"></i>
-						<span class="tooltiptext">We need to know your date of birth in order to findthebestplans.</span>
+						<span class="tooltiptext">We need to know your date of birth in order to find the best plans.</span>
 					</div>
 				</div>
 				<div id="birthQuestion" class="grid set-cols-3 set-sizes-1s-1s-1l set-gap-32">
@@ -227,10 +227,10 @@
 			<div id="step10">
 				<div class="question">What is your address?</div>
 				<div id="addressQuestion" class="grid set-cols-2 set-gap-32">
-					<input class="fullrow" type="text" id="street" name="street" placeholder="street" required />
-					<input type="text" id="apt" name="apt" placeholder="apartment" />
+					<input type="text" id="street" name="street" placeholder="street" class="fullrow" required />
+					<input type="number" id="apt" name="apt" placeholder="apartment" />
 					<input type="text" id="city" name="city" placeholder="city" required />
-					<input type="text" id="zip" name="zip" placeholder="zip code" required />
+					<input type="number" id="zip" name="zip" placeholder="zip code" required />
 					<input type="text" id="state" name="state" placeholder="state" required />
 				</div>
 				<button class="button" onclick="step10()">
@@ -253,7 +253,7 @@
 
 			<div id="step12">
 				<div class="question">What is your Email?</div>
-				<input type="email" id="email" name="email" placeholder="youremail@mail.com" required />
+				<input type="email" id="email" name="email" placeholder="youremail@mail.com" />
 				<button class="button" onclick="step12()">
 					<i class="fas fa-spinner fa-spin"></i>
 					<i class="fas fa-arrow-circle-right"></i>
