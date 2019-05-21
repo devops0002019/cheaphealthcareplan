@@ -228,7 +228,7 @@
 				<div class="question req">What is your address?</div>
 				<div id="addressQuestion" class="grid set-cols-2 set-gap-32">
 					<input type="text" id="street" name="street" placeholder="street" class="fullrow req" required />
-					<input type="number" id="apt" name="apt" placeholder="apartment" class="optional" />
+					<input type="number" id="apt" name="apt" placeholder="apartment" class="deep-quaternary"  />
 					<input type="text" id="city" name="city" placeholder="city" required />
 					<input type="number" id="zip" name="zip" placeholder="zip code" required />
 					<input type="text" id="state" name="state" placeholder="state" required />
@@ -253,7 +253,7 @@
 
 			<div id="step12">
 				<div class="question optional">What is your Email?</div>
-				<input type="email" id="email" name="email" placeholder="youremail@mail.com" />
+				<input type="email" id="email" name="email" placeholder="youremail@mail.com" class="deep-tertiary" />
 				<button class="button" onclick="step12()">
 					<i class="fas fa-spinner fa-spin"></i>
 					<i class="fas fa-arrow-circle-right"></i>
@@ -262,7 +262,7 @@
 
 
 			<div id="step20">
-				<div class="question">What is your spouse's gender?</div>
+				<div class="question req">What is your spouse's gender?</div>
 				<div id="sgenderQuestion" class="select" selected="selected" disabled>
 					<select id="sgender" name="sgender" required>
 						<option value="">Select One</option>
@@ -277,7 +277,7 @@
 			</div>
 
 			<div id="step21">
-				<div class="question">What is your spouse's date of birth? </div>
+				<div class="question req">What is your spouse's date of birth? </div>
 				<div id="sbirthQuestion">
 					<input type="number" id="day" name="sday" placeholder="DD" required />
 					<input type="number" id="month" name="smonth" placeholder="MM" required />
@@ -305,7 +305,7 @@
 			</div>
 
 			<div id="step23">
-				<div class="question">Are you looking to include your children in your Health Insurance plan?</div>
+				<div class="question req">Are you looking to include your children in your Health Insurance plan?</div>
 				<div id="schildrenQuestion" class="select" selected="selected" disabled>
 					<select id="schildren" name="schildren" required>
 						<option value="">Select One</option>
@@ -321,7 +321,7 @@
 
 
 			<div id="step30">
-				<div class="question">Last step! What is your Mobile or home phone number?</div>
+				<div class="question req">Last step! What is your Mobile or home phone number?</div>
 				<input type="tel" id="phone" name="phone" placeholder="(555) 555 - 5555" required />
 				<button class="button" onclick="step30()">
 					<i class="fas fa-spinner fa-spin"></i>

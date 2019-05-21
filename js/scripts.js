@@ -176,9 +176,6 @@ function step8() {
 	}
 }
 
-
-
-
 function step9() {
 	var spouse = document.getElementById("spouse");
 	var answer = spouse.options[spouse.selectedIndex].value;
@@ -200,12 +197,6 @@ function step9() {
 	}
 }
 
-
-
-
-
-
-
 function step20() {
 	sgender = _("sgender").value;
 	if (sgender.length > 1) {
@@ -219,7 +210,6 @@ function step20() {
 		return false;
 	}
 }
-
 
 function step21() {
 	sday = _("sday").value;
@@ -338,15 +328,17 @@ function step11() {
 
 function step12() {
 	email = _("email").value;
-	if (email.length > 1 && email.match(/^\S+@\S+/)) {
+	// if (email.length > 0) {
+												// if (email.length > 1 && email.match(/^\S+@\S+/)) {  //if email is *required use this snippet
 		_("step12").style.display = "none";
 		_("step30").style.display = "block";
 		progress.dataset.progress = 98;
-	} else {
-		animateCSS('#email', 'jello');
-		alert.show('Please enter a valid email address', 'danger');
-		return false;
-	}
+		return true;
+												// } else {
+												// 	animateCSS('#email', 'jello');
+												// 	alert.show('Please enter a valid email address', 'danger');
+												// 	return false;
+	// }
 }
 
 

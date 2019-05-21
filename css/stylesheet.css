@@ -24,9 +24,9 @@
     content: '* required';
 }
 .optional:after {
-	color:var(--red);
+	color:var(--green);
 	font-size:12px;
-    content: 'Optional';
+    content: '(Optional)';
 }
 
 .fa-spinner {
