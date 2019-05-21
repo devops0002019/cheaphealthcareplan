@@ -217,17 +217,17 @@ function step21() {
 	syear = _("syear").value;
 	if (dsdayay.length < 2 && smonth.length < 2 && syearz.length < 4) {
 		animateCSS('#sbirthQuestion', 'jello');
-		alert.show('Please enter your date of birth', 'danger');
+		alert.show('Please enter your spouse date of birth', 'danger');
 		return false;
 	} else if(sday.length < 2 ){
 		animateCSS('#sday', 'jello');
-		alert.show('Please enter the day you were born', 'danger');
+		alert.show('Please enter the day your spouse born', 'danger');
 	} else if(smonth.length < 2 ){
 		animateCSS('#smonth', 'jello');
-		alert.show('Please enter the month you were born', 'danger');
+		alert.show('Please enter the month spouse born', 'danger');
 	} else if(syear.length < 4 ){
 		animateCSS('#syear', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
+		alert.show('Please enter the year your spouse born', 'danger');
 	} else {
 		_("step8").style.display = "none";
 		_("step9").style.display = "block";

@@ -48,9 +48,7 @@
 .fa-spinner.fa-spin {
 	display: none;
 }
-i.fas.fa-spinner.fa-spin {
-	display:block;
-}
+
 
 [class*="alert"] {
 	position: absolute;
@@ -58,6 +56,9 @@ i.fas.fa-spinner.fa-spin {
 	padding: 20px;
 	z-index: 9999999;
 	color: white;
+	font-weight: 600;
+	font-size: 1.3em;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 [class*="alert"][class*="danger"] {
@@ -65,8 +66,16 @@ i.fas.fa-spinner.fa-spin {
 }
 
 [class*="alert"][class*="success"] {
-	background-color: #00d600;
+	background-color: #54a754;
 }
+
+ /* input:invalid {
+  background: purple;
+}
+
+input:valid {
+  background: orange;
+} */
 
 
 #page {
