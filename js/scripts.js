@@ -159,13 +159,13 @@ function step8() {
 		animateCSS('#birthQuestion', 'jello');
 		alert.show('Please enter your date of birth', 'danger');
 		return false;
-	} else if(day.length < 2){
+	} else if(day.length < 2 ){
 		animateCSS('#day', 'jello');
 		alert.show('Please enter the day you were born', 'danger');
-	} else if(month.length < 2){
+	} else if(month.length < 2 ){
 		animateCSS('#month', 'jello');
 		alert.show('Please enter the month you were born', 'danger');
-	} else if(year.length < 4){
+	} else if(year.length < 4 ){
 		animateCSS('#year', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
 	} else {
@@ -255,28 +255,23 @@ function step23() {
 	}
 }
 
-
-
-
 function step10() {
-
 	street = _("street").value;
 	apt = _("apt").value;
 	city = _("city").value;
 	zip = _("zip").value;
 	state = _("state").value;
-
-	if (street.length < 2 && city.length < 2 && state.length < 2) {
+	if (street.length < 5 && city.length < 3 && zip.length < 5 && state.length < 2) {
 		animateCSS('#addressQuestion', 'jello');
 		alert.show('Please enter your address', 'danger');
 		return false;
-	} else if(street.length < 2){
+	} else if( street.length < 5 ){
 		animateCSS('#street', 'jello');
 		alert.show('Please enter the day you were born', 'danger');
-	} else if(city.length < 2){
+	} else if( city.length < 3 ){
 		animateCSS('#city', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
-	} else if(zip.length < 2){
+		alert.show('Please enter what city are are in', 'danger');
+	} else if(zip.length < 5){
 		animateCSS('#zip', 'jello');
 		alert.show('Please enter the year the were born', 'danger');
 	} else if(state.length < 2){
@@ -288,18 +283,6 @@ function step10() {
 		progress.dataset.progress = 86;
 		return true;
 	}
-
-
-	// if (street.length > 1 &&apt.match(/^[0-9]*$/) && city.length>1 && zip.length>1&&zip.match(/^[0-9]*$/) && state.length > 1) {
-	// 	_("step10").style.display = "none";
-	// 	_("step11").style.display = "block";
-	// 	progress.dataset.progress = 60;
-	// 	return true;
-	// } else {
-	// 	animateCSS('#addressQuestion', 'jello');
-	// 	alert.show('Please enter your date of birth', 'danger');
-	// 	return false;
-	// }
 }
 
 function step11() {
@@ -307,49 +290,59 @@ function step11() {
 	firstName = _("firstName").value;
 	lastName = _("lastName").value;
 
-	// if (firstName.match(/^[0-9a-zA-Z]{1,16}$/) && firstName.length > 3 && lastName.match(/^[0-9a-zA-Z]{1,16}$/) && lastName.length > 3){
-	if (firstName.length < 2 && lastName.length < 2) {
+	if ( firstName.length == '' || lastName.length == '') {
 		animateCSS('#namesQuestion', 'jello');
 		alert.show('Please enter your first and last names', 'danger');
 		return false;
-	} else if(firstName.length < 2){
-		animateCSS('#firstName', 'jello');
+	} else if (firstName.length < 2){
+		animateCSS('#firstName', 'jello');	
 		alert.show('Please enter your First Name', 'danger');
-	} else if(lastName.length < 2){
+	} else if (lastName.length < 2){
 		animateCSS('#lastName', 'jello');
 		alert.show('Please enter your Last Name', 'danger');
-	} else {
+	} else if (firstName.match(/^[a-zA-Z]{1,16}$/) && firstName.length > 2 && lastName.match(/^[a-zA-Z]{1,16}$/) && lastName.length > 2) {
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
 		progress.dataset.progress = 92;
 		return true;
+	} else {
+		animateCSS('#firstName', 'jello');
+		animateCSS('#lastName', 'jello');
+		alert.show('Please enter the correct values', 'danger');
+		return false;
+
 	}
+
+
+
+
+
+// } else {
+// 	_("step11").style.display = "none";
+// 	_("step12").style.display = "block";
+// 	progress.dataset.progress = 92;
+// 	return true;
+// }
 }
 
 function step12() {
 	email = _("email").value;
-	// if (email.length > 0) {
-												// if (email.length > 1 && email.match(/^\S+@\S+/)) {  //if email is *required use this snippet
-		_("step12").style.display = "none";
-		_("step30").style.display = "block";
-		progress.dataset.progress = 98;
-		return true;
-												// } else {
-												// 	animateCSS('#email', 'jello');
-												// 	alert.show('Please enter a valid email address', 'danger');
-												// 	return false;
-	// }
+	_("step12").style.display = "none";
+	_("step30").style.display = "block";
+	progress.dataset.progress = 98;
+	return true;
 }
+// if (email.length > 0) {
+// if (email.length > 1 && email.match(/^\S+@\S+/)) {  //if email is *required use this snippet
+// } else {
+// 	animateCSS('#email', 'jello');
+// 	alert.show('Please enter a valid email address', 'danger');
+// 	return false;
+// }
 
-
-
-
-
-
-// && phone.match(/^[0-9]*$/)
 function step30() {
 	phone = _("phone").value;
-	if (phone.length > 10 && phone.match(/^[0-9]*$/)) {
+	if (phone.length > 7 && phone.match(/^[0-9]*$/)) {
 
 		_("step30").style.display = "none";
 		_("userData").style.display = "block";
@@ -380,7 +373,6 @@ function step30() {
 		_("userLastName").innerHTML = lastName;
 		_("userEmail").innerHTML = email;
 		_("userPhone").innerHTML = phone;
-
 		progress.dataset.progress = 100;
 		alert.show('Please review your information', 'success');
 		return true;
@@ -389,7 +381,6 @@ function step30() {
 		alert.show('Please enter a valid phone number', 'danger');
 		return false;
 	}
-
 }
 
 // submit form
