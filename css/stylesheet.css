@@ -48,7 +48,9 @@
 .fa-spinner.fa-spin {
 	display: none;
 }
-
+i.fas.fa-spinner.fa-spin {
+	display:block;
+}
 
 [class*="alert"] {
 	position: absolute;
