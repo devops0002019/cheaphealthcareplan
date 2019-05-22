@@ -60,6 +60,15 @@ function _(id) {
 	return document.getElementById(id);
 }
 
+
+function validateEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+  }
+
+
+
+
 // step by step
 function step1() {
 	coverage = _("coverage").value;
@@ -329,13 +338,20 @@ function step11() {
 }
 
 function step12() {
-	email = _("email").value;
-		if (email.length == '') {
+
+	if (email.length == '') {
 		_("step12").style.display = "none";
 		_("step30").style.display = "block";
 		progress.dataset.progress = 98;
 		return true;
+	} else if (validateEmail(email)) {
+		_("step12").style.display = "none";
+		_("step30").style.display = "block";
+		progress.dataset.progress = 98;
+		return re.test(String(email).toLowerCase());
 	} else {
+		animateCSS('#email', 'jello');
+		alert.show('Please enter a valid email address', 'danger');
 		return false;
 	}
 }
