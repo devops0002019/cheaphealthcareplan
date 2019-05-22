@@ -339,16 +339,11 @@ function step11() {
 
 function step12() {
 
-	if (email.length == '') {
+	if (email.length == '' || email.length > 5) {
 		_("step12").style.display = "none";
 		_("step30").style.display = "block";
 		progress.dataset.progress = 98;
 		return true;
-	} else if (validateEmail(email)) {
-		_("step12").style.display = "none";
-		_("step30").style.display = "block";
-		progress.dataset.progress = 98;
-		return re.test(String(email).toLowerCase());
 	} else {
 		animateCSS('#email', 'jello');
 		alert.show('Please enter a valid email address', 'danger');
