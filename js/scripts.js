@@ -1,5 +1,8 @@
+//Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam corrupti ratione eveniet nesciunt voluptate minima sunt ut ipsa rem id sapiente enim, nulla repellendus distinctio numquam quos quis consequuntur quas.
 // init vars ---- wait... my boss sucks!!
 // if im not here today is becucase i got sick of him and you too will!
+//Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam corrupti ratione eveniet nesciunt voluptate minima sunt ut ipsa rem id sapiente enim, nulla repellendus distinctio numquam quos quis consequuntur quas.
+
 var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
 
 
@@ -11,6 +14,9 @@ smonth = 'No applied';
 syear = 'No applied';
 stabacco = 'No applied';
 schildren = 'No applied';
+
+apt = 'No applied';
+
 email = 'No applied';
 
 
@@ -324,10 +330,14 @@ function step11() {
 
 function step12() {
 	email = _("email").value;
-	_("step12").style.display = "none";
-	_("step30").style.display = "block";
-	progress.dataset.progress = 98;
-	return true;
+		if (email.length == '') {
+		_("step12").style.display = "none";
+		_("step30").style.display = "block";
+		progress.dataset.progress = 98;
+		return true;
+	} else {
+		return false;
+	}
 }
 
 function step30() {
