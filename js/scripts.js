@@ -211,17 +211,17 @@ function step21() {
 	syear = _("syear").value;
 	if (sday.length < 2 && smonth.length < 2 && syear.length < 4) {
 		animateCSS('#sbirthQuestion', 'jello');
-		alert.show('Please enter your spouse date of birth', 'danger');
+		alert.show('Please enter your spouse`s date of birth', 'danger');
 		return false;
 	} else if(sday.length < 2 ){
 		animateCSS('#sday', 'jello');
-		alert.show('Please enter the day your spouse born', 'danger');
+		alert.show('Please enter the day your spouse was born', 'danger');
 	} else if(smonth.length < 2 ){
 		animateCSS('#smonth', 'jello');
-		alert.show('Please enter the month spouse born', 'danger');
+		alert.show('Please enter the month your spouse was born', 'danger');
 	} else if(syear.length < 4 ){
 		animateCSS('#syear', 'jello');
-		alert.show('Please enter the year your spouse born', 'danger');
+		alert.show('Please enter the year your spouse was born', 'danger');
 	} else {
 		_("step21").style.display = "none";
 		_("step22").style.display = "block";
@@ -270,16 +270,16 @@ function step10() {
 		return false;
 	} else if( street.length < 5 ){
 		animateCSS('#street', 'jello');
-		alert.show('Please enter the day you were born', 'danger');
+		alert.show('Please enter the street', 'danger');
 	} else if( city.length < 3 ){
 		animateCSS('#city', 'jello');
-		alert.show('Please enter what city are are in', 'danger');
+		alert.show('Please enter the city', 'danger');
 	} else if(zip.length < 5){
 		animateCSS('#zip', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
+		alert.show('Please enter the zip code', 'danger');
 	} else if(state.length < 2){
 		animateCSS('#state', 'jello');
-		alert.show('Please enter the year the were born', 'danger');
+		alert.show('Please enter the state', 'danger');
 	} else {
 		_("step10").style.display = "none";
 		_("step11").style.display = "block";
@@ -338,9 +338,11 @@ function step30() {
 		_("userEnrolled").innerHTML = enrolled;
 		_("userGender").innerHTML = gender;
 		_("userTabacco").innerHTML = tabacco;
+		
 		_("userDay").innerHTML = day;
 		_("userMonth").innerHTML = month;
 		_("userYear").innerHTML = year;
+
 		_("userSpouse").innerHTML = spouse;
 		_("userSgender").innerHTML = sgender;
 		_("userSday").innerHTML = sday;
@@ -348,15 +350,19 @@ function step30() {
 		_("userSyear").innerHTML = syear;
 		_("userStabacco").innerHTML = stabacco;
 		_("userSchildren").innerHTML = schildren;
+
 		_("userStreet").innerHTML = street;
 		_("userApt").innerHTML = apt;
 		_("userCity").innerHTML = city;
 		_("userState").innerHTML = state;
 		_("userZip").innerHTML = zip;
+
 		_("userFirstName").innerHTML = firstName;
 		_("userLastName").innerHTML = lastName;
+
 		_("userEmail").innerHTML = email;
 		_("userPhone").innerHTML = phone;
+
 		progress.dataset.progress = 100;
 		alert.show('Please review your information', 'success');
 		return true;

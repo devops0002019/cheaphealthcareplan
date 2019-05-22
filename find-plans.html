@@ -39,7 +39,6 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140250626-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-
 		function gtag() {
 			dataLayer.push(arguments);
 		}
@@ -73,17 +72,17 @@
 		</div>
 
 		<form onsubmit="return false" action="/thankyou.html" method="POST" id="userInfo" data-netlify="true"
-			autocomplete="off" novalidate>
+			autocomplete="off" >
 
 			<div class="controls">
-				<a title="Go back to the beginning" href="find-plans.html" class="text-primary"><i class="fas fa-home"></i>
+				<a title="Go back to the beginning" href="find-plans.html" class="text-primary text-shadow "><i class="fas fa-home"></i>
 				</a>
 				<div id="progressBar" class="progress-circle" data-progress="0"></div>
 			</div>
 
 
 			<div id="step1">
-				<div class="question req">When would you like coverage?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">When would you like coverage?</div>
 				<div id="coverageQuestion" class="select" selected="selected" disabled>
 					<select id="coverage" name="coverage" required>
 						<option value="">Select One</option>
@@ -99,7 +98,7 @@
 			</div>
 
 			<div id="step2">
-				<div class="question req">Are you looking for Individual or Family Coverage?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Are you looking for Individual or Family Coverage?</div>
 				<div id="familyQuestion" class="select" selected="selected" disabled>
 					<select id="family" name="family" required>
 						<option value="">Select One</option>
@@ -114,7 +113,7 @@
 			</div>
 
 			<div id="step3">
-				<div class="question req">Are you on Disability, Medicaid or Medicare?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Are you on Disability, Medicaid or Medicare?</div>
 				<div id="programQuestion" class="select" selected="selected" disabled>
 					<select id="program" name="program" required>
 						<option value="">Select One</option>
@@ -131,7 +130,7 @@
 			</div>
 
 			<div id="step4">
-				<div class="question req">What is your total household income?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your total household income?</div>
 				<div id="incomeQuestion" class="select" selected="selected" disabled>
 					<select id="income" name="income" required>
 						<option value="">Select One</option>
@@ -148,7 +147,7 @@
 			</div>
 
 			<div id="step5">
-				<div class="question req">Are you currently enrolled in Medicare Parts A or B?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Are you currently enrolled in Medicare Parts A or B?</div>
 				<div id="enrolledQuestion" class="select" selected="selected" disabled>
 					<select id="enrolled" name="enrolled" required>
 						<option value="">Select One</option>
@@ -164,7 +163,7 @@
 			</div>
 
 			<div id="step6">
-				<div class="question req">What is your gender?
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your gender?
 					<div class="tooltip">
 						<i class="fas fa-exclamation-triangle"></i>
 						<span class="tooltiptext">We need to know your gender in in order to find the best plans.</span>
@@ -184,7 +183,7 @@
 			</div>
 
 			<div id="step7">
-				<div class="question req">Have you used Tabacco Products within the last 12 months?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Have you used Tabacco Products within the last 12 months?</div>
 				<div id="tabaccoQuestion" class="select" selected="selected" disabled>
 					<select id="tabacco" name="tabacco" required>
 						<option value="">Select One</option>
@@ -199,7 +198,7 @@
 			</div>
 
 			<div id="step8">
-				<div class="question req">What is your date of birth?
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your date of birth?
 					<div class="tooltip">
 						<i class="fas fa-exclamation-triangle"></i>
 						<span class="tooltiptext">We need to know your date of birth in order to find the best
@@ -218,7 +217,7 @@
 			</div>
 
 			<div id="step9">
-				<div class="question req">Are you looking to include your spouse in your Health Insurance plan?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Are you looking to include your spouse in your Health Insurance plan?</div>
 				<div id="spouseQuestion" class="select" selected="selected" disabled>
 					<select id="spouse" name="spouse" required>
 						<option value="">Select One</option>
@@ -234,7 +233,7 @@
 
 
 			<div id="step20">
-				<div class="question req">What is your spouse's gender?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your spouse's gender?</div>
 				<div id="sgenderQuestion" class="select" selected="selected" disabled>
 					<select id="sgender" name="sgender" required>
 						<option value="">Select One</option>
@@ -249,7 +248,7 @@
 			</div>
 
 			<div id="step21">
-				<div class="question req">What is your spouse's date of birth? </div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your spouse's date of birth? </div>
 				<div id="sbirthQuestion" class="grid set-cols-3 set-sizes-1s-1s-1l set-gap-32">
 					<input type="number" id="sday" name="sday" placeholder="DD" required />
 					<input type="number" id="smonth" name="smonth" placeholder="MM" required />
@@ -277,7 +276,7 @@
 			</div>
 
 			<div id="step23">
-				<div class="question req">Are you looking to include your children in your Health Insurance plan?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Are you looking to include your children in your Health Insurance plan?</div>
 				<div id="schildrenQuestion" class="select" selected="selected" disabled>
 					<select id="schildren" name="schildren" required>
 						<option value="">Select One</option>
@@ -293,9 +292,9 @@
 
 
 			<div id="step10">
-				<div class="question req">What is your address?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your address?</div>
 				<div id="addressQuestion" class="grid set-cols-2 set-gap-32">
-					<input type="text" id="street" name="street" placeholder="street" class="fullrow req" required />
+					<input type="text" id="street" name="street" placeholder="street" class="fullrow req" title="We ask this question in order to find the best plans for you." required />
 					<input type="number" id="apt" name="apt" placeholder="apartment" class="deep-quaternary" />
 					<input type="text" id="city" name="city" placeholder="city" required />
 					<input type="number" id="zip" name="zip" placeholder="zip code" required />
@@ -308,7 +307,7 @@
 			</div>
 
 			<div id="step11">
-				<div class="question req">What is your full name?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your full name?</div>
 				<div id="namesQuestion" class="grid set-cols-2 set-gap-32">
 					<input type="text" id="firstName" name="firstName" placeholder="first Name" required />
 					<input type="text" id="lastName" name="lastName" placeholder="last Name" required />
@@ -332,7 +331,7 @@
 
 
 			<div id="step30">
-				<div class="question req">Last step! What is your Mobile or home phone number?</div>
+				<div class="question req" title="We ask this question in order to find the best plans for you.">Last step! What is your Mobile or home phone number?</div>
 				<input type="tel" id="phone" name="phone" placeholder="(555) 555 5555" required />
 				<button class="button" onclick="step30()">
 					<i class="fas fa-spinner fa-spin"></i>
@@ -371,15 +370,13 @@
 				</li>
 				<li>
 					<span>What is your date of birth?</span>
-					<span id="userDay"></span>
-				</li>
-				<li>
-					<span>What is your date of birth?</span>
-					<span id="userMonth"></span>
-				</li>
-				<li>
-					<span>What is your date of birth?</span>
-					<span id="userYear"></span>
+					<span>
+							<span id="userDay"></span>
+							<span id="userMonth"></span>
+							<span id="userYear"></span>
+
+					</span>
+					
 				</li>
 				<li>
 					<span>Are you looking to include your spouse in your Health Insurance plan?</span>
