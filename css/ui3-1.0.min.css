@@ -802,6 +802,7 @@ footer {
 	background: var(--footer-background);
 	color: var(--footer-text-color);
 	text-align: center;
+	font-style: italic;
 }
 
 #footer {
