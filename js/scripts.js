@@ -1,11 +1,19 @@
 // init vars ---- wait... my boss sucks!!
 // if im not here today is becucase i got sick of him and you too will!
 var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
+
+
+
 spouse = 'Applied';
 sgender = 'No applied';
-sbirth = 'No applied';
+sday = 'No applied';
+smonth = 'No applied';
+syear = 'No applied';
 stabacco = 'No applied';
 schildren = 'No applied';
+email = 'No applied';
+
+
 
 // prevent forms from auto submitting on all inputs
 $(document).on("keydown", "input", function (e) {
@@ -311,7 +319,6 @@ function step11() {
 		animateCSS('#lastName', 'jello');
 		alert.show('Please enter the correct values', 'danger');
 		return false;
-
 	}
 }
 
@@ -322,7 +329,6 @@ function step12() {
 	progress.dataset.progress = 98;
 	return true;
 }
-
 
 function step30() {
 	phone = _("phone").value;
@@ -338,7 +344,7 @@ function step30() {
 		_("userEnrolled").innerHTML = enrolled;
 		_("userGender").innerHTML = gender;
 		_("userTabacco").innerHTML = tabacco;
-		
+
 		_("userDay").innerHTML = day;
 		_("userMonth").innerHTML = month;
 		_("userYear").innerHTML = year;

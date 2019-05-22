@@ -227,13 +227,14 @@ ul#userData {
 
 #userData li {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	border: 1px solid #d0d0d093;
+	color:#5c5c5c;
 }
 
 #userData span {
 	width: 100%;
-	padding: 1em;
+	padding: 0.5em;
 }
 
 #userData li:nth-of-type(odd) {
@@ -243,11 +244,35 @@ ul#userData {
 #userData li:nth-of-type(even) {
 	background: #dcdbdb;
 }
-
+#userData li.table-headline {
+	/* padding: 1em; */
+	background: #e2e2e2;
+	text-transform: uppercase;
+	color:#000;
+}
 #userData span:nth-child(1) {
 	border-right: 1px solid #c9c9c9;
 	font-weight: 600;
 }
+
+#userData li.table-child,
+#userData li.table-child span {
+	/* border-right: 1px solid #c9c9c9; */
+	padding: 0 0.5em !important;
+	background: #fafafa !important;
+}
+
+#userData li.table-child,
+#userData li.table-child span {
+	border:none;
+}
+
+#userData li.table-child {
+	border-left:1px solid #c9c9c9;
+	border-right:1px solid #c9c9c9;
+}
+
+
 
 #userData span:nth-child(2) {
 	text-align: right;
