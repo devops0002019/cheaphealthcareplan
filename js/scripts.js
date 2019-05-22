@@ -3,10 +3,7 @@
 // if im not here today is becucase i got sick of him and you too will!
 //Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam corrupti ratione eveniet nesciunt voluptate minima sunt ut ipsa rem id sapiente enim, nulla repellendus distinctio numquam quos quis consequuntur quas.
 
-var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
-
-
-
+var coverage, family, program, income, enrolled, gender, day, month, year, spouse, sgender, sday, smonth, syear, stabacco, schildren, lookaround, tabacco, street, apt, city, zip, state, firstName, lastName, email, phone;
 spouse = 'Applied';
 sgender = 'No applied';
 sday = 'No applied';
@@ -14,9 +11,7 @@ smonth = 'No applied';
 syear = 'No applied';
 stabacco = 'No applied';
 schildren = 'No applied';
-
 apt = 'No applied';
-
 email = 'No applied';
 
 
@@ -61,13 +56,6 @@ function _(id) {
 }
 
 
-function validateEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-  }
-
-
-
 
 // step by step
 function step1() {
@@ -78,7 +66,6 @@ function step1() {
 		progress.dataset.progress = 6;
 		return true;
 	} else {
-		document.getElementById("coverage").style.background = "red"
 		animateCSS('#coverageQuestion', 'jello');
 		alert.show('Please select one option', 'danger');
 		return false;
@@ -271,7 +258,7 @@ function step23() {
 	schildren = _("schildren").value;
 	if (schildren.length > 1) {
 		_("step23").style.display = "none";
-		_("step10").style.display = "block";
+		_("step24").style.display = "block";
 		progress.dataset.progress = 78;
 		return true;
 	} else {
@@ -280,6 +267,7 @@ function step23() {
 		return false;
 	}
 }
+
 
 function step10() {
 	street = _("street").value;
@@ -327,7 +315,7 @@ function step11() {
 	} else if (firstName.match(/^[a-zA-Z]{1,16}$/) && firstName.length > 2 && lastName.match(/^[a-zA-Z]{1,16}$/) && lastName.length > 2) {
 		_("step11").style.display = "none";
 		_("step12").style.display = "block";
-		progress.dataset.progress = 92;
+		progress.dataset.progress = 90;
 		return true;
 	} else {
 		animateCSS('#firstName', 'jello');
@@ -338,11 +326,10 @@ function step11() {
 }
 
 function step12() {
-
 	if (email.length == '' || email.length > 5) {
 		_("step12").style.display = "none";
-		_("step30").style.display = "block";
-		progress.dataset.progress = 98;
+		_("step13").style.display = "block";
+		progress.dataset.progress = 94;
 		return true;
 	} else {
 		animateCSS('#email', 'jello');
@@ -351,13 +338,25 @@ function step12() {
 	}
 }
 
-function step30() {
+function step13() {
 	phone = _("phone").value;
 	if (phone.length > 7 && phone.match(/^[0-9]*$/)) {
+		_("step13").style.display = "none";
+		_("step30").style.display = "block";
+		progress.dataset.progress = 98;
+		return true;
+	} else {
+		animateCSS('#phone', 'jello');
+		alert.show('Please enter a valid phone number', 'danger');
+		return false;
+	}
+}
 
+function step30() {
+	lookaround = _("lookaround").value;
+	if (lookaround.length > 1) {
 		_("step30").style.display = "none";
 		_("userData").style.display = "block";
-
 		_("userCoverage").innerHTML = coverage;
 		_("userFamily").innerHTML = family;
 		_("userProgram").innerHTML = program;
@@ -365,11 +364,9 @@ function step30() {
 		_("userEnrolled").innerHTML = enrolled;
 		_("userGender").innerHTML = gender;
 		_("userTabacco").innerHTML = tabacco;
-
 		_("userDay").innerHTML = day;
 		_("userMonth").innerHTML = month;
 		_("userYear").innerHTML = year;
-
 		_("userSpouse").innerHTML = spouse;
 		_("userSgender").innerHTML = sgender;
 		_("userSday").innerHTML = sday;
@@ -377,25 +374,22 @@ function step30() {
 		_("userSyear").innerHTML = syear;
 		_("userStabacco").innerHTML = stabacco;
 		_("userSchildren").innerHTML = schildren;
-
 		_("userStreet").innerHTML = street;
 		_("userApt").innerHTML = apt;
 		_("userCity").innerHTML = city;
 		_("userState").innerHTML = state;
 		_("userZip").innerHTML = zip;
-
 		_("userFirstName").innerHTML = firstName;
 		_("userLastName").innerHTML = lastName;
-
 		_("userEmail").innerHTML = email;
 		_("userPhone").innerHTML = phone;
-
+		_("userLookaround").innerHTML = lookaround;
 		progress.dataset.progress = 100;
 		alert.show('Please review your information', 'success');
 		return true;
 	} else {
-		animateCSS('#phone', 'jello');
-		alert.show('Please enter a valid phone number', 'danger');
+		animateCSS('#lookaround', 'jello');
+		alert.show('Please select one option', 'danger');
 		return false;
 	}
 }

@@ -322,18 +322,33 @@
 			</div>
 			<div id="step12">
 				<div class="question optional">What is your Email?</div>
-				<input type="text" id="email" name="email" placeholder="youremail@mail.com"  />
+				<input type="text" id="email" name="email" placeholder="youremail@mail.com" />
 				<button class="button" onclick="step12()">
 					<i class="fas fa-spinner fa-spin"></i>
 					<i class="fas fa-arrow-circle-right"></i>
 				</button>
 			</div>
-
+			<div id="step13">
+				<div class="question req" title="We ask this question in order to find the best plans for you.">What is your Mobile or home phone number?</div>
+				<input type="tel" id="phone" name="phone" placeholder="(555) 555 5555" required />
+				<button class="button" onclick="step13()">
+					<i class="fas fa-spinner fa-spin"></i>
+					<i class="fas fa-arrow-circle-right"></i>
+				</button>
+			</div>
 
 			<div id="step30">
 				<div class="question req" title="We ask this question in order to find the best plans for you.">Last
-					step! What is your Mobile or home phone number?</div>
-				<input type="tel" id="phone" name="phone" placeholder="(555) 555 5555" required />
+						step! What is
+					making you look around?</div>
+				<div id="lookaroundQuestion" class="select" selected="selected" disabled>
+					<select id="lookaround" name="lookaround" required>
+						<option value="">Select One</option>
+						<option value="Ending">Ending</option>
+						<option value="Too Expensive">Too Expensive</option>
+						<option value="Just Not Happy With It">Just Not Happy With It</option>
+					</select>
+				</div>
 				<button class="button" onclick="step30()">
 					<i class="fas fa-spinner fa-spin"></i>
 					<i class="fas fa-arrow-circle-right"></i>
@@ -448,7 +463,10 @@
 					<span>Mobile or home Phone number?</span>
 					<span id="userPhone"></span>
 				</li>
-
+				<li>
+					<span>What is making you look around?</span>
+					<span id="userLookaround"></span>
+				</li>
 				<div class="submission">
 					<!-- <div data-netlify-recaptcha="true"></div> -->
 					<button class="submit" type="submit" onclick="submitForm()">Submit</button>
